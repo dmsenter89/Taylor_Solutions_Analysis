@@ -10,6 +10,8 @@
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
 
 \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
@@ -21,7 +23,7 @@
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{question}[2][Question]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
-
+ 
 \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
@@ -31,10 +33,15 @@
 %                         Start here
 % --------------------------------------------------------------
 
-\title{Solutions Manual for Joseph Taylor's \emph{Foundations of Analysis}}%replace X with the appropriate number
-\author{Michael Senter} %if necessary, replace with your course title
+\title{Solutions Manual for Joseph Taylor's \\ \emph{Foundations of Analysis}}%replace X with the appropriate number
+\author{Michael Senter}
+\date{}
 
 \maketitle
+
+\begin{center}
+\textsc{\Large Section 1.1}
+\end{center}
 
 \begin{exercise}{1.1.1} %You can use theorem, exercise, problem, or question here.  Modify x.yz to be whatever number you are proving
 If $a, b \in \mathbb{R}$ and $a < b$, give a description in set theory notation for each of the intervals $(a, b)$, $[a, b]$, $[a, b)$, and $(a, b]$ (see Example 1.1.1).
@@ -152,25 +159,428 @@ which $f (E) \backslash f (F ) = f (E \backslash F )$. \\
 The above conditions are fulfilled for a function $f(x)=x$ with $A=B=[0,10]$, and the subsets $E=[1,6]$ and $F = [1,2] \subset E$.
 \end{question}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 1.4}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{1.4.1}
+For each of the following sets, describe the set of all upper bounds for the set: \\
+(a) the set of odd integers; The integers are unbounded.\\
+(b) $\{1 - 1/n : n \in \mathbb{N}\}$; The set of all upper bounds for this set is $\{x \in \mathbb{N}: x \geq 1\}$. \\
+(c) $\{r \in \mathbb{Q}: r^3 < 8\}$; The set of all upper bounds for this set is $\{x \in \mathbb{Q}: x \geq 2\}$.\\
+(d) $\{ \sin x : x \in \mathbb{R}\}$; The set of all upper bounds for this set is $\{x \in \mathbb{R}: x \geq 1\}$.
+\end{exercise}
+
+
+
+\begin{exercise}{1.4.2}
+For each of the sets in (a), (b), (c) of the preceding exercise, find the least upper bound of the set, if it exists.\\
+
+(a) There is no upper bound, and hence no least upper bound. \\
+(b) The least upper bound is $1$.\\
+(c) The least upper bound is $2$.
+\end{exercise}
+
+
+
+\begin{theorem}{1.4.3}
+If a subset $A$ of $\mathbb{R}$ is bounded above, then the set of all upper bounds for $A$ is a set of the form $[x, \infty)$. \emph{What is $x$}?
+\end{theorem}
+
+\begin{proof}
+Let $B$ denote the set of all upper bounds of $A$. By definition, a number $m \in \mathbb{R}$ is considered an upper bound for the set $A$ if $z \leq m$ for all $z \in A$. If the set $A$ has a largest number, then this largest number - $y'$ - will be in the set $B$. In that case, it is obvious that all numbers $m > y'$ will also be upper bounds, since we assumed that $x \leq y'$ for all $x \in A$, and that $m > y'$, it follows that $x \leq y' < m$. Therefore, the set $[y', \infty)$ would be the set of all upper bounds of $A$. \\
+Assume now that $A$ does not have a largest number. By the completeness theorem we know that any subset $A$ of an ordered field - such as $\mathbb{R}$ - is indeed bounded above. Specifically, according to theorem 1.4.4 of the book we know that any subset of $\mathbb{R}$ not only is bounded above, but has a least upper bound. By definition, a number $c$ is a least upper bound if and only if it is a number such that $x \leq c$ for all $x \in A$, and for every $k \in \mathbb{R}$, if $k$ is an upper bound of $A$, then $k \geq c$. It is obvious then that the set of all upper bounds of $A$ will be the set $[c, \infty)$ where $c$ is the least upper bound of $A$.
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 1.5}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{1.5.1}
+For each of the following sets, find the set of all extended real numbers $x$ that are greater than or equal to every element of the set. Then find the sup of the set. Does the set have a maximum? \\
+(a) $(-10, 10)$; The set of all numbers greater than this set is the set $[10, +\infty)$. The supremum of the set in question is $10$. The set does not have a maximum.\\
+(b) $\{n^2 : n \in \mathbb{N}\}$; In the extended set of real numbers, the only element greater than or equal to all the elements in the set in question is $+\infty$, which thereby must also be its supremum. The set does not have a maximum.\\
+(c) $\{ \frac{2n+1}{n+1}\}$; The set of all real numbers greater than the set in question is the set $[2,\infty)$. The supremum is $2$ and the set does not have a maximum.
+\end{exercise}
+
+
+
+\begin{exercise}{1.5.2}
+Find the sup and inf of the following sets. Tell whether each set has a maximum or a minimum. \\
+(a) $(-2,8]$; The infimum of the set is $-2$ and the supremum is $8$. The has a maximum, but not a minimum. \\
+(b) $\frac{n+2}{n^2+1}$; The infimum of the set is 0, and the supremum is $2$. The set has a maximum, but no minimum.\\
+(c) $\{ n/m : n,m \in \mathbb{Z}, n^2<5m^2\}$; The infimum of the set is $- \sqrt{5}$, and the maximum is $\sqrt{5}$. Seeing that $\sqrt{5}$ is not a rational number, the set has neither a maximum nor a minimum.
+\end{exercise}
+
+
+
+
+\begin{exercise}{1.5.3}
+Prove that if $\sup A < \infty$, then for each $n \in \mathbb{N}$ there is an element $a_n \in A$
+such that $\sup A - 1/n < a_n \leq \sup A$. 
+
+	\begin{proof}
+	This is true since we can easily construct an element $a_n$ such that this equality holds. We assume that $A$ is defined for all $m/n$ with $m,n \in \mathbb{Z}$ within $A$. In this case, we constructs our term to be $a_n = \sup A - 1/(n+1)$. It is obvious that since $1/(n+1) < 1/n$, that $\sup A - 1/n < \sup A - 1/(n+1) \leq \sup A$. \\
+	Alternatively, we may also note that $\sup A - 1/n < \sup A$ for all $n \in \mathbb{N}$ by definition, so the inequality holds in the trivial case of $a_n = \sup A$. 
+	\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{1.5.4}
+Prove that if $\sup A = \infty$, then for each $n \in \mathbb{N}$ there is an element $a_n \in A$
+such that $a_n > n$. 
+
+\begin{proof}
+Assume some set $A$ whose supremum is $+\infty$. In that case, $\forall x \in A$, $x < \infty$. Both from the Archimedean property and from the Peano Axioms we know that for every $n \in \mathbb{N}$, there is a successor element $n'$ which is also in $\mathbb{N}$, such that $n < n'$. Since there $\nexists a$ such that $a = \infty$, and $n<\infty$, this implies that $\exists a_n$ such that $a_n = n'$ and $a_n \in A$, showing that $n < a_n < \infty$.
+\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{1.5.5}
+Formulate and prove the analog of Theorem 1.5.4 for $\inf$. \\
+
+\textbf{Theorem.} Let $A$ be a non-empty subset of $\mathbb{R}$ and let $x$ be an element of $\mathbb{R}$. Then \\ 
+(a) $\inf A \geq x$ if and only if $a \geq x$ for every $a \in A$;\\
+(b) $x > \inf A$ if and only if $x > a$ for some some $a \in A$.
+
+	\begin{proof}
+	By definition, $a \geq x$ if and only if $x$ is a lower bound for $A$. If $x$ is a lower bound for $A$, then $A$ is bounded below. This implies that its $\inf$ is its greatest lower bound, which is necessarily greater than or equal to $x$. Conversely, if $\inf A \geq x$, then $\inf A$ is finite and is the greatest lower bound for $A$. Since $\inf A \geq x$, $x$ is also  a lower bound for $A$. Thus, $\inf A \geq x$ if and only if $a \geq x$ for every $a \in A$. \\
+	If $x > \inf A$, then $x$ is not a lower bound for $A$, which means $x >a$ for some $a \in A$. Conversely, if $x > a$ for some $a  \in A$, then $x> \inf A$, since $a \geq \inf A$. Thus, $x > \inf A$ if and only if $x > a$ for some $a \in A$.
+	\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{1.5.6}
+Prove part (d) of Theorem 1.5.7.\\
+
+\textbf{Theorem}. Let $A,B$ be non-empty subsets of $\mathbb{R}$. Then $\sup (A-B) = \sup A - \inf B$.
+
+	\begin{proof}
+	According to the book, $\sup(A+B) = \sup A + \sup B$ (proof on p. 30). We can then write $\sup (A + (-B) ) = \sup A + \sup(-B)$. We then apply Theorem 1.5.7b, to rewrite $\sup(-B)$ as $-\inf A$. From this it follows that 
+	\begin{align*}
+	\sup(A + (-B)) = \sup(A-B) = \sup A + (- \inf B) = \sup A - \inf B
+	\end{align*}.
+	\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{1.5.7}
+Prove (e) of Theorem 1.5.7. \\
+
+\textbf{Theorem}. Let $A,B$ be non-empty subsets of $\mathbb{R}$. If $A \subset B$, then $\sup A \leq \sup B$ and $\inf B \leq \inf A$.
+	\begin{proof}
+	If $A \subset B$, then $a \in A$ implies that $a \in B$ for all $a$. Then, if $\sup A \in A$, $\sup A \in B$. Since $\sup B \geq b$ for all $b \in B$, it is obvious that $\sup A \leq \sup B$. Assume now that $\sup A \notin A$. In that case, $\sup A - \epsilon \in A$ for all $\epsilon > 0$. Thus, $\sup A - \epsilon \in A$ and $\sup A - \epsilon \in B$. By definition, $\sup B$ is greater than or equal to all $b \in B$. This means  that if $\sup A - \epsilon \in B$ implies that $\sup A \leq \sup B$. The proof for the infimum is analogous.
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{1.5.10}
+Prove (a) of Theorem 1.5.10. \\
+
+\textbf{Theorem}. Let $f$ and $g$ be functions defined on a set containing $A$ as a subset, and let $c \in \mathbb{R}$ be a positive constant. Then $\sup_A c f= c \sup_A f$ and $\inf_A c f = c \inf_A f$.
+	\begin{proof}
+	Let $f$ be function $f: A \to B$. Then $\sup f$ is the supremum of $B$ provided that $f$ is surjective. Let $M$ be an arbitrary upper bound of $cx$ for some $x \in B$. We say that $c x \leq M$ if and only if $x \leq M/c$. This shows that $M$ is an upper bound of $c x$ if and only if $M/c$ is an upper bound of $B$. Hence, $\sup c B = c \sup B$ and similarily $\sup c f = c \sup f$. The result for the infimum follows similarily.
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{1.5.11}
+Prove (b) of Theorem 1.5.10. \\
+
+\textbf{Theorem}. Let $f$ and $g$ be functions defined on a set containing $A$ as a subset, and let $c \in \mathbb{R}$ be a positive constant. Then $\sup_A (-f) = - \inf_A f$.
+
+	\begin{proof}
+	We have a function $f: A \to B$. A number $x$ is a lower bound for $f(a)$ for all $a \in A$ if and only if $-x$ is an upper bound for the set $-f(a)$. Let  $L$ be the set of all lower bounds for $f(a)$. Then $-L$ is the set of all upper bounds for $-f(a)$. Furthermore, the largest member of $L$ and the smallest member of $-L$ are negatives of each other. That is, $- \inf f(a) = \sup (f(a))$, or equivalently $- \inf f = \sup (-f)$.  
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{1.5.12}
+Prove (c) of Theorem 1.5.10.\\
+
+\textbf{Theorem}. Let $f$ and $g$ be functions defined on a set containing $A$ as a subset, and let $c \in \mathbb{R}$ be a positive constant. Then $\sup_A (f+g) \leq \sup_A f + \sup_A g $ and $\inf_A f + \inf_A g \leq \inf_A (f+g)$.
+
+	\begin{proof}
+	By definition, $f(a) \leq \sup f$ for all $a \in A$ and $g(a) \leq \sup g$ for all $a \in A$. Therefore, $f(a)+g(a) \leq \sup f + \sup g$. Let $c$ denote the supremum of $f+g$. We know that $\sup f + \sup g$ is an upper bound  for $f(a)+g(a)$. Since the supremum is always less than or equal to an upper bound, we find that $c \leq \sup f + \sup g$. This implies that $\sup (f+g) \leq \sup f + \sup g$.
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{1.5.13}
+Prove (d) of Theorem 1.5.10. \\
+
+\textbf{Theorem}. Let $f$ and $g$ be functions defined on a set containing $A$ as a subset, and let $c \in \mathbb{R}$ be a positive constant. Then $\sup \{ f(x) - f(y): x, y \in A \} = \sup_A f - \inf_A f$.
+	\begin{proof}
+	This appears somewhat obvious. The function $f$ is defined on $A$, i.e., for every $a \in A$, $f$ maps to some value $f(a)$ in some set, let's call it $B$. The value $\sup f$ is defined as to be the least upper bound of $f(a)$, i.e. $\nexists x$ such that $f(x) > \sup f$ for some $x \in A$. The infimum is defined as the value such that there is no value $x \in A$ such that $x < \inf f$. The value defined by $f(x) - f(y)$ for all $x,y \in A$ is a measure of the distance between these two values. Since $\sup f$ and $\inf f$ are defined as above, we can see that there cannot be a greater distance between any other two points in $B$ than the distance between $\sup f$ and $\inf f$. Therefore, for any collection of distances between points in $B$ reached by $f(x)$ for all points $x \in A$, the supremum of this collection - namely, the largest value of this set such that no other value is larger - cannot be any other than the distance between the supremum and the infimum of the function itself.
+	\end{proof}
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 2.1}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{2.1.1}
+Show that \\
+\textbf{(a) if $|x - 5| < 1$, then $x$ is a number greater than $4$ and less than $6$.;} 
+This is equivalent to saying $-1 < x - 5 < 1$. We add $5$ to the inequality, and we get $4 < x < 6$.\\
+\textbf{(b) if $|x - 3| < 1/2$ and $|y - 3| < 1/2$, then $|x - y| < 1$;} We add the inequalities, such that we see $ |x-3| + |y - 3| < 1/2 + 1/2 = 1$. We notice that $|y-3| = |3-y|$. We rewrite using the triangle inequality:
+	\begin{align*}
+	|(x-3)+(3-y)| \leq |x-3| + |3-y| &< 1 \\
+	|x - y| \leq |x-3| + |3-y| &< 1.
+	\end{align*}
+\textbf{(c) if $|x - a| < 1/2$ and $|y - b| < 1/2$, then $|x + y - (a + b)| < 1$.} We add the inequalities and get $|x-a| + |y-b| < 1/2 + 1/2 =1$. We can then rewrite using the triangle inequality as above
+	\begin{align*}
+		|(x-a) + (y-b) | &\leq |x-a| + |y-b| & < 1 \\
+		|x+y - a-b| &\leq |x-a|+ |y-b| &<1\\
+		|x+y - (a-b)|  &\leq |x-a|+ |y-b| &<1.
+	\end{align*}
+\end{exercise}
+
+\begin{exercise}{2.1.3}
+Put each of the following sequences in the form $a_1, a_2, a_3, \hdots, a_n$. This requires that you compute the first 3 terms and find an expression for the $n$th term. \\
+\textbf{(a) the sequence of positive odd integers;} This is a sequence of the form $1,3,5,\hdots$. To find the $n-th$ term, we express this sequence as $a_n = 2 n - 1$, with $n \in \N$. \\
+\textbf{(b) the sequence defined inductively by $a_1 = 1$ and $a_{n+1} = - \frac{a_n}{2}$;} The sequence begins with $1, -1/2, 1/4, \hdots$. The $n$th term will be something like $a_n= ((-1)^{n-1})/(2^{n-1})$ for $n \in \N$. \\
+\textbf{(c) the sequence defined inductively by $a_1 = 1$ and $a_{n+1} = \frac{a_n}{n+1}$}. This is the series $1, 1/3, 1/12, 1/60, \hdots$. The $n$th term is: $a_n = \frac{2}{(n+1)!}$.
+\end{exercise}
+
+\begin{exercise}{2.1.4}
+Find $\lim 1/n^2$. \\
+
+The larger $n$ become, the smaller $1/n^2$ will become. We guess the limit to be $0$. For any $\epsilon > 0$, we need an $N$ such that whenever $n > N$, $1/n^2 < \epsilon$. We find that this is true whenever $ 1/\epsilon < n^2$, or in other words - whenever $\sqrt{1/ \epsilon} < n$.
+\end{exercise}
+
+
+\begin{exercise}{2.1.5}
+Find $\lim  \frac{2n-1}{3n+1}$. \\
+
+We guess the limit to be $2/3$. 
+	\begin{align*}
+	|\frac{2n-1}{3n+1} - \frac{2}{3}| = | \frac{3(2n-1) - 2(3n+1)}{3(3n+1)}| = | \frac{6n-3-6n-2}{9n+3} |\\
+	= |\frac{5}{9n+3} < | \frac{5}{9n} | < | \frac{5}{n} |
+	\end{align*}
+We must choose an $n > N$ such that $N> \frac{5}{\epsilon}$ so that this will be true.
+\end{exercise}
+
+
+\begin{exercise}{2.1.6}
+Find $\lim (-1)^n /n$ \\
+
+We guess the limit to be $0$. We see $| \frac{(-1)^n}{n}| = |\frac{1}{n}|$. Hence we need to choose an $n>N$ such that $N> \frac{1}{\epsilon}$ for this inequality to be true.
+\end{exercise}
+
+
+\begin{exercise}{2.1.10}
+Prove that $\lim 2^{-n} = 0$. Hint: prove first that $2^n \geq n$ for all natural numbers $n$.\\
+
+	\begin{proof} 
+	We wish to show that $2^n > n$ for all $n$. Proof by induction. The base case, $2^1 > 1$ is obviously true, since $2^1 = 2$. We assume now that $2^n > n$ for some $n$. Then we wish to check $2^{n+1}$. But, we can rewrite this simply as $2^n 2^1$. Let $k= 2^n$. Since we know that $k > n$, it is obvious that $2 k > n+1$. Thus, $2^n > n$ for all $n \in \N$. \\
+	We note that $2^{-n} = \frac{1}{2^n}$. Thus, $\lim 2^{-n}  = \lim \frac{1}{2^n}$. Since $2^n$ increases until infinity, we see that $1/2^{n}$ will grow smaller and smaller, since $1/2^{n} > 1/2^{n+1}$ for all $n$.\\
+	We see that for any $\epsilon > 0$, we need to simply pick $n$ such that $1/\epsilon < 2^n$.  As such, the limit is 0.
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{2.1.11}
+Prove that if $a_n \to 0$ and $k$ is any constant, then $k a_n \to 0$. \\
+
+If $a_n \to 0$, this means that $a_n < \epsilon$ for any $\epsilon > 0$. We multiply by $k$ and find that $k a_n < k \epsilon$.
+\end{exercise}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 2.2}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{2.2.1}
+Make an educated guess as to what you think the limit is, then use the definition of limit to prove that your guess is correct.\\
+
+$\lim \frac{3n^2 -2}{n^2 +1}$. I assume the limit will be $3$. We note that $\frac{3n^2 - 2}{n^2+1} <  \frac{3n^2}{n^2} = 3$. Hence, the limit is 3.
+\end{exercise}
+
+
+\begin{exercise}{2.2.3}
+Make an educated guess as to what you think the limit is, then use the definition of limit to prove that your guess is correct.\\
+
+$\lim \frac{1}{\sqrt{n}} $ I assume the limit will be $0$. We see $| \frac{1}{\sqrt{n}}| = | \frac{1}{n^{1/2}}|$; therefore, this is true whenever we choose an $n>N$ such that $\sqrt{N}> \frac{1}{\epsilon}$.
+\end{exercise}
+
+
+\begin{exercise}{2.2.5}
+Make an educated guess as to what you think the limit is, then use the definition of limit to prove that your guess is correct.\\
+
+$\lim (\sqrt{n^2 + N} -n) $ I know as we approach infinity, the limit is $1/2$, but have not been able to prove it.
+\end{exercise}
+
+
+\begin{exercise}{2.2.6}
+Make an educated guess as to what you think the limit is, then use the definition of limit to prove that your guess is correct.\\
+
+$\lim (1 + 1/n)^3 = 1$. Proof:
+	\begin{align*}
+		| (1+ \frac{1}{n})^3 -1 | &= | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} + 1 - 1| = | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} |	
+		\end{align*}
+We note that each term is of the form $c/n$ or multiples thereof for some constant $c$. It has already been shown that each such term tends can be made smaller than any $\epsilon$. This also holds for the sum.
+\end{exercise}
+
+
+\begin{exercise}{2.2.8}
+Prove that if $\lim a_n = a$, then $\lim a_n^3 = a^3$. 
+	\begin{align*}
+	|a_n^3 - a^3 | = |(a_n - a) (a_n^2 + a_n a + a^2)|
+	\end{align*}
+We then note that we are given that $|a_n - a| < \epsilon$. From this we see that 
+	\begin{align*}
+	|(a_n - a) (a_n^2 + a_n a + a^2)| < \epsilon (a_n^2 + a_n a + a^2).
+	\end{align*}
+\end{exercise}
+
+
+\begin{exercise}{2.2.9}
+Does the sequence $\{cos(n \pi /3)\}$ have a limit? Justify your answer. \\
+
+No. The sequence $\{cos(n \pi /3)\}$ oscillates between $-1$ and $1$; a limit cannot converge to two different values. Hence, this sequence does not have a limit.
+\end{exercise}
+
+
+\begin{exercise}{2.2.11}
+Prove that if $\{a_n\}$ and $\{b_n\}$ are sequences with $|a_n| \leq b_n$ for all $n$ and if $\lim b_n =0$, then $\lim a_n = 0$ also. \\
+
+We are given that $ |a_n|  \leq b_n$ for all $n$. Therefore, we know that $ \lim |a_n| \leq \lim b_n$. We know that $\lim b_n = 0$. Hence we can write - equivalently - that $\lim |a_n| \leq 0$. We notice that $|a_n|$ is defined to be greater than or equal to zero. Hence we have $0 \leq \lim |a_n| \leq 0$, from which it follows by the squeeze theorem (proof on p. 43 of the book) $\lim |a_n| = 0$.
+\end{exercise}
+
+
+\begin{exercise}{2.2.12}
+Prove the following partial converse to Theorem 2.2.3: Suppose $\{a_n\}$ is a convergent sequence. If there is an $N$ such that $a_n \leq c$ for all $n > N$, then $\lim a_n \leq c$. Also, if there is an $N$ such that $b \leq a_n$ for all $n > N$, then $b \leq \lim a_n$. \\
+
+Note that ${a_n}$ is bounded by $c$ according to the premise. In this case, we can say that $a_n \leq \sup a_n \leq c$ for all $n$. Let $ a = \lim a_n$. We know by definition that $a \leq \sup a_n$, and therefore we can write that $\lim a_n \leq \sup a_n \leq c$. \\
+Likewise, we can say that $b$ is a lower bound for $a_n$ such that $b \leq \inf a_n$. We know that by definition $\inf a_n \leq a$, allowing us to write $b \leq \lim a_n$.
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 2.3}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{2.3.2}
+Use the Main Limit Theorem to find $\lim \frac{n^2 - 5}{n^3 + 2n^2 + 5}$. \\
+	\begin{align*}
+		\lim \frac{n^2 - 5}{n^3 + 2n^2 + 5} &=  &(\text{dividing top and bottom by $n^3$}) \\
+		\lim \frac{1/n - 5/n^3}{1+2/n + 5/n^3} &= \\
+		\frac{\lim (1/n - 5/n^3)}{\lim (1+2/n + 5/n^3)} &= \frac{0}{1} = 0.
+	\end{align*}
+\end{exercise}
+
+
+\begin{exercise}{2.3.5}
+Prove Theorem 2.3.2.
+
+	\begin{proof}
+	We know that $\lim a_n = 0$, hence we know that for all $\epsilon > 0$, there exists an $N$ such that whenever $n>N$, $|a_n | < \epsilon$. Likewise, we know that $b_n$ is bounded, such that we can state that $- q \leq b_b \leq q$. We can then also write $|a_n| < \frac{\epsilon}{|q|}$.  We guess that the limit of $ (a_n)(b_n)$ is zero, so we write:
+		\begin{align*}
+		|a_n b_n - 0| = |a_n b_n| &\leq | a_n q| \\
+		|a_n b_n| &\leq |q| \frac{\epsilon}{|q|}  \\
+		|a_n b_n| &\leq \epsilon.
+		\end{align*}
+	Thus, the $\lim a_n b_n = 0$, since we there is an $N$ such that the above inequality is true whenever we pick an $n>N$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.3.6}
+Prove that a sequence $\{a_n\}$ is both bounded above and bounded below if and only if its sequence of absolute values $\{|a_n|\}$ is bounded above. 
+
+\begin{proof}
+By definition, if $\{|a_n|\}$ is bounded above, then there exists some $M$ such that $|a_n| \leq M$ for all $n$. This is equivalent to saying $-M \leq a_n \leq M$, which proves that $\{a_n\}$ is bounded above and below.
+\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.3.7}
+Prove part(b) of Theorem 2.3.6. 
+
+\begin{proof}
+	Since both $a_n$ and $b_n$ have a limit, we can write $|a_n -a| < \frac{\epsilon}{2}$ and $|b_n - b| < \frac{\epsilon}{2}$. For all $\epsilon$, we have an $N$ such that if we choose $n>N$, these inequalities are true. We know add them together and find
+	\begin{align*}
+	|a_n - a| + |b_n - b| &< \epsilon \\
+	|(a_n) + (b_n -b) | \leq |a_n - a| + |b_n - b| &< \epsilon \\
+	|(a_n + b_n) - (a+b) | \leq |a_n - a| + |b_n - b| &< \epsilon.
+	\end{align*} 
+\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.3.8}
+Prove that if $\{b_n\}$ is a sequence of positive terms and $b_n \to b > 0$, then there is a number $m>0$ such that $b_n \geq m$ for all $n$. \\
+
+This is true by virtue of the definition of $\mathbb{R}$. The statement above is equivalent to saying that we are looking for some $m$ such that $0 < m \leq b_n$. By definition $\mathbb{R}$ is full, such that between any two numbers, there are infinitely more numbers.
+\end{exercise}
+
+
+\begin{exercise}{2.3.9}
+Prove part (d) of Theorem 2.3.6. Hint: Use the previous exercise. I.e, that if $a_n \to a$ and $b_n \to b$, $a_n/b_n \to a/b$, if $b \neq 0$ and $b_n \neq 0$ for all $n$. 
+
+	\begin{proof}
+		\begin{align*}
+		|a_n \frac{1}{b_n} - a \frac{1}{b}| = |a_n \frac{1}{b_n} - a \frac{1}{b_n} + a \frac{1}{b_n} - a \frac{1}{b} | \leq |a_n = a| |\frac{1}{b_n}| + |a| |\frac{1}{b_n -b}|
+		\end{align*}
+		We know that $\{1/b_n\}$ is bounded, and hence $\{|1/b_n|\}$ is bounded above. We also have $|a_n -a| \to 0$. Therefore, $|a_n -a| |1/b_n| \to 0$. Also, $ |a| |1/b_n - 1/b| \to 0$. By (b) we know that $ |a_n - a| |1/b_n| + |a| |1/b_n - 1/b| \to 0$, proving that $a_n/b_n \to a/b$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.3.10}
+Prove part (f) of theorem 2.3.6. Hint: use the identity:
+	\begin{align*}
+	x^k - y^k = (x-y)(x^{k-1} + x^{k-2} y+ \hdots  + y^{k-1})
+	\end{align*}
+with $x= a_n^{1/k}$ and $y= a^{1/k}$, to show that $a_n^{1/k} \to a^{1/k}$ if $a_n \geq 0$ for all $n$. 
+
+	\begin{proof}
+		We notice that 
+		\begin{align*}
+			a_n^{1/k} - a^{1/K} = (a_n - a) (a_n^{1/K-1} + a_n^{1/K -2}a^{1/k} + \hdots + a^{1/K-1}) = (a_n - a) b_n
+		\end{align*}
+		where
+		\[ b_n = a_n^{1/K-1} + a_n^{1/K -2}a^{1/k} + \hdots + a^{1/K-1} \]
+		We know that $\{a_n\}$ converges, and hence that $\{|a_n|\}$ is bounded above. We choose an upper bound $m$ for $\{|a_n|\}$ which satisfies that $|a_n| \leq m$. Then $b_n \leq \frac{1/k} m^{1/k}$ sowing that $\{|b_n|\}$ is bounded above. According to theorem 2.3.2 we conclude that $|a_n - a| |b_n| \to -$ and find from theorem 2.3.1 that $a_n^{1/k} \to a^{1/k}$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.3.12}
+Prove that $\lim a^{1/n} = 1$. Hint: use the result of the previous exercise.\\
+
+We notice that $n^{1/n} > 1$ for all $n \in \N$.We can therefore write that we are looking for a solution to $n^{1/n} - 1 < \epsilon$.We can rearrange and raise both sides to the $n$th power, resulting in the equation $n < (1 + \epsilon)^n$. We can expand the right hand side using the binomial theorem:
+	\begin{align*}
+	n < 1+ n \epsilon + \frac{1}{2}n(n-1) \epsilon^2 + \hdots
+	\end{align*}
+As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring that $n> 1+ \frac{2}{\epsilon^2}$. Therefore, for any $\epsilon >0$ there exists an $N$ such that whenever $n>N$,  $| n^{1/n} -1|< \epsilon$.
+\end{exercise}
+
 
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
 % --------------------------------------------------------------
-%\begin{align*}
-%\sum_{i=1}^{k+1}i & = \left(\sum_{i=1}^{k}i\right) +(k+1)\\
-%& = \frac{k(k+1)}{2}+k+1 & (\text{by inductive hypothesis})\\
-%& = \frac{k(k+1)+2(k+1)}{2}\\
-%& = \frac{(k+1)(k+2)}{2}\\
-%& = \frac{(k+1)((k+1)+1)}{2}.
-%\end{align*}
-
-%
-%The intersection of all closed intervals is denoted $\bigcap \mathcal{A}$. It is defined as
-%\begin{align*}
-%	\bigcap \mathcal{A} = \{x: x \in A \text{ } \forall A \in \mathcal{A}\}.
-%\end{align*}
-%Let $a,b$ be arbitrary points such that $0<a<1$ and $0<b<1$. Let $C$ be a set defined as $C = \{ x: a \leq x \leq b\}$, and from this it follows that $C \subset (0,1)$. Any number $x$ is a member of $\bigcap \mathcal{A}$ if and only if $! \exists C$ such that $x  \notin C$ for any $C \subset \mathcal{A}$. Assume we are given a number $y$ such that $0 < y <1$. Then for any such $y$, I can create a set $C$ such that $y \ni C$, for example, a set defined by the endpoints $a=b= |1-y|/2$. Since $y \ni C$, we also know that $y \ni \bigcap \mathcal{A}$. This proves that $\bigcap \mathcal{A} = \emptyset$.
-
 
 \end{document}
 
