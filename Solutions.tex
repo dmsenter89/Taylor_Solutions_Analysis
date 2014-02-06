@@ -1,0 +1,176 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+
+\title{Solutions Manual for Joseph Taylor's \emph{Foundations of Analysis}}%replace X with the appropriate number
+\author{Michael Senter} %if necessary, replace with your course title
+
+\maketitle
+
+\begin{exercise}{1.1.1} %You can use theorem, exercise, problem, or question here.  Modify x.yz to be whatever number you are proving
+If $a, b \in \mathbb{R}$ and $a < b$, give a description in set theory notation for each of the intervals $(a, b)$, $[a, b]$, $[a, b)$, and $(a, b]$ (see Example 1.1.1).
+\begin{align*}
+	(a,b) &= \{x \in \mathbb{R} : a < x < b\} \\
+	[a,b] &= \{x \in \mathbb{R} : a \leq x \leq b\} \\
+	[a,b) &= \{x \in \mathbb{R} : a \leq x < b\} \\
+	(a,b] &= \{x \in \mathbb{R} : a < x \leq b\}.
+\end{align*}
+\end{exercise}
+
+\begin{theorem}{1.1.2}
+If $A$, $B$, and $C$ are sets, then $A  \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+\end{theorem}
+\begin{proof}
+If  $x \in A  \cap (B \cup C)$, then $x \in A$ and $x \in (B \cup C)$. Thus, either $x \in B$ or $x \in C$. Thus, $x \in A \cap B$ or in $x \in A \cap C$. Thus, if $x \in A  \cap (B \cup C)$, then $x \in (A \cap B) \cup (A \cap C)$. \\
+If an $x \in (A \cap B) \cup (A \cap C)$, then either $x \in (A \cap B)$ or $x \in (A \cap C)$. This means that surely $x \in A$, and also that $x \in B \cup C$. Hence, if $x \in (A \cap B) \cup (A \cap C)$, then $x \in A  \cap (B \cup C)$.\\ 
+Therefore, $A  \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+\end{proof}
+
+\begin{question}{1.1.5}
+What is the intersection of all the closed intervals containing the open interval $(0, 1)$? Justify your answer. \\
+
+Let $\mathcal{A}$ denote the set of all sets such that $(0,1) \in \mathcal{A_i}$.  The intersection of all closed intervals is denoted $\bigcap \mathcal{A}$. It is defined as
+\begin{align*}
+	\bigcap \mathcal{A} = \{x: x \in A \text{ } \forall A \in \mathcal{A}\}.
+\end{align*}
+In other words, we are looking for some set $A$ such that $A$ is a subset of every other set in $\mathcal{A}$. This set is $A = \{x: 0 < x < 1\}$. Consider any other subset $C$ of $\mathcal{A}$. If $C \neq A$, then necessarily there must exist an element $x$ such that $x \in C$ and $x \notin A$, showing that $A \subset C$ but $C \nsubseteq A$. Since $x$ is not in every subset of $\mathcal{A}$, $x \notin \bigcap \mathcal{A}$. 
+\end{question}
+
+\begin{question}{1.1.6}
+What is the union of all of the closed intervals contained in the open
+interval $(0, 1)$? Justify your answer. \\
+
+Let $\mathcal{A}$ be the set containing all sets containing $(0,1)$ as a subset. The union of all these sets is denoted by $\bigcup \mathcal{A}$. An object $x$ is an element of $\bigcup \mathcal{A}$ if there exists some set $C \subset \mathcal{A}$ such that $x \in C$. We need to consider two cases: either the object $x \leq 0$ or $ 1 \leq x$. The case of $0 < x < 1$ is trivial. For any $x$ such that $1\leq x$ we can create a set $C$ such that $C = \{ y: 0 < y < x \}$. This since $1 \leq x$, it is guaranteed that $C \subset \mathcal{A}$. The case of $x \leq 0$ is analogous. Hence, $\bigcup \mathcal{A} = (- \infty, \infty)$.
+\end{question}
+
+\begin{problem}{1.1.7}
+If A is a collection of subsets of a set X, formulate and prove a theorem
+like Theorem 1.1.5 (\emph{from book numbering}) for the intersection and union of A. 
+
+\begin{theorem}{1.1.7}
+	Let $\mathcal{A}$ be a collection of subsets $A_1, A_2,...,A_n$ of some set $X$. Then $( \bigcup \mathcal{A})^c = A_1^c \cap A_2^c \cap ... \cap A_n^c$ and $( \bigcap \mathcal{A})^c = A_1^c  \cup A_2^c \cup ... \cup A_n^c$.
+\end{theorem}
+
+\begin{proof}
+This is a generalization of DeMorgan's law, proved in the book. We begin with the statement $( \bigcup \mathcal{A})^c = A_1^c \cap A_2^c \cap ... \cap A_n^c$.	We can rewrite $ (\bigcup \mathcal{A})^c$ as $( A_1 \cup A_2 \cup ... \cup A_n)^c$. We can then sub-partition this collection of unions into a collection of two unions, as such:
+\begin{align*}
+	(\bigcup \mathcal{A})^c = [ A_1 \cup ( A_2 \cup ... \cup A_n) ]^c
+\end{align*}
+Then we will refer to $A_2 \cup ... \cup A_n$ as $B$. We can then rewrite the above as $(A_1 \cup B)^c$, for which DeMorgans laws apply. Thus, we write $(A_1 \cup B)^c =  A_1^c \cap B^c = A_1^c \cap ( A_2 \cup ... \cup A_n)^c$. As next step, we sub partition B into two sets, as such
+\begin{align*}
+	( A_2 \cup ... \cup A_n)^c = [ A_2 \cup (A_3 \cup .... \cup A_n)]^c
+\end{align*}
+Then DeMorgan's laws apply again as above, and we can write $[ A_2 \cup (A_3 \cup .... \cup A_n)]^c = A_2^c \cap (A_3 \cup ... \cup A_n)^c$. Since intersections and unions are associative, we can then write
+\begin{align*}
+	(\bigcup \mathcal{A})^c = (A_1^c \cap (A_2^c \cap (A_3 \cup ... \cup A_n)^c)) = A_1^c \cap A_2^c \cap (A_3 \cup ... \cup A_n)^c	
+\end{align*}
+We continue an inductive application of DeMorgan's laws as outlined above, until we see that $( \bigcup \mathcal{A})^c = A_1^c \cap A_2^c \cap ... \cap A_n^c$ \\~\\
+The other proof is analogous, requiring a sub-partition of the collection of intersections and rewriting them into series of intersections of two sets to which DeMorgan's laws apply.
+\end{proof}
+
+\end{problem}
+
+\begin{problem}{1.1.8}
+Which of the following functions $f : \mathbb{R} \to \mathbb{R}$ are one to one and which ones are onto. Justify your answer. \\
+(a) $f (x) = x^2$ ; This function is neither onto, nor one-to-one. It is not onto, since there is no $x$ such that $f(x) < 0$. It is not one-to-one since $f(x)=f(-x)$ for all $x \in \mathbb{R}$. \\
+(b) $f (x) = x^3$ ; This function is both one-to-one and onto. It is one-to-one since there $f(x) \neq f(y)$ for all $x,y$ such that $x \neq y$. It is onto, as for any $y \in \mathbb{R}$, there exists an $x \in \mathbb{R}$ such that $f(x) = y$. \\
+(c) $f (x) = e^x$ This function is one-to-one, but not onto. It is one-to-one, for $f(x) \neq f(y)$ for all $x,y \in \mathbb{R}$ such that $x \neq y$. It fails to be onto since there exists no $x$ such that $f(x)<0$ for any $x \in \mathbb{R}$.
+\end{problem}
+
+\begin{theorem}{1.1.9}
+If $f : A \to B$ is a function and $E$ and $F$ are subsets of $B$, then $f^{-1} (E \cap F ) = f^{-1} (E) \cap f^{-1} (F )$.
+\end{theorem}
+
+\begin{proof}
+If $x \in f^{-1} (E \cap F )$, then $f(x) \in E \cap F$. This means that $f(x)$ is both in $E$ as well as in $F$. If $f(x) \in E$, then $x \in f^{-1}(E)$. If $f(x) \in F$, then $x \in f^{-1}(F)$. Since $f(x)$ is in both $E$ and $F$, $x$ is in $f^{-1} (E \cap F)$. \\
+Assume $x$ is in $f^{-1} (E) \cap f^{-1} (F )$. Then, $x \in f^{-1} (E)$ as well as $x \in f^{-1} (F)$. If $x \in f^{-1} (E)$, then $f(x) \in E$. If $x \in f^{-1}(F)$, then $f(x) \in F$. Since $x$ is both in $f^{-1} (E)$ as well as $f^{-1} (F)$, we know that $f(x) \in E \cap F$. This implies that $x \in f^{-1} (E \cap F)$. \\ 
+Since every $x \in f^{-1} (E \cap F )$ implies that $x \in f^{-1} (E) \cap f^{-1} (F )$ and vice versa, it is true that  $f^{-1} (E \cap F ) = f^{-1} (E) \cap f^{-1} (F )$.
+\end{proof}
+
+\begin{theorem}{1.1.10}
+If $f : A \to B$ is a function and $E$ and $F$ are subsets of $B$, then $f^{-1} (E \backslash F ) = f^{-1} (E) \backslash f^{-1} (F )$ if $F \subset E$.
+\end{theorem}
+
+\begin{proof}
+If $x \in f^{-1} (E \backslash F )$, then $f(x) \in E \backslash F$. Thus $f(x) \in E$ but $f(x) \notin F$. This means that $x \in f^{-1}(E)$ and but also $x \notin f^{-1}(F)$. In other words, $x \in f^{-1}(E) \backslash f^{-1} (F)$. \\
+Assume now that $x \in f^{-1}(E) \backslash f^{-1} (F)$. Then $x \in f^{-1}(E)$ but $x \notin f^{-1}(F)$. This means that $f(x) \in E \backslash F$, and hence $x \in f^{-1} (E \backslash F)$. \\
+It follows that  $f^{-1} (E) \backslash f^{-1} (F ) = f^{-1} (E \backslash F)$.
+\end{proof}
+
+\begin{theorem}{1.1.11}
+If $f : A \to B$ is a function and $E$ and $F$ are subsets of $A$, then $f (E \cup F ) = f (E) \cup f (F )$.
+\end{theorem}
+
+\begin{proof}
+If $y \in f(E \cup F)$, then $y = f(x)$ for some $x \in E$ or $x \in F$. If $x \in E$, then $y \in f(E)$. If $x \in F$, then $y \in f(F)$. Since $x$ is in either one of these, we know that $y \in f(E) \cup f(F)$. \\
+Assume now that $y \in f(E) \cup f(F)$. This implies that $y=f(x)$ for some $x \in E$ or $x\in F$. Thus we can write $x \in E \cup F$. Then $y \in f(E \cup F)$. \\
+Since any element of $f(E \cup F)$ is in $f(E) \cup f(F)$ and vice versa, we conclude that $f (E \cup F ) = f (E) \cup f (F )$.
+\end{proof}
+
+
+\begin{theorem}{1.1.12}
+If $f : A \to B$ is a function and $E$ and $F$ are subsets of $A$, then $f (E \cap F ) \subset f (E) \cap f (F )$.
+\end{theorem}
+
+\begin{proof}
+Assume that $y \in f(E \cap F)$. Then $y = f(x)$ for some $x \in E \cap F$. This means that both $x \in E$ as well as $x \in F$. Then, $f(x) \in f(E)$ and $f(x) \in f(F)$, showing that $f(x) \in f(E) \cap f(F)$, or - equivalently - that $y \in f(E) \cap f(F)$. This proves that $f (E \cap F ) \subset f (E) \cap f (F )$.
+\end{proof}
+
+\begin{question}{1.1.13}
+Give an example of a function $f : A \to B$ and subsets $F\subset E$ of $A$ for
+which $f (E) \backslash f (F ) = f (E \backslash F )$. \\
+
+The above conditions are fulfilled for a function $f(x)=x$ with $A=B=[0,10]$, and the subsets $E=[1,6]$ and $F = [1,2] \subset E$.
+\end{question}
+
+
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+%\begin{align*}
+%\sum_{i=1}^{k+1}i & = \left(\sum_{i=1}^{k}i\right) +(k+1)\\
+%& = \frac{k(k+1)}{2}+k+1 & (\text{by inductive hypothesis})\\
+%& = \frac{k(k+1)+2(k+1)}{2}\\
+%& = \frac{(k+1)(k+2)}{2}\\
+%& = \frac{(k+1)((k+1)+1)}{2}.
+%\end{align*}
+
+%
+%The intersection of all closed intervals is denoted $\bigcap \mathcal{A}$. It is defined as
+%\begin{align*}
+%	\bigcap \mathcal{A} = \{x: x \in A \text{ } \forall A \in \mathcal{A}\}.
+%\end{align*}
+%Let $a,b$ be arbitrary points such that $0<a<1$ and $0<b<1$. Let $C$ be a set defined as $C = \{ x: a \leq x \leq b\}$, and from this it follows that $C \subset (0,1)$. Any number $x$ is a member of $\bigcap \mathcal{A}$ if and only if $! \exists C$ such that $x  \notin C$ for any $C \subset \mathcal{A}$. Assume we are given a number $y$ such that $0 < y <1$. Then for any such $y$, I can create a set $C$ such that $y \ni C$, for example, a set defined by the endpoints $a=b= |1-y|/2$. Since $y \ni C$, we also know that $y \ni \bigcap \mathcal{A}$. This proves that $\bigcap \mathcal{A} = \emptyset$.
+
+
+\end{document}
+
