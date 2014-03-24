@@ -640,13 +640,52 @@ As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring 
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{exercise}{2.4.1}
+Tell which of the following sequences are non-increasing, non-decreasing, bounded? Justify your answers.\\
+(a) $\{n^2\}$; for $n \in \N$, this sequence is non-decreasing since $n^2 < (n+1)^2$ for all $n$. It is bounded below by $1$.\\
+(b) $\{ \frac{1}{\sqrt{n}} \}$; this sequence is non-increasing, since $\sqrt{n}=n^{1/2}<(n+1)^{1/2}$ for all $n$. This then implies $\frac{1}{\sqrt{n}} > \frac{1}{\sqrt{n+1}}$. The sequence is bounded by $0$ and $1$. \\
+(c) $\{ \frac{(-1)^n}{n} \}$;  this sequence is neither non-increasing, nor non-decreasing as the sign of the value of the sequence fluctuates due to the term $(-1)^n$. It is, however, bounded by $-1$ and $1/2$.\\
+(d) $\{ \frac{n}{2^n} \}$; this is the sequence $\frac{1}{2},\frac{2}{4},\frac{3}{8},\hdots$ which is clearly non-increasing. It is bounded by $0$ and $1$. \\
+(e) $\{ \frac{n}{n+1} \}$; this is the sequence $\frac{1}{2}, \frac{2}{3},\frac{3}{4},\frac{4}{5},\hdots$ which is clearly non-decreasing and tending to $1$. It is bounded by $1/2$ and $1$.
+\end{exercise}
+
+
 \begin{exercise}{2.4.2}
 \emph{Solved in Class}
+\end{exercise}
+
+\begin{exercise}{2.4.3}
+If $a_1 = 1$ and $a_{n+1} = (1-2^{-n})a_n$ , prove that $\{a_n\}$ converges.
+	\begin{proof}
+We notice that $2^{-n}$ is monotone and converges to $0$. Therefore we see that $1-2^{-n}$ is also monotone, converging to $1$. The whole term then is monotone and non-increasing. It is also bounded by 0 and 1. Therefore, by the monotone convergence theorem, $a_n$ converges.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.4.8}
+Prove that $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$. 
+	\begin{align*}
+	\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1} &= \lim \frac{n^5(1+3n^3/n^5+2/n^5)}{n^4(1-n/n^4+1/n^4)}\\
+	&= \lim \underbrace{n}_\text{$\to \infty$} (\underbrace{\frac{1+3/n^2+2/n^5}{1-1/n^3+1/n^4}}_\text{$\to 1$})
+	\end{align*}
+And hence, $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
+\end{exercise}
+
+
+\begin{exercise}{2.4.11}
+Prove Part (c) of Theorem 2.4.7. \\
+ 	\textbf{Theorem} $\lim a_n = \infty$ iff $\lim(-a_n)= -\infty $
+ 	
+ 	\begin{proof}
+ 	If $a_n \to \infty$, there exists some value of $a_n$ such that $a_n > M$ for any possible $M\in\R$. If we consider the sequence $a_n (-1)$, we see clearly that $-a_n < M$ for any $M\in\R$. But if that is true, then $\lim -a_n= -\infty$.
+ 	\end{proof}
 \end{exercise}
 
 \begin{exercise}{2.4.14}
 \emph{Solved in Class}
 \end{exercise}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
@@ -654,9 +693,61 @@ As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring 
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{exercise}{2.5.9}
-\emph{Solved in class}
+\begin{exercise}{2.5.1}
+Give an example of a nested sequence of bounded open intervals that does not have a point in its intersection.
 \end{exercise}
+
+\begin{exercise}{2.5.4}
+Prove by induction that if $\{n_k\}$ is an increasing sequence of natural numbers, then $n_k \geq k$ for all $k$.
+	\begin{proof}
+	Assume the base case $n_k=n$, which is the series $1,2,3,4,5,\hdots$. Since $k$ is the counter index, i.e. $k \in \N$, it is obvious that $n_k = k = 1,2,3,4,5, \hdots$. We generalize to the $n+1$ case, i.e. $n_k = n+1$. In that case we have $n_k = n+1 = k+1 > k$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.5.5}
+Which of the following sequences $\{a_n \}$ have a convergent subsequence? Justify your answer. \\
+(a) $a_n= (-2)^n$; None of the subsequences are convergent, as they either tend to $+\infty$ or $-\infty$.\\
+(b) $a_n = \frac{5+(-1)^n n}{2+3n}$; This sequence is convergent for all $n$ such that $n\mod 2=0$, which is the sequence starting with $0.875, 0.6428, 0.55, 0.5, 0.46875, 0.4473, 0.4318, 0.42, 0.41071, \hdots$\\
+(c) $a_n=2^{(-1)^n}$ This sequence has convergent subsequences for all $n$ such that $n\mod 2=0$ and for $n \mod 2 = 1$.
+\end{exercise}
+
+\begin{exercise}{2.5.7}
+For each of the following sequences, determine how many different limits of subsequences there are. Justify your answer.\\
+(a) $\{1+(-1)^n\}$; This sequence is $0,2,0,2,0,2,\hdots$ and as such has two different limits: 0 and 2. \\
+(b) $\{cos(n \pi/3)\}$; There are two different limits. The first approaches $1$ for the sequence of all $n$ where $n\mod 6=0$. The second limit is attained at $-1$ for all $n$ such that $n\mod 6=3$. \\
+(c) $1, \frac{1}{2},1,\frac{1}{2}, \frac{1}{3},1, \frac{1}{2},\frac{1}{3},\frac{1}{4},1. \frac{1}{2},\frac{1}{3},\frac{1}{4}, \frac{1}{5},\hdots$ The terms $a_1, a_3, a_6, a_{10}, a_15, \hdots$ are convergent to 1.
+\end{exercise}
+
+\begin{exercise}{2.5.8}
+Does the sequence $\sin n$ have a convergent subsequence? Why? \\
+
+Yes, it has three convergent subsequences, provided $n\in \R$. If $n\in \N$, then it is not convergent. 
+\end{exercise}
+
+\begin{exercise}{2.5.9}
+Prove that a sequence which satisfies $|a_{n+1} - a_n| < 2^{-n}$ for all $n$ is a Cauchy sequence.
+
+	\begin{proof}
+	We notice that the sequences defined by the above condition are non-increasing and covergent. We notice the following pattern:
+		\begin{align*}
+		|a_{n+2}-a_n| = |a_{n+2}-a_{n+1}+a_{n+1}-a_n| &\leq |a_{n+2} - a_{n+1}|+ |a_{n+1} - a_n| < 2^{-n+1} + 2^{-n} \\
+		|a_{n+3}-a_n| = |a_{n+3}-a_{n+2}+a_{n+2}-a_{n+1}+a_{n+1}-a_n| &\leq |a_{n+3}-a_{n+2}|+|a_{n+2}-a_{n+1}|+|a_{n+1}-a_n|\\
+		&< 2^{-(n+2)} + 2^{-(n+1)} + 2^{-n}
+		\end{align*}
+	Inductively, we see that this pattern continues for all patterns $a_n$ and $a_n+k$ with $k \in \N$. Now, we assume two indices $m$ and $n$ such that $m>n$. We find
+		\begin{align*}
+		|a_m - a_n| &< 2^{-(m-1)} + 2^{-(m-2)}+\hdots+2^{-n} = \\
+				& 2^{-n} \underbrace{ (1+ 2^{-1}+2^{-2}+\hdots+2^{-(m-1)+n})}_\text{geometric series}
+		\end{align*}
+	We rewrite and solve the geometric series:
+		\begin{align*}
+		2^{-n}( \sum_{k=-m+n+1}^0 2^k)= 2^{-n}(2-2^{-m+n+1}) = 2^{1-n} - 2^{1-m} 
+		\end{align*}
+	We want to to prove $|2^{1-n} - 2^{1-m}| \leq 2^{1-n} + 2^{1-m} < \epsilon$. We solve the equations $2^{1-n} < \frac{\epsilon}{2}$ and $2^{1-m} < \frac{\epsilon}{2}$. The solution to this is $2- \frac{\log(\epsilon)}{\log(2)}< n,m$
+	\end{proof}
+\end{exercise}
+
 
 \begin{exercise}{2.5.10}
 \emph{Solved in class}
@@ -672,17 +763,60 @@ As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring 
 \emph{Solved in Class}
 \end{exercise}
 
+\begin{exercise}{2.6.2}
+Find lim inf and lim sup for the sequence $a_n = \frac{n}{2^{k_n}}-1$ with $k_n$ being the largest integer $k$ so that $2^k \leq n$. \\
+
+This is the sequence $0, 0, \frac{1}{2},0, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}, 0, \frac{1}{8}, \frac{2}{8}, \frac{3}{8}, \frac{4}{8}, \frac{5}{8}, \frac{6}{8}, \frac{7}{8}, 0, \hdots $. It is clear that $\lim \inf =0$ and $\lim \sup = 1$. 
+\end{exercise}
+
+
+\begin{exercise}{2.6.3}
+Find lim inf and lim sup for the sequence $1, \frac{1}{2}, 1,\frac{1}{2},\frac{1}{3},1,\frac{1}{2},\frac{1}{3}, \frac{1}{4},1,\hdots$. \\
+
+We find that $\lim \inf = 0$ and $\lim \sup =1$.
+\end{exercise}
+
+
 \begin{exercise}{2.6.4}
 \emph{Solved in class}
 \end{exercise}
+
+\begin{exercise}{2.6.5}
+If $\lim \sup a_n$ is finite, prove that $\lim \inf(-a_n) = - \lim \sup a_n$.
+	
+	\begin{proof}
+	By assumption, $\lim \sup a_n$ is equal to some $a$, such that $a \geq a_n$ for all $a_n \in \{a_n\}$. We multiply this by $-1$ to find the inverse sequence $\{-a_n\}$. Then we have $-a \leq -a_n$ for all $a_n \in \{a_n\}$. By definition, this means $-a = \lim \inf (-a_n)$. Therefore, $\lim \inf (-a_n) = - \lim \sup a_n$.
+	\end{proof}
+\end{exercise}
+
 
 \begin{exercise}{2.6.7}
 \emph{Solved in Class}
 \end{exercise}
 
+\begin{exercise}{2.6.8}
+If $\{a_n\}$ and $\{b_n\}$ are non-negative sequences and $\{b_n\}$ converges, prove that $\lim \sup a_n b_n= (\lim \sup a_n) (\lim b_n)$.
+
+	\begin{proof}
+	We need to consider two cases. First, assume $\{a_n\}$ is \emph{not} bounded above. Then $\lim \sup a_n  = \infty$. It then doesn't matter what we multply $a_n$ with, we will always get infinity provided that $b_n \neq 0$.Then $\lim \sup (a_n b_n) = \lim \sup a_n \lim b_n = \infty$. \\
+	We now consider case 2, where $a_n$ is bounded above. By Bolzano-Weierstrass we know that $a_n$ then has at least one convergent subsequence. Let $a$ be the subsequential limit of $a_n$, and let $M$ be the upper bound of $a_n$. We know then that $\lim \sup a_n$ exists and $\lim \sup a_n \leq M$. \emph{MORE WORK NEEDED ON THIS}. We note that according to the main limit theorem, if $a_n \to a$ and $b_n \to b$, $a_n b_n \to a b$. Thus $\lim \sup (a_n b_n) = \lim \sup a_n \lim b_n$.
+	\end{proof}
+\end{exercise}
+
+
 \begin{exercise}{2.6.9}
 \emph{Solved in class}
 \end{exercise}
+
+
+\begin{exercise}{2.6.12}
+Which numbers do you think are subsequential limits of $\{ \sin n\}_{n=1}^\infty$? Can you prove that your guess is correct? \\
+
+All $x \in R$ with $|x| \leq 1$ are limits for $\sin$.
+\end{exercise}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
@@ -691,7 +825,115 @@ As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{3.1.1}
+<<<<<<< HEAD
 If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2-1)$?\\
+=======
+    If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2 -1)$? \\
+    
+    $g$ is defined at point $x$ iff $x^2-1 \in [0,1]$, $0 \leq x^2-1 \leq 1$.
+    \begin{align*}
+        \begin{cases}
+            x^2-1 & x\in (-\infty,-1] \cup [1,\infty] \\
+            x^2 \leq 2 & x \in [-\sqrt{2},\sqrt{2}]
+         \end{cases}
+    \end{align*}
+    Thus $x \in [-\sqrt{2},-1] \cup [1,\sqrt{2}]$.
+\end{exercise}
+
+\begin{exercise}{3.1.2}
+What is the natural domain of the function $\frac{x^2 +1}{x^2-1}$? With this as its domain, is this function continuous? Why? \\
+
+The domain is $\R \backslash \{-1,1\}$. The function is continuous everywhere except for the points not part of the domain.
+\end{exercise}
+
+\begin{exercise}{3.1.4}
+Show that the function $f(x) = |x|$ is continuous on all of $\R$.
+
+	\begin{proof}
+	We need to find a $\delta$ such that for any $\epsilon > 0$, we have $||x| - |a|| < \epsilon$ whenever $|x-a|< \delta$.
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{3.1.5}
+Assuming $\sin$ is continous, prove that $\sin(x^3-4x)$ is continuous.
+
+	\begin{proof}
+	We know that $|sin(x)| < 1$ for all $x$.  
+	\end{proof}
+\end{exercise}
+
+\begin{exercise}{3.1.8}
+    We know $\sqrt{x}$ is continuous at all $a \geq 0$ by theorem 3.1.7. Give another proof of this fact by using only the definition of continuity. 
+    
+    \begin{proof}
+    We need to distinguish between two cases: \\
+    Case 1 - $a= 0$: $|\sqrt{x} - \sqrt{0}| = \sqrt{x} < \epsilon$ iff $0 \leq x < \epsilon^2$, $\delta=\epsilon^2$. Whenever $x<\epsilon^2$ we find that $\sqrt{x}< \epsilon$ and therefore $\sqrt{x}$ is continuous at $a=0$. \\
+    Case 2 - $a>0$: $|x-a|=|\sqrt{x}-\sqrt{a}| |\sqrt{x}+\sqrt{a}|$. This implies $|\sqrt{x}-\sqrt{a}| = \frac{x-a}{\sqrt{x}-\sqrt{a}} \leq \frac{|x-a|}{\sqrt{a}} < \epsilon$ if we have $|x-a| < \epsilon \sqrt{a}$, $\delta=\epsilon \sqrt{a}$.
+    \end{proof}
+\end{exercise}
+
+\begin{exercise}{3.1.9}
+Consider the function:
+	\begin{align*}
+	f(x) = \left\{
+     \begin{array}{lr}
+       1 & : x \geq 0,\\
+       -1 & : x < 0
+     \end{array}
+   \right.
+	\end{align*}
+Is this function continuous if its domain is $\R$? Is it continous if its domain is cut down to $\{ x\in \R: x \geq 0 \}$? How about if its domain is $\{x \in \R : x \leq 0 \}$?
+\end{exercise}
+
+\begin{exercise}{3.1.10}
+Let $f$ be a function with domain $D$ and suppose $f$ is continuous at some point $a \in D$. Prove that, for each $\epsilon >0$, there is a $\delta >0$ such that
+	\begin{align*}
+	|f(x) - f(y) | < \epsilon \text{ whenever } x,y \in D \cap (a-\delta,a+ \delta)
+	\end{align*}
+\end{exercise}
+
+\begin{exercise}{3.1.11}
+    Prove that the function
+        \[ f(x)= \begin{cases} \sin (1/x) & x\neq 0 \\ 0 & x =0 \end{cases} \]
+    is not continuous at 0.
+    
+    \begin{proof}
+    Whenever $x_n \to 0$ we have $f(x_n) \to f(0) = 0$. We are looking for a sequence $x_n \to 0$ but where $f(x_n) \not\to f(0)=0$. We choose $x_n = \frac{1}{\pi/2 + 2 \pi n}$. This goes to 0 but $\sin(\frac{\pi}{1} +2n)=1$.
+    \end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.1.12}
+    Prove that the function
+        \[ f(x)= \begin{cases} x \sin(1/x) & x \neq 0 \\ 0 & x=0 \end{cases} \]
+    is continuous at 0.
+    
+    \begin{proof}
+    We need to estimate $|f(x)-f(0)|$.
+    \[ |f(x)-f(0)| = |x \sin \left(\frac{1}{x} \right)| = |x| |\sin \left( \frac{1}{x} \right)| \leq |x| < \epsilon \]
+    Thus $|x-0|<\epsilon$ for $\delta = \epsilon$.
+    \end{proof}
+\end{exercise}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 3.2}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{3.2.2}
+    Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m>0$ such that $f(x)\geq m$ for all $x \in I$ or $f(x) \leq -m$ for all $x \in I$.
+    
+    \begin{proof}
+    Assume $f(a)>0$. We have that $f([a,b])=[m,M]$. We know that $m=\min f$, $M=\max f$. Let's prove that $m>0$. By contradiction: assume $m<0$. Value 0 is taken \emph{(non-legible)} $a_n$ intermediate value $[m, f(a)]$ which contradicts $f(x)\neq 0$. Prove for case 2 is analogous (show that $M <0$).
+    \end{proof}
+\end{exercise}
+
+>>>>>>> 0cf5dbb14e331c8ffefef5425631ab5eefd2d0ca
 
 \emph{solved in class}
 \end{exercise}
@@ -734,6 +976,222 @@ Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ 
 
 \emph{solved in class}
 \end{exercise}
+
+\begin{exercise}{3.2.3}
+    Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ and if $(x_0, y_0)$ is any point in the plane, then there is a closest point to $(x_0,y_0)$ on the graph of $f$. 
+    
+    \begin{proof}
+    Pick any point $x \in [a,b]$. Then the distance to $x_0,y_0$ is $\text{dist}\left( (x_0,y_o), (x,f(x)) \right) = \left( (x-x_0)^2 + (y_0-f(x))^2)\right)^{\frac{1}{2}}$. We must prove that this function attains its minimum value in $[a,b]$ and that if $f$ is continuous, then $\left( (x-x_0)^2 + (y_0-f(x))^2)\right)^{\frac{1}{2}}$ is also continuous on $[a,b]$. Then distance takes its minimum value there.
+    \end{proof}
+\end{exercise}
+
+
+\begin{exercise}{3.2.4}
+Find an example of a function which is continuous on a bounded (but not closed) interval $I$, but is not bounded. Then find an example of a function which is continuous and bounded on a bounded interval $I$, but does not have a maximum value. \\
+
+The function $f: (0,1) \to \R$ with $f(x)=\frac{1}{x}$ fulfills the first condition. \\
+The second condition cannot be fulfilled; according to theorem 3.2.1 (p. 65): ``If $f$ is a continuous function on a closed bounded interval $I$, then $f$ is bounded on $I$ and in fact, it assumes both a minimum and a maximum value on $I$.'' The only way to create a function which would \emph{not} assume a maximum on such an interval would be by violating the continuity. For example, the function	
+	\begin{align*}
+	f(x) =
+		\begin{cases}
+		2x & x< 1/2 \\
+		0  & x \geq 1/2
+		\end{cases}
+	\end{align*}
+fails to achieve its maximum on a bounded interval $[0,1]$. However, it does so by having a discontinuity at $x = 1/2$.
+\end{exercise}
+
+
+
+\begin{exercise}{3.2.7}
+Give an example of a function defined on the interval $[0,1]$ which does not take on every value between $f(0)$ and $f(1)$. \\
+
+In other words, we are looking for a function with a discontinuity between $[0,1]$. One example would be:
+ \begin{displaymath}
+   f(x) = \left\{
+     \begin{array}{lr}
+       x & : 0 \leq x < \frac{1}{2} \\
+       2x & : \frac{1}{2} \leq x \leq 1
+     \end{array}
+   \right.
+\end{displaymath} 
+
+\end{exercise}
+
+
+\begin{exercise}{3.2.8}
+    Show that if $f$ and $g$ are continuous functions on the interval $[a,b]$ such that $f(a)< g(a)$ and $g(b)<f(b)$, then there is a number $c \in (a,b)$ such that $f(c)=g(c)$. 
+    
+    \begin{proof}
+    We create a function $h(x)=f(x)-g(x)$. This is continuous since it is a linear combination of continuous functions, and it is defined on $[a,b]$. We know that $h(a)=f(a)-g(a)<0$ and $h(b)=f(b)-g(b)>0$.  Bt the intermediate value theorem there exists a $c$ such that $h(c)=f(c)-g(c)=0$, which implies $f(c)=g(c)$.
+    \end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.2.9}
+Let $f$ be a continuous function from $[0,1]$ to $[0,1]$.Prove that there is a point $c \in [0,1]$ such that $f(c) = c$ - that is, show that $f$ has a \emph{fixed point}. Hint: Apply the Intermediate Value Theorem to the function $g(x) = f(x)-x$. 
+	\begin{proof}
+	Let $g(x) = f(x) -x$. Since $f(x)$ is continuous, we know that $g(x)$ is also continuous. Then $g(a) \geq 0$ and $g(b) \leq 0$. By the intermediate value theorem we know that there exists some $x \in [0,1]$ such that $g(x) = 0$, which implies that $f(x)=x$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{3.2.10}
+    Use the intermediate value theorem to prove that if $n$ is a natural number, then every positive number $a$ has a positive $n$-th root.
+    
+    \begin{proof}
+    We write the function $f(x)=x^n$ which is continuous on $[0,\infty)$ since it is a polynomial. We notice $f(0)=0<a$. We know that there is a number $m\in \N$ such that $m>a$ which implies $f(m)=m^n \geq m > a$. Thus we have $f(0) < a$ and $f(m)>a$ and since $f$ is continuous on $[0,m]$, the intermediate value theorem states that there exists a $c$ such that $f(c)=c^n=a$.
+    \end{proof}
+\end{exercise}
+
+
+\begin{exercise}{3.2.11}
+Prove that a polynomial of odd degree has at least one real root. 
+
+	\begin{proof}
+	Assume $g(x): \R \to \R$ is an odd degree polynomial. Then $g$ is of the form $\sum_{k=0}^{n} a_k x^k$, where $a_k$ is the $k$-th coefficient of the polynomial an $n \in \N$ such that $n \mod 2 = 1$. We can then factor $g$ to be of the form $g(x)= x^n (a_n + \sum_{k=0}^{n-1} a_k \frac{x^k}{x^n} )$. We note that $\lim_{x \to \pm \infty} \sum_{k=0}^{n-1} a_k \frac{x^k}{x^n}  = 0$. We then consider $\lim_{x \to \pm \infty} x^n a_n$. We note that since $n$ is odd, $x^n \leq 0$ if $x \leq 0$ and $x^n \geq 0$ if $x \geq 0$. Therefore, $\lim_{x \to +\infty} x^n a_n = + \infty$ and $\lim_{x \to -\infty} x^n a_n = -\infty$, provided that $a_n > 0$. Hence, we find that $\lim_{x \to - \infty} g(x) = - \infty$ and $\lim_{x \to \infty} g(x) = \infty$. In the case of $a_n < 0$, we find that $\lim_{x \to -\infty} g(x) = \infty$ and $\lim_{x \to \infty} g(x)= -\infty$. \\
+	We know that any polynomial is continous, and the above shows that there are some $a,b \in \R$ such that $g(a) < 0$ and $g(b) > 0$. We now consider the interval $[a,b]$. By the Intermediate value theorem, we find that for every $c \in [g(a),g(b)]$ there exists some $x \in [a,b]$ such that $g(x)=c$, implying that there exists at least one $x$ such that $g(x)=0$. 
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.2.12}
+Use the Intermediate Value Theorem to prove that $f$ is a continuous function on an interval $[a,b]$ and if $f(x) \leq m$ for every $x \in [a,b)$, then $f(b) \leq m$.
+	\begin{proof}
+	Assume that $m < f(b)$, such that $f(x) \leq m < f(b)$ for all $x \in [a,b)$. We then know that $m = f(b)- \delta$ for some $\delta > 0 \in \R$. But, by properties of the real numbers, we would also have $m = f(b) - \delta < f(b) - \epsilon < f(b)$ some some $\epsilon$, such as $\epsilon = \frac{\delta}{2}$. But $f(b)- \epsilon \in [a,b)$ - contradiction: by the intermediate value theorem, since $f$ is continuous, we know that there exists some $x$ such that $f(x)= f(b) - \epsilon$, and thus we require $m \geq f(b) - \epsilon$. Hence, $f(b) \leq m$.
+	\end{proof}
+\end{exercise}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 3.3}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{3.3.1}
+Is the function $f(x)=x^2$ uniformly continuous on $(0,1)$? Justify your answer. \\
+
+Yes, it is. According to Theorem 3.3.4, if a function is continuous on a closed bounded interval $I$, it is uniformly continuous there. Assume $I=[0,1]$. Then by theorem 3.3.4, $f$ is uniformly continuous on $I$. By theorem 3.3.6, $f$ is then also uniformly continuous on $(0,1)$.
+\end{exercise}
+
+
+\begin{exercise}{3.3.2}
+    Is the function $f(x)=1/x^2$ uniformly continuous on $(0,+\infty)$ (\emph{actual text printed asks only about interval up to 1})? Justify your answer. \\
+    
+    Assume $f$ were uniformly continuous. Then it it is uniformly continuous on a subinterval, such as $(0,1)$. But $f(x)$ is \emph{not} bounded on the interval $(0,1)$. Therefore, it is not uniformly continuous. 
+\end{exercise}
+
+
+\begin{exercise}{3.3.3}
+Is the function $f(x) = x^2$ uniformly continuous on $(0, + \infty)$? Justify your answer.  \\
+
+No, it its not. As $x \to \infty$ we find that the distance between $y,y'$ gets bigger and bigger, such that $x,x'$ need to be closer and closer for $y,y'$ to still be within $\epsilon$ of each other. This means that $\delta$ does depend on $a$, so it is not uniformly continuous. 
+\end{exercise}
+
+
+\begin{exercise}{3.3.4}
+    Using only the $\epsilon-\delta$ definition of uniform continuity, prove that the function $f(x)=\frac{x}{x+1}$ is uniformly continuous on $[0,\infty)$.
+    
+    \begin{proof}
+        \begin{align*}
+        |f(x)-f(y)| &= | \frac{x}{x+1} - \frac{y}{y+1} | = |\frac{x(y+1) + y(x+1)}{(x+1)(y+1)}| \\
+         &= |\frac{xy+x-xy-y}{(x+1)(y+1)}| = \frac{|x-y|}{(x+1)(y+1)} \leq |x-y|
+         \end{align*}
+    Estimate $|f(x)-f(y)|\leq |x-y|$. Then for all $\epsilon> 0$, $\delta = \epsilon$ implies $|x-y|<\delta = \epsilon$ will result in $|f(x)-f(y)|<\epsilon$.
+    \end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.3.5}
+    In example 3.3.8 we showed that $\sqrt{x}$ is uniformly continuous on $[1,\infty)$. Show that it is also uniformly continuous on $[0,1]$. \\
+    
+    By theorem 3.3.4: if $\sqrt{x}$ is continuous on $[0,1]$, it is uniformly continuous there.
+\end{exercise}
+
+
+\begin{exercise}{3.3.6}
+Prove that if $I$ and $J$ are overlapping intervals in $\R (I \cap J \neq \emptyset$ and $f$ is a function, defined on $I \cup J$, which is uniformly continuous on $I$ and uniformly continuous on $J$, then it is also uniformly continuous on $I \cup J$. Use this and the previous exercise to prove that $\sqrt{x}$ is uniformly continuous on $[0, + \infty)$. 
+
+	\begin{proof}
+	By assumption $I \cap J \neq \emptyset$. We shall assume that the interval $I$ is the ``lower'' one of the two. Then there exists an $x$ such that $x \in I \cap J$. Since $I$ is uniformly continuous by assumption, we know that $[x-a,x]$ is uniformly continous for all $(x-a)\in I$. Likewise we know that $[x,x+b]$ is uniformly continous for all $(x+b)\in J$ since $J$ is uniformly continous by assumption. This implies that the whole interval $[x-a, x+b]$ is uniformly continous. \\
+	To prove that $\sqrt{x}$ is uniformly continuous, we assume we are given some $\epsilon >0$. For this, we pick $\delta=\epsilon^2$. We note that $|\sqrt{x} - \sqrt{y}| \leq |\sqrt{x} + \sqrt{y}|$. If $|x-y|< \delta = \epsilon^2$, we find:
+		\begin{align*}
+		|\sqrt{x} - \sqrt{y}|^2 \leq |\sqrt{x} - \sqrt{y}| |\sqrt{x}+\sqrt{y}| = |x-y| < \epsilon^2
+		\end{align*}
+	This guarantees that $|\sqrt{x} - \sqrt{y}|<\epsilon$, proving that $\sqrt{x}$ is uniformly continous on $(0,\infty)$.
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.3.8}
+Let $f$ be a function defined on an interval $I$ and suppose that there are positive constants $K$ and $r$ such that 
+	\[ |f(x)-f(y)| \leq K |x-y|^r \text{ for all } x,y \in I. \]
+Prove that $f$ is uniformly continuous.
+
+	\begin{proof}
+	According to assumption, we find that $|f(x)-f(y)| \leq K |x-y|^r$ for all $x,y \in I$. This implies that if $K | x-y|^r < \epsilon$, $|f(x)-f(y)|<\epsilon$. Thus we find that we need to solve $K |x-y|^r < \delta \leq \epsilon$, and find that for any given $\epsilon$, we pick a $\delta$ such that $\delta = \sqrt[r]{\frac{\epsilon}{K}}$. Since $\delta$ does not depend on where $x,y$ are in the interval, $f$ is uniformly continuous.
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{3.3.9}
+Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly continuous on $(0,1)$? Justify your answers. 
+	
+	\begin{proof}
+	Since $\sin$ is a trigonometric function, it is continuous on its whole domain. Likewise, $\sin(1/x)$ is continous since it is merely a composition of two elementary functions. \\
+	However, $\sin(1/x)$ is \emph{not} uniformly continous. The reason for this is that the as $x \to 0$ the function oscillates between $-1$ and $1$. Thus, a $\delta$ that would work at one point in the function will can produce potentially a difference $|f(x)-f(y)|=2$ for $x,y$ sufficiently close to 0. Hence, the functions is not uniformly continous.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{3.3.10}
+    Is the function $f(x)=x \sin(1/x)$ uniformly continuous on $(0,1)$? Justify your answer. \\
+    
+    \begin{proof}
+    Method 1: $f(1)=\sin(1)$. It is still uniformly continuous. $\lim_{x \to 0} f(x)= \lim_{x \to 0} x \sin(1/x) = 0$. By squeeze theorem:
+		\begin{align*}
+		\underbrace{0}_\text{$\to$ 0} \leq \overbrace{|x \sin \left( \frac{1}{x} \right) |}^\text{$\to$ 0 by squeeze thrm.} \leq \underbrace{|x|}_\text{$\to$ 0}
+		\end{align*}		       
+         
+    If we define $f(0)=0$, $f(1)=\sin(1)$, then $f(x)$ becomes continuous on $[0,1]$. then by theorem 3.3.4, $f$ is uniformly continuous on $[0,1] \implies f$ is uniformly continuous on $(0,1)$.\\
+    Method 2: 
+        \[ |f(x)-f(y)| = |x \sin(1/x) - y \sin(1/y)| \leq |x \sin(1/x)| + |y \sin(1/y)| \leq |x|+|y| \]
+    Then for all $\epsilon>0$ we have $|f(x)-f(y)|<\epsilon$ if $x,y \in (0,\frac{\epsilon}{2}]$. If now $x,y > \epsilon/3$, then there exists a $\delta>0$ such that $|f(x)-f(y)| <\epsilon$ whenever $|x-y| < \delta$: 
+        \[ |f(x)-f(y)| \leq |x|+|y| < \frac{\epsilon}{3} + |x| + |y-x| < \frac{\epsilon}{3} + \frac{\epsilon}{3}+ \delta < \epsilon \]
+    if $\delta< \frac{\epsilon}{3}$. Then we choose $\delta= \min(\frac{\epsilon}{3}, \delta_0)$.
+    \end{proof}
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 3.4}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 4.1}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 4.2}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
