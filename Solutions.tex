@@ -651,7 +651,13 @@ Tell which of the following sequences are non-increasing, non-decreasing, bounde
 
 
 \begin{exercise}{2.4.2}
-\emph{Solved in Class}
+	Prove that the sequence ${x_n}$ with $x_1=1$ and $x_{n+1} = \sqrt{x_n + 1}$ converges and decide what number it converges to.
+	\begin{proof}
+		The first few terms of the sequence: $1, \sqrt{2}, \sqrt{1+\sqrt{2}}, \sqrt{1+\sqrt{1+\sqrt{2}}}, \hdots$. We see that $x_n$ is both increasing an bounded:
+			\[ x_{n+1} = \underbrace{\sqrt{1+\sqrt{1+ \hdots \sqrt{1+\sqrt{2}}}}}_\text{$n$ terms} > \underbrace{\sqrt{1+\sqrt{1+ \hdots \sqrt{1+\sqrt{2}}}}}_\text{$n-1$ terms} = x_n \]
+			Then $x_n$ is increasing for all $n \in \N$. We prove that $x_n < 2$ by induction. We have $x_1=1<2$. Then, if $x_k<2$, $x_{k+1} = \sqrt{1+x_k}< \sqrt{1+2}= \sqrt{3}<2$. Thus by the monotone convergence theorem, $x_n$ converges and is bounded by 2. \\
+		Finding the limit: We solve $a=\sqrt{1+a}$, which implies $a^2 - a -1 =0$. The solutions to this are $a_1 = \frac{1+\sqrt{5}}{2}$, $a_2= \frac{1-\sqrt{5}}{2}$. The correct limit is $a_1$, since $a_2 < 0$.
+	\end{proof}		
 \end{exercise}
 
 \begin{exercise}{2.4.3}
@@ -659,6 +665,11 @@ If $a_1 = 1$ and $a_{n+1} = (1-2^{-n})a_n$ , prove that $\{a_n\}$ converges.
 	\begin{proof}
 We notice that $2^{-n}$ is monotone and converges to $0$. Therefore we see that $1-2^{-n}$ is also monotone, converging to $1$. The whole term then is monotone and non-increasing. It is also bounded by 0 and 1. Therefore, by the monotone convergence theorem, $a_n$ converges.
 	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{2.4.4}
+	
 \end{exercise}
 
 
@@ -1147,6 +1158,155 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \textsc{\Large Section 4.2}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 4.3}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{4.3.1}
+\end{exercise}
+
+
+\begin{exercise}{4.3.2}
+\end{exercise}
+
+\begin{exercise}{4.3.3}
+\end{exercise}
+
+\begin{exercise}{4.3.4}
+\end{exercise}
+
+\begin{exercise}{4.3.5}
+\end{exercise}
+
+\begin{exercise}{4.3.6}
+\end{exercise}
+
+\begin{exercise}{4.3.7}
+\end{exercise}
+
+
+\begin{exercise}{4.3.8}
+\end{exercise}
+
+
+\begin{exercise}{4.3.9}
+\end{exercise}
+
+
+\begin{exercise}{4.3.10}
+\end{exercise}
+
+
+\begin{exercise}{4.3.11}
+\end{exercise}
+
+\begin{exercise}{4.3.12}
+\end{exercise}
+
+
+\begin{exercise}{4.3.13}
+\end{exercise}
+
+
+\begin{exercise}{4.3.14}
+\end{exercise}
+
+\begin{exercise}{4.3.15}
+\end{exercise}
+
+\begin{exercise}{4.3.16}
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 4.4}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{4.4.1}
+\end{exercise}
+
+
+\begin{exercise}{4.4.2}
+\end{exercise}
+
+
+
+\begin{exercise}{4.4.3}
+\end{exercise}
+
+
+
+\begin{exercise}{4.4.4}
+\end{exercise}
+
+
+
+
+\begin{exercise}{4.4.5}
+\end{exercise}
+
+
+
+\begin{exercise}{4.4.6}
+    Find the limit $\lim_{x \to \infty} \frac{\ln x}{x^r}$ where $r > 0$. \\
+    
+    This limit is indeterminate. Use L'H\^{o}pital's rule. We find $\frac{d}{dx} \ln x = 1/x$ and $\frac{d}{dx} x^r = \frac{r\, x^r}{x}$.
+\end{exercise}
+
+
+
+\begin{exercise}{4.4.7}
+\end{exercise}
+
+
+\begin{exercise}{4.4.8}
+\end{exercise}
+
+
+\begin{exercise}{4.4.9}
+\end{exercise}
+
+
+\begin{exercise}{4.4.10}
+\end{exercise}
+
+
+\begin{exercise}{4.4.11}
+\end{exercise}
+
+\begin{exercise}{4.4.12}
+\end{exercise}
+
+
+\begin{exercise}{4.4.13}
+\end{exercise}
+
+
+\begin{exercise}{4.4.14}
+\end{exercise}
+
+\begin{exercise}{4.4.15}
+\end{exercise}
+
+\begin{exercise}{4.4.16}
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textsc{\Large Section 5.1}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
