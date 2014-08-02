@@ -3,15 +3,22 @@
 % Head down to where it says "Start here"
 % --------------------------------------------------------------
 
-\documentclass[12pt]{article}
+\documentclass[12pt]{book}
 
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amsthm,amssymb,hyperref}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
+
+\hypersetup{
+    bookmarks=true,
+    unicode=true,
+    pdftitle={Michael Senter}
+}
+
 
 \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
@@ -39,9 +46,12 @@
 
 \maketitle
 
-\begin{center}
-\textsc{\Large Section 1.1}
-\end{center}
+\part{Single Variable - 3210}
+
+
+\chapter{The Real Numbers}
+
+\section{Sets and Functions}
 
 \begin{exercise}{1.1.1} %You can use theorem, exercise, problem, or question here.  Modify x.yz to be whatever number you are proving
 If $a, b \in \mathbb{R}$ and $a < b$, give a description in set theory notation for each of the intervals $(a, b)$, $[a, b]$, $[a, b)$, and $(a, b]$ (see Example 1.1.1).
@@ -173,10 +183,12 @@ The above conditions are fulfilled for a function $f(x)=x$ with $A=B=[0,10]$, an
 \emph{Solved in Class}
 \end{exercise}
 
+
+\section{The Natural Numbers}
+\section{Integers and Rational Numbers}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 1.4}
-\end{center}
+\section{The Real Numbers}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -219,9 +231,7 @@ Assume now that $A$ does not have a largest number. By the completeness theorem 
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 1.5}
-\end{center}
+\section{Sup and Inf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{1.5.1}
@@ -356,10 +366,10 @@ Prove (d) of Theorem 1.5.10. \\
 \end{exercise}
 
 
+
+\chapter{Sequences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.1}
-\end{center}
+\section{Limits of Sequences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{2.1.1}
@@ -437,9 +447,7 @@ If $a_n \to 0$, this means that $a_n < \epsilon$ for any $\epsilon > 0$. We mult
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.2}
-\end{center}
+\section{Using the Definition of Limit}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -520,9 +528,7 @@ Likewise, we can say that $b$ is a lower bound for $a_n$ such that $b \leq \inf 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.3}
-\end{center}
+\section{Limit Theorems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{2.3.1}
@@ -635,9 +641,7 @@ As long as $n < \frac{1}{2} n(n-1) \epsilon^2$ this inequality holds, requiring 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.4}
-\end{center}
+\section{Monotone Sequences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{2.4.1}
@@ -699,9 +703,7 @@ Prove Part (c) of Theorem 2.4.7. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.5}
-\end{center}
+\section{Cauchy Sequences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{2.5.1}
@@ -765,9 +767,7 @@ Prove that a sequence which satisfies $|a_{n+1} - a_n| < 2^{-n}$ for all $n$ is 
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 2.6}
-\end{center}
+\section{lim inf and lim sup}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{2.6.1}
@@ -828,15 +828,12 @@ All $x \in R$ with $|x| \leq 1$ are limits for $\sin$.
 
 
 
-
+\chapter{Continuous Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 3.1}
-\end{center}
+\section{Continuity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{3.1.1}
-<<<<<<< HEAD
 If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2-1)$?\\
 =======
     If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2 -1)$? \\
@@ -929,25 +926,8 @@ Let $f$ be a function with domain $D$ and suppose $f$ is continuous at some poin
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 3.2}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{exercise}{3.2.2}
-    Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m>0$ such that $f(x)\geq m$ for all $x \in I$ or $f(x) \leq -m$ for all $x \in I$.
-    
-    \begin{proof}
-    Assume $f(a)>0$. We have that $f([a,b])=[m,M]$. We know that $m=\min f$, $M=\max f$. Let's prove that $m>0$. By contradiction: assume $m<0$. Value 0 is taken \emph{(non-legible)} $a_n$ intermediate value $[m, f(a)]$ which contradicts $f(x)\neq 0$. Prove for case 2 is analogous (show that $M <0$).
-    \end{proof}
-\end{exercise}
-
->>>>>>> 0cf5dbb14e331c8ffefef5425631ab5eefd2d0ca
-
-\emph{solved in class}
-\end{exercise}
 
 
 \begin{exercise}{3.1.8}
@@ -969,18 +949,18 @@ Prove that the function (piecewise function) is continuous at 0.\\
 \emph{solved in class}
 \end{exercise}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 3.2}
-\end{center}
+\section{Properties of Continuous Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{3.2.2}
-Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m >0$ such that $f(x)\geq m$ for all $x\in I$ or $f(x) \leq -m$ for all $x \in I$.\\
-
-\emph{solved in class}
+    Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m>0$ such that $f(x)\geq m$ for all $x \in I$ or $f(x) \leq -m$ for all $x \in I$.
+    
+    \begin{proof}
+    Assume $f(a)>0$. We have that $f([a,b])=[m,M]$. We know that $m=\min f$, $M=\max f$. Let's prove that $m>0$. By contradiction: assume $m<0$. Value 0 is taken \emph{(non-legible)} $a_n$ intermediate value $[m, f(a)]$ which contradicts $f(x)\neq 0$. Prove for case 2 is analogous (show that $M <0$).
+    \end{proof}
 \end{exercise}
-
 
 \begin{exercise}{3.2.3}
 Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ and if $(x_0, y_0)$ is any point in the plane, then there is a closest point to $(x_0,y_0)$ on the graph of $f$.\\
@@ -1078,9 +1058,7 @@ Use the Intermediate Value Theorem to prove that $f$ is a continuous function on
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 3.3}
-\end{center}
+\section{Uniform Continuity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{3.3.1}
@@ -1182,34 +1160,26 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 3.4}
-\end{center}
+\section{Uniform Convergence}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-
+\chapter{The Derivative}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 4.1}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 4.2}
-\end{center}
+\section{Limits of Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 4.3}
-\end{center}
+\section{The Derivative}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Mean Value Theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}{4.3.1}
@@ -1268,9 +1238,7 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 4.4}
-\end{center}
+\section{L'Hopital's Rule}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -1343,12 +1311,209 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \begin{exercise}{4.4.16}
 \end{exercise}
 
+
+
+\chapter{The Integral}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\textsc{\Large Section 5.1}
-\end{center}
+\section{Definition of the Integral}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Existence and Properties of the Integral}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Fundamental Theorems of Calculus}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Logs, Exponentials, Improper Integrals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Infinite Series}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Convergence of Infinite Series}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tests for Convergence}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Absolute and Conditional Convergence}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Power Series}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Taylor's Formula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\part{Multivariable - 3220}
+
+
+
+\chapter{Convergence in Euclidean Space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Euclidean Space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Convergent Sequences of Vectors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Open and Closed Sets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Compact Sets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Connected Sets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\chapter{Functions on Euclidean Space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Continuous Functions of Several Variables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Properties of Continuous Functions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sequences of Functions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Linear Functions, Matrices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dimension, Rank, Lines, and Planes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\chapter{Differentiation in Several Variables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Partial Derivatives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Differential}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Chain Rule}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Applications of the Chain Rule}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Taylor's Formula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Inverse Function Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Implicit Function Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\chapter{Integration in Several Variables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integration over a Rectangle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Jordan Regions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Integral over a Jordan Region}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Iterated Integrals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Change of Variables Formula}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\chapter{Vector Calculus}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{1-forms and Path Integrals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Change of Variables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Differential Forms of Higher Order}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Green's Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Surface Integrals and Stoke's Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gauss's Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Chains and Cycles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
