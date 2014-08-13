@@ -1356,12 +1356,178 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{exercise}{6.4.2}
+Prove that $f(x) = \sum_{k=1}^\infty \frac{sin (kx)}{2^k} $ is continuous on the entire real line.
+
+\begin{proof}
+    We use the Ratio test to show that the sum converges on the entire real line:
+        \begin{align*}
+        \frac{\sin\left( (k+1)x \right)}{2^k 2} \frac{2^k}{\sin(kx)} = \frac{\sin \left(kx+x\right)}{2 \sin(kx)} \leq \frac{1}{2}.
+        \end{align*}
+    This proves convergence on all of $\R$. We notice that $\sin(kx)2^{-k} \leq 2^{-k}$. Since $\sum_{k=0}^\infty 2^{-k} = 2$, we know by the Weierstrass M-test that $\sum_{k=1}^\infty \frac{sin (kx)}{2^k}$ converges uniformly on all $\R$. This proves that this sum is continuous on the entire real line.
+\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{6.4.4}
+Radius of convergence of $\sum_{k=1}^\infty \frac{1}{k 3^k}x^k$. \\
+
+We have $c_k = (k 3^k)^{-1}$. We proceed to take the $k$-th root: 
+    \[ (k 3^k)^{-1/k} = \frac{1}{3} \frac{1}{\sqrt[k]{k}} = 3^{-1}. \]
+We then solve using the formula for the radius of convergence:
+    \begin{align*}
+    R = \frac{1}{\lim \sup \sqrt[k]{c_k}} = \frac{1}{\lim \sup 3^{-1}} = 3.
+    \end{align*}
+ Therefore, the radius of convergence is 3.
+\end{exercise}
+
+
+
+\begin{exercise}{6.4.5}
+Radius of convergence of $\sum_{k=0}^\infty \frac{(-1)^{k-1}}{k+1} (x+2)^k$.  \\
+
+We have $c_k= \frac{(-1)^{k-1}}{k+1}$. We take the $k$-th root:
+    \begin{align*}
+    (c_k)^{1/k} &=  \left( \frac{(-1)^{k-1}}{k+1} \right)^{\frac{1}{k}} = \left(- \frac{(-1)^k}{k+1} \right)^{\frac{1}{k}} \\
+                &= - \frac{(-1)^{k/k}}{\left(k+1\right)^{1/k}} = - \frac{-1}{\left(k+1\right)^{1/k}} = \frac{1}{\left(k+1\right)^{1/k}}.
+    \end{align*}
+    
+    We then use the formula for the radius of convergence:
+    \begin{align*}
+    R = \frac{1}{\lim \sup \sqrt[k]{c_k}} = \frac{1}{\lim \sup \left(k+1\right)^{-1/k}} = \frac{1}{1} = 1.
+    \end{align*}
+    And hence, the radius of convergence is 1.
+\end{exercise}
+
+
+
+\begin{exercise}{6.4.8}
+Radius of convergence of $\sum_{k=0}^\infty 2^k x^{2k}$.  \\
+
+We have $c_k= 2^k$. We then take the $k$-th root: $\left( 2^k \right)^{\frac{1}{k}} =2^{k/k} = 2$. We use the formula for the the radius of convergence: 
+    \begin{align*}
+      R = \frac{1}{\lim \sup \sqrt[k]{c_k}} = \frac{1}{\lim \sup 2} = \frac{1}{2}.
+    \end{align*}
+Thus we can see that the radius of convergence is $1/2$.
+\end{exercise}
+
+
+
+\begin{exercise}{6.4.10}
+Let $\{a_k\}$ be a non-increasing sequence of non-negative numbers which converges to 0. Use theorem 6.3.2 to show that the power series $\sum_{k=0}^\infty (-1)^{k+1} a_k x^k$ converges uniformly on $[0,1]$, and hence converges to a continuous function on this interval.
+
+    \begin{proof}
+    According to theorem 6.3.2, the series $\sum_{k=0}^\infty \left(-1\right)^{k+1} a_k$ converges provided that $\{a_k\}$ is a non-increasing sequence of non-negative numbers. We notice that this power series is uniformly Cauchy, since the sequence of partial sums is uniformly Cauchy according to the theorem. Therefore, this series converges uniformly. \\
+    Notice that for all $x \in [0,1]$, $\left(-1\right)^{k+1} a_k x^k \leq \left(-1\right)^{k+1} a_k$. Therefore, we see that the series $\sum_{k=0}^\infty (-1)^{k+1} a_k x^k$  is bounded by $\sum_{k=0}^\infty (-1)^{k+1} a_k$, which by the Weierstrass M-test implies that $\sum_{k=0}^\infty (-1)^{k+1} a_k x^k$  is uniformly convergent on $[0,1]$.
+    \end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{6.4.12}
+Prove that if $f(x)$ is the sum of a power series centered at $a$ and with radius of convergence $R$, then $f$ is infinitely differentiable on $(a-R,a+R)$ - that is, its derivative of order $m$ exists on this interval for all $m \in \N$.
+
+   \begin{proof}
+   Suppose that $f(x) = \sum_{k=0}^\infty c_k \left( x-a\right)^k$. Then, according to theorem 6.4.12, $f(x)$ is differentiable on $\left(a-R, a+R\right)$ and its derivative is $f'(x) = \sum_{k=1}^\infty k c_k \left( x-a\right)^{k-1} $. This means we are left with a $k-1$ degree differentiable polynomial. By induction we see that we can then integrate this power series again. Since we take $k$ to infinity, this means we can take an infinite number of derivatives. Additionally, any polynomial has an infinite number of derivatives: the $k$th derivative is a constant, and all others are zero.
+   \end{proof}
+\end{exercise}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Taylor's Formula}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{exercise}{6.5.1}
+Prove that $\lim \frac{x^n}{n!} = 0$ for all $x$.
+
+\begin{proof}
+    Since we take the limit as $n \to \infty$, $n$ will take on every value of $\N$. We assume that $x \in \R$. Therefore, at some point we find have that $x \leq n$; at the first point this occurs, we then consider the rational expression $\frac{x}{n} C$ where $C$ is some constant of the form $\frac{x^{n-1}}{\left(n-1\right)!}$. If we consier the next term in the sequence, $\frac{x\, x}{n\, (n+1)}C$, we find that $n \left(n+1\right)\geq x\,x$, since $x\leq n$. Therefore, it is obvious that $\lim_{n \to \infty} \frac{x^n}{n!}=0$ for all $x$.  
+\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{6.5.3}
+Use Taylor's formula to estimate the error if $\cos(x)$ is approximated by $1-\frac{x^2}{2}$ on the interval $[-0.1,0.1]$. \\
+
+We estimate as follows:
+    \begin{align*}
+       \frac{x^4}{4!} \leq \frac{0.1^4}{4!} \leq 5\times10^{-6}
+    \end{align*}
+    Thus we can bound the error by $5\times10^{-6}$.
+\end{exercise}
+
+
+
+\begin{exercise}{6.5.5}
+Taylor's formula for $f(x) = \sqrt{ t+x}$ with $a=0$. \\
+
+We begin by taking the first few derivatives of $f(x) = \sqrt{t+x}$.
+    \begin{align*}
+    f'(x) &= \frac{1}{2 \sqrt{t + x}} \\
+    f''(x) &= - \frac{1}{4 \left(t + x\right)^{\frac{3}{2}}} \\
+    f^{(3)} (x) &= \frac{3}{8 \left(t + x\right)^{\frac{5}{2}}} \\
+    f^{(4)} (x) &= - \frac{15}{16 \left(t + x\right)^{\frac{7}{2}}}
+    \end{align*}
+    
+    Then the Taylor formula for the above function for the first 5 terms, with remainder, at $a=0$ will be as follows:
+    \begin{align*}
+    f(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x-a)^n \\
+    &\approx \sqrt{t} + \frac{1}{2 \sqrt{t}} x - \frac{1}{4 t^{\frac{3}{2}}}\frac{1}{2} x^2 + \frac{3}{8 t^{\frac{5}{2}}}  \frac{1}{3!}  x^3 - \frac{15}{16 t^{\frac{7}{2}}} \frac{1}{4!}  x^4 + \frac{105}{32 \left(c + t\right)^{\frac{9}{2}}} \frac{1}{5!} x^5 \\
+    &= \sqrt{t} + \frac{x}{2 \sqrt{t}} - \frac{1}{8 t^{\frac{3}{2}}} x^2 + \frac{1}{16 t^\frac{5}{2}} x^3 - \frac{5}{128 t^\frac{7}{2}} x^4 + \frac{7}{256 \left(c+t\right)^\frac{9}{2}} x^5 \,.
+    \end{align*}
+\end{exercise}
+
+
+
+
+\begin{exercise}{6.5.7}
+Taylor's formula for $f(x) =\ln (1+x)$ with $a=0$.  \\
+
+We again begin by taking the first four derivatives of $f$.
+    \begin{align*}
+    f(x) &= \ln (1+x) \\
+    f'(x) &= \frac{1}{x + 1} \\
+    f''(x) &= - \frac{1}{\left(x + 1\right)^{2}} \\
+    f^{(3)} (x) &= \frac{2}{\left(x + 1\right)^{3}} \\
+    f^{(4)} (x) &= - \frac{6}{\left(x + 1\right)^{4}}
+    \end{align*} 
+    Then the Taylor formula for the above function for the first 5 terms, with remainder, at $a=0$ will be as follows: 
+    \begin{align*}
+    f(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x-a)^n \\ 
+    &\approx x - \frac{1}{2} x^2 + \frac{2}{6} x^3 - \frac{6}{24} x^4 + \frac{24}{120\left(c+1\right)^5} x^5 \\
+    &= x - \frac{1}{2} x^2 + \frac{1}{3} x^3 - \frac{1}{4} x^4 + \frac{1}{5 \left(c+1\right)^5} x^5 \,.
+    \end{align*}
+\end{exercise}
+
+
+
+\begin{exercise}{6.5.11}
+If $f$ is an infinitely differentiable function on $(a-r,a+r)$ and there is some constant $K$ such that $\left| f^{(n)} (x)\right| \leq K \frac{n!}{r^n}$ for all $n \in \N$ and all $x \in (a-r,a+r)$, then the Taylor series for $f$ at $a$ converges to $f$ on $(a-r,a+r)$. \\
+
+This appears to be a backwards reasoning argument. We that if $f$ is a convergent taylor series on $\left(a-R, a+R\right)$, then it is infitinely differentiable on that same interval.
+
+We can see that if there is some constant $K$ such that $\left| f^{(n)} (x)\right| \leq K \frac{n!}{r^n}$ for all $n \in \N$ and all $x \in (a-r,a+r)$, then $f^{(n)}(x)$ is always bounded. 
+\end{exercise}
+
+
+
+\begin{exercise}{6.5.13}
+If $g(x)=e^{-1/x^2}$ for $x \neq 0$ and $g(0)=0$, show that $g$ is infinitely differentiable on the entire real line but all of its derivatives at 0 are 0. Argue that this means that $g$ cannot be analytic at 0. \emph{Hint: Use the previous exercise to help compute the derivatives of $g$ at 0.} \\
+
+First note that $g'(x)= 2 \frac{e^{-1/x^2}}{x^3}$. The Taylor expansion of $e^{-1/x^2}$ centered around $a$ is of the form $\sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!} \left(x-a\right)^k$. This is a power series where $c_k=\frac{f^{(k)}(a)}{k!}$ and as such is differentiable according to theorem 6.4.12, and infinitely so (cf. exercise 6.4.12). Likewise, $e^{-1/x^2}$ is infinitely differentiable, and all of its diefferentials are clearly defined everywhere except at $x=0$. This is due to the fact that all $n$-th derivatives of $g$ are sums of the form $\sum_{k=1}^n a_k e^{-1/x^2} x^{-(n+k+1)}$. Therefore, analytically $g(x)$ is not defined at 0.
+
+Remember however that $\lim_{x \to 0} \frac{e^{-1/x^2}}{x^n}=0$. Therefore, if we define $g(x)$ and and all of its derivatives to be 0 at 0, $g(x)$ is infinitely differentiable.
+\end{exercise}
+
+
+%%--------------------------------
+%%--------------------------------
 
 \part{Multivariable - 3220}
+
+%%--------------------------------
+%%--------------------------------
 
 
 
@@ -1371,9 +1537,43 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{exercise}{7.1.5}
+Prove that $\left| |x| - |y| \right| \leq \left| x- y \right|$.
+
+    \begin{proof}
+    We note that $x = x-y+y$. This implies that $\left|x\right| = \left| x - y + y\right| $. We use the triangle inequality:\
+        \begin{align*}
+        \left| x - y + y \right| &\leq \left|x-y\right| + |y| &&\text{which is equivalent to}\\
+        \left| x \right| &\leq \left|x-y\right| + |y| &&| - |y| \\
+        \left| x \right| - \left| y \right| &\leq \left| x- y \right|
+        \end{align*}
+    This proves the result.
+    \end{proof}
+\end{exercise}
+
+
+\begin{exercise}{7.1.6}
+Prove that equality holds in the Cauchy-Schwartz inequality if and only if one of the vectors $\vec{u}, \vec{v}$ is a scalar multiple of the other.
+    
+    \begin{proof}
+    Let $\vec{v}$ be a scalar multiple of $\vec{u}$, such that $\vec{v} = \alpha \vec{u}$. Then 
+        \begin{align*}
+        \vec{u} \cdot \vec{v} = \vec{u} \cdot \alpha \vec{u} &= \alpha u_1^2 + \alpha u_2^2 + \hdots + \alpha u_n^2 \\
+         &= \alpha \left( u_1^2 + \hdots + u_n^2 \right) \\
+         &= \alpha \left( \sqrt{ \sum_{i=1}^n u_i^2 } \right)^2 = \alpha \left| \vec{u} \right| ^2.
+        \end{align*}
+    Therefore, we find that $\left| \vec{u} \right|^2 \left|\vec{v}\right|^2 = \left|\vec{u}\right| \alpha \left|\vec{u}\right|^2= \alpha \left| \vec{u} \right|^2$, and hence, equality holds. The proof for the case where $\vec{u}$ is a scalar multiple of $\vec{v}$ is analogous.
+    \end{proof}
+\end{exercise} 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Convergent Sequences of Vectors}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1381,13 +1581,166 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{exercise}{7.3.1}
+Prove that the set $\{(x, y) \in \R^2 : y > 0\}$ is an open subset of $\R^2$. 
+
+    \begin{proof}
+    According to theorem 7.3.10, a set $A\in \R^d$ is closed if and only if every convergent sequence in $A$ converges to a point $x \in A$. Consider the sequence $\{\frac{1}{n}, \frac{1}{n} \}$. This sequence is clearly contained in the set $A = \{(x, y) \in \R^2 : y > 0\}$. However, $\{\frac{1}{n}, \frac{1}{n} \} \to (0,0)$, and $(0,0) \notin A$. Therefore, the set $A$ is not closed. Since $A$ is not closed, $A$ is an open set.
+    \end{proof}
+\end{exercise}
+
+
+\begin{exercise}{7.3.4}
+Find the interior, closure, and boundary for the set 
+\[ A= \{(x, y) \in \R^2 : |(x, y)| < 1\} \cup \{(x, y) \in \R^2 : y = 0, −2 < x < 2\}. \]
+The solution is as follows:
+    \begin{align*}
+    A^\circ &= \{(x, y) \in \R^2 : |(x, y)| < 1\} \cup \{(x, y) \in \R^2 : y = 0, −2 < x < 2\}\\
+    \overline{A} &= \{ (x,y) \in \R^2 : |(x,y)| \leq 1 \lor y=0, |x| \leq 2 \} \\
+    \partial A &= \{ (x,y) \in \R^2: |(x,y)| = 1 \lor x=-2, y=0  \lor  x=2, y=0  \}
+    \end{align*}
+\end{exercise}
+
+
+\begin{exercise}{7.3.6}
+Let $A$ be an open set and $B$ a closed set. If $B \subset A$, prove that $A \backslash B$ is
+open. If $A \subset B$, prove that $B \backslash A$ is closed.
+
+\begin{proof}
+    \textbf{Case 1:} $B\subset A$. Since $B$ is a closed set, for any sequence $\{x_n\} \in B$, there is some $L_i \in B$ such that $\{x_n\} \to L_i$. Since $B \subset A$, we know that $\{x_n\}, L_i \in A$ for all $n,i \in \N$. If $B$ is a proper subset of $A$, then for every $L_i$ there exists some sequence $\{y_n\}$ such that $\{y_n\} \in A\backslash B$ and $\{y_n\} \to L_i$. Since $L_i \in B$, we find that $L_i \notin A\backslash B$. But then not all limit points of $A \backslash B$ are actually in $A \backslash B$, thus showing that $A \backslash B$ is an open set. \\
+    \textbf{Case 2:} $A \subset B$. Since $A$ is an open set, $\exists L_i, \{x_n\}$ such that $L_i \in B$, $\{x_n\} \in A$ and $\{x_n\} \to L_i$. Consider now the set $B \backslash A$. Since $L_i \in B$, but $L_i \notin A$, we find that $L_i \in B \backslash A  \, \, \forall i$. Therefore, $B \backslash A$ is a closed set.
+\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{7.3.9}
+If $A$ and $B$ are subsets of $\R^d$ show that $\overline{A \cup B} = \overline{A} \cup \overline{B}$. Is the analogous statement true for $A \cap B$? Justify your answer. \\
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.9\textwidth]{Sets}
+  \caption{Sets for exercise 7.3.9 and 7.3.15.}
+\end{figure}
+
+As is evident from Figure 1, this holds only in the first case. For analytical purposes, assume $x \in \overline{A}$. Then we have that $x \in \overline{A} \cup \overline{B}$. \\
+This is not true for intersections. Consider the case of $A= (-\infty, 0)$, $B= (0, \infty)$ in $\R$. Then $A \cap B = \emptyset$, but  $0 \in \overline{A \cap B}$. Hence $\overline{A \cap B} \neq \overline{A} \cap \overline{B}$.
+\end{exercise}
+
+
+\begin{exercise}{7.3.15}
+If $E$ is a subset of $\R^d$, show that $(\overline{E})^c = (E^c)^\circ$. \\
+
+As is evident from Figure 1, this identity holds.
+\end{exercise}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Compact Sets}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{exercise}{7.4.1}
+If $K$ is a compact subset of $\R^d$ and $U_1 \subset U_2 \subset \hdots \subset U_k \subset \hdots$ is a
+nested upward sequence of open sets with $K \subset \bigcup_k U_k$ , then prove that $K$ is contained in one of the sets $U_k$.
+
+
+
+\begin{proof}
+    This seems obvious. Since $U_K$ is a nested upward sequence, we have that $U_i \subset U_{i+1}$ for all $i\in N$. If $K \subset \bigcup_k U_k$, then $\forall x_i \in K$ we find that $x_i \in \bigcup_k U_k$. Since $K$ is a compact set, it has a finite subcoverage. This means, there is a finite $n \in N$ such that $\bigcup_n U_n \subset K$. Therefore, there exists a finite $m \in N$ such that $K \subset \bigcup_{n+m} U_{m+n}$.  
+\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{7.4.4}
+Prove that if $K$ is a compact subset of $\R^d$, then $K$ contains a point of maximal norm. That is, there is a point $x_1 \in K$ such that 
+    \[ |x| \leq |x_1| \text{ for all } x \in K. \]
+\emph{Hint:} set $m =\sup\{ |x| : x \in K \}$  and consider the open balls $B_{m-1/n}(0)$.
+    
+    \begin{proof}
+    A continuous image of a compact space is compact. Consider the space $K \in \R^d$, and let $f:K \to \R$ such that $f(x)=|x|$. This is a continuous function since the space is compact. As a continuous, real valued function, it attains both a maximum and a minimum per 3.2.1. Therefore, there exists an $x_i \in K$ such that $f(x_i) \geq f(x_k)$ for all $k \in \N$. This proves that $\exists \,x : |x| \geq |x_i|$ for all $i \in \N$.
+    \end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{7.4.6}
+Prove that the conclusion of the previous exercise also holds if we only assume that $K$ is a closed subset of $\R^d$. \emph{Hint:} replace $K$ by its intersection with a suitably large closed ball centered at $y$.
+
+    \begin{proof}
+    Let $f(x): K \to \R$ such that $f(x) = |x-y|$ where $y \in \R^d$. Since $K$ is a compact set imaged into a compact set, we know that $f$ is a continuous function. As such, this function attains both a minimum and a maximum per 3.2.1. Therefore, there exists a point $x_i$ such that $f(x_i) \leq f(x_k)$ for all $k \in \N$, which proves that there exists a point $x_i$ such that $\left| x_i - y \right| \leq \left| x- y \right| $ for all $x$.
+    \end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{7.4.9}
+Show that it is true that the union of any finite collection of compact
+subsets of $\R^d$ is compact, but it is not true that the union of an infinite
+collection of compact subsets is necessarily compact. Show the latter
+statement by finding an example of an infinite union of compact sets which
+is not compact. \\
+
+Any compact set has a finite subcoverage. Having a finite subcoverage - given an open cover - is sufficient for a set to be considered compact. The union of 2 compact sets then has two sets of compact subcoverages. The union of subcoverages is likewise finite. Assume we have $n$ compact sets with finite subcoverage. The union of these $n$ sets with an additional compact set results in the union of a set of finite subcoverages of the union of the $n$ sets together with a finite subcoverage of the $n+1$-th set. This is then evidently also finite. Hence, any finite union of compact sets is also compact. However, an infinite collection is not necessarily compact as this infinite union may lead to the existence of an infinite number of subcoverages, which would make this union no longer compact. 
+\end{exercise}
+
+
+
+\begin{exercise}{7.4.10}
+Prove that if $A$ and $B$ are compact subsets of a $\R^d$, then $A \cup B $ and $A \cap B$ are also compact.
+\begin{proof}
+    Any compact set has a finite open coverage. Hence, there is a finite open cover $U_A$ of $A$ and an open coverage $U_B$ of $B$. We now consider the union $U_A \cup U_B$. Since both coverages are finite, the union is finite as well. This union now is a finite coverage of $A \cup B$. Since $A \cup B$ has a finite coverage, it is also compact.
+\end{proof}
+\end{exercise}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Connected Sets}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{7.5.1}
+$A = \{ (x,y) \in \R^2 : |(x,y)| < 1 \} \cup \{ (x,y) \in \R^2 : 1 \leq x \leq 2, y= 0 \}.$
+This set is connected, since it is the union of two connected sets whose intersect is non-empty.
+\end{exercise}
+
+
+
+\begin{exercise}{7.5.3}
+$A= \{ (x,y) \in \R^2 : 1 < |(x,y)| < 2 \}$.
+This set is an open set in the form of a disk, and as such is connected.
+\end{exercise}
+
+
+
+\begin{exercise}{7.5.5}
+What are the connected components of the complement of the set of integers in $\R$? \\
+
+The connected components of this set consists of all sets $A = \{ x \in \R : m < x < m+1 \}$ for all $m \in \Z$.
+\end{exercise}
+
+
+
+\begin{exercise}{7.5.7}
+Which subsets of $\R$ are both compact and connected? Justify. \\
+
+Any closed interval in $\R$ will be both compact and connected. That is any set $A= \{ x \in \R : m \leq x \leq n \}$ for some $m, n \in \R$. It is important that this interval not contain any holes, as it is possible to create a compact set with holes which would not be connected. For example,  the Cantor set is considered to be both compact and totally disconnected.
+\end{exercise}
+
+
+\begin{exercise}{7.5.10}
+Prove that the closure of a connected set is connected.
+
+\begin{proof}
+We need to consider two distinct cases: either $A$ is an open set, or a closed set. If $A$ is a closed set, then $\overline{A} = A$ and hence, the closure is connected. \\
+If however $A$ is an open set, then there exists at least one sequence $\{x_n\}$ such that $x_n \in A$ for all $n \in \N$, $\{x_n \} \to L$, but $L \notin A$. Consider now the set $\overline{A}$. Now, $L \in \overline{A}$ and $A \subset \overline{A}$. Assume now that $\overline{A}$ is not a connected set. Then there exists some $x_i$ such that $x_i \in \{x_n\}$ but $x_i \notin \overline{A}$. But by assumption, $x_i \in \{x_n\}$ and therefore $x_i \in A$. Since $A \subset \overline{A}$, which shows that $x_i \in \overline{A}$. Contradiction. Hence, $\overline{A}$ must also be a connected set.
+\end{proof}
+\end{exercise}
+
+
 
 
 
@@ -1397,13 +1750,176 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{exercise}{8.1.2}
+Give a simple reason why the function $\gamma : \R \to \R^4 $ defined by $\gamma (t) = \left( t, \sin(t), e^t, t^2 \right) $ is continuous in $\R$. \\
+
+The function $\gamma$ consists solely of continuous functions in $\R$, and as such $\gamma(t)$ is likewise continuous (theorem 8.1.5).
+\end{exercise}
+
+
+\begin{exercise}{8.1.4}
+Consider the function $f:\R^2  \to \R $ defined by  
+    \[ f(x,y) = \left\{
+     \begin{array}{lr}
+       x \, y & : x \, y > 0.\\
+       0 & : x \, y \leq 0.
+     \end{array}
+   \right. \]
+   at which points of $\R^2$ is this function continuous? \\
+   
+   
+    This function is continuous whenever
+    \begin{itemize}
+        \item $x,y >0$ 
+        \item $x,y < 0$
+        \item $x < 0$, $y > 0$
+        \item or $x > 0$, $y < 0.$
+    \end{itemize}
+    The function is also continuous at zero if we approach $(0,0)$ along the axis from the same quadrant.
+\end{exercise}
+ד
+
+
+\begin{exercise}{8.1.5}
+For the function  $f : \R^2 \to \R$ defined by 
+    \[ f(x,y) = \frac{x^2 y}{x^4 + y^2} \]
+show that $f$ has a limit $0$ as $(x,y) \to (0,0)$ along any straight line through the origin but that it does not have a limit as $(x,y)\to (0,0)$ in $\R^2$. \\
+
+Assume thatwe approach along the $x = 0$ axis. In that case, the function has the limit $0$. Assume now we approach along some line, which has the form $ y = m x$. Then we consider 
+    \[ \lim_{x,y \to (0,0)} \frac{x^2  (mx)}{x^4 + (m x^2)^2} = \lim_{x,y \to (0,0)} \frac{x^3 m}{x^4 + m^2 x^4} = \lim_{x,y \to (0,0)} \frac{m x}{x^2 + m^2} = 0.\]
+    The function does not however have a limit itself. For a function to have a limit, its limit must be path-independent. This is not the case for the function in question. Assume you approach via the path $y = m x^2$. The resulting limit
+        \[ \lim_{x,y \to (0,0)} \frac{x^2 (mx^2)}{x^4 + (mx^2)^2} = \lim_{x,y \to (0,0)} \frac{x^4 m}{x^4 + x^4 m} = \lim_{x,y \to (0,0)} \frac{m}{1 + m}  \]
+    clearly depends on $m$, and as such is not path-independent.
+\end{exercise}
+
+
+
+\begin{exercise}{8.1.12}
+Let $B_1(0)$ be the open unit ball in $\R^2$. Is it true that every continuous function $f:B_1(0) \to \R$ takes Cauchy sequences to Cauchy sequences? \\
+
+I can't come up with a counter example; as such, I think this holds true given that we are considering an open ball which includes the point $(0,0)$. If we however choose the go towards the functions via a path of the form $y = m x^2$.
+\end{exercise}
+
+
+\begin{exercise}{8.1.14}
+Find a parameterized curve $\gamma(t)$ in $\R^2$, with parameter interval $[0, \infty)$, that begins at $(1,0)$, spirals inward in the counterclockwise direction, and approaches $(0,0)$ as $t \to \infty$. \\
+
+We use the function $f(r,\theta) = \left( r \cos(\theta), r \sin(\theta) \right)$.
+\end{exercise}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Properties of Continuous Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{exercise}{8.2.3}
+If $K$ is a compact, connected subset of $\R^p$ and $f:K \to \R$ is continuous function, what can you say about $f(K)$? \\
+
+We know that a continuous function maps a compact set to a compact set, and that a continuous function also maps a connected set to a connected set. As such, I would argue that $f(K)$ is a compact, connected set.
+\end{exercise}
+
+
+
+\begin{exercise}{8.2.5}
+The image of a compact set under a continuous function is compact, hence closed by theorem 8.2.3. Is the image of a closed set under a continuous function necessarily closed? Prove that it is or give a counter example.  \\
+
+A simple counter example would be the function $f:\R \to \R^+$ where $f(x) = e^x$. Then the preimage of $f$ is closed, yet the image of $f$ is not, as the limit point $\lim_{x \to -\infty} e^x = 0$ is not part of the image set. 
+\end{exercise}
+
+
+
+\begin{exercise}{8.2.7}
+Is the sphere $\left\{ (x,y,z) \in \R^3 : x^2 + y^2 + z^2 =1 \right\}$ connected? How do you know? \\
+
+The sphere described above is connected. We know that any path-connected set is a connected set. The surface of a sphere is path connected, as we can join any two points through a continuous path function. As such, I would argue that the sphere is simply connected, which implies that it is a connected set.
+\end{exercise}
+
+
+
+\begin{exercise}{8.2.10}
+Is the function $f: \R^2 \backslash \{ (2,0 \} \to \R$ defined  by
+    \[ f(x,y) = \frac{1}{(x-2)^2 + y^2} \]
+uniformly continuous on $B_1(0,0)$? Is it uniformly continuous on $B_2(0,0)$? Justify your answers. \\
+
+I think it is uniformly continuous on $B_1 (0,0)$, as well as on $B_2 (0,0)$. In both cases, we can bound the function appropriately such that it goes to 0 without depending on $x$ and $y$.
+\end{exercise}
+
+
+
+\begin{exercise}{8.2.11}
+If $D \subset \R^p$, prove that if a function $F:D \to \R^q$ is uniformly continuous on $D$, then $\{F(x_n)\}$ is a Cauchy sequence in $\R^q$ whenever $\{x_n\}$ is a Cauchy sequence in $D$.
+
+\begin{proof}
+    Assume $F$ is defined as above, with $\{x_n\}$ being a Cauchy sqeuence in $D$. Since $F$ is a a uniformly continuous mapping, we know that for all $\epsilon > 0$, there exists some $\delta>0$ such that $\left| f(x_n) - f(x_m) \right| < \epsilon$ whenever $ \left| x_n - x_m \right| < \delta$. Since $\{x_n\}$ is Cauchy, we know that there exists some $N>0$ such that $\left| x_n - x_m \right| < \delta$ whenever $n,m > N$. Due to uniform continuity, we know that $\delta$ is independent of $x$. Hence, if $\left| x_n - x_m \right| < \delta$, we have $\left| f(x_n) - f(x_m) \right| < \epsilon$ for $m,n > N$. As such, the image of the Cauchy sequence is again Cauchy.
+\end{proof}
+\end{exercise}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sequences of Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{8.3.1}
+Show that the sequence $\{\gamma_n(t)\}$, where 
+    \[ \gamma_n(t) = \left( \frac{1}{1+n t}, \frac{t}{n} \right), \]
+does not converge uniformly on $[0,1]$. \\
+
+For the function to converge uniformly, both parts of the function need to individually converge uniformly. While it is true that $t/n$ converges uniformly on $[0,1]$ since it can be bound by $1/n$, it is not true that $1/(1+n t)$ converges uniformly. Specifically, we find that 
+    \[ \left| \frac{1}{1+n} \right| \leq \left| \frac{1}{1+ n t} \right| \leq 1. \]
+As can be seen, this bound is dependent on $t$, since we need $n$ large whenever $t$ approaches 0 to be within $\epsilon>0$. Hence, this part of the function fails to converge uniformly, which results in our sequence $\gamma_n (t)$ failing to converge uniformly.
+\end{exercise}
+
+
+
+\begin{exercise}{8.3.3}
+Does the sequence $\{ \left( k^{-1} \sin(kx), k^{-1} \cos(ky)  \right)\} $ converge pointwise in $\R^2$? Does it converge uniformly in $\R^2$? Justify your answers. \\
+
+We can rewrite this sequence as $\left\{ \left( \frac{1}{k \csc(k x)}, \frac{1}{k \sec(k y)}  \right) \right\}$. Clearly, the limit of this sequence is $(0,0)$ for all $x$. As both the secant and cosecant functions aren't properly bounded, I would argue that this convergence cannot be uniform, and must be pointwise.
+\end{exercise}
+
+
+
+
+\begin{exercise}{8.3.8}
+Does the series $\sum_{k=0}^\infty x^k y^k $ converge uniformly on the square 
+    \[ \left\{ (x,y) \in \R^2 : -1 < x <1,\,  -1 < y < 1   \right\}?\]
+Justify your answer. \\
+
+This series converges uniformly. It is an adaptation of the geometric series in multiple variables. The geometric series exhibits uniform convergence per the Cauchy criterion. As such, I would argue that the extension of the geometric series to $\R^2$ would converge uniformly as well.
+\end{exercise}
+
+
+
+
+\begin{exercise}{8.3.10}
+Does the series $\sum_{k=0}^\infty \left( x^n, (1-x)^n \right)$ converge pointwise on $[0,1]$? Does it converge pointwise on $(0,1)$? On which subsets of $(0,1)$ does it converge uniformly? Justify your answers. \\
+
+The series does not converge pointwise on $[0,1]$, since $\sum_{k=0}^\infty 1^n$ does not converge. It does however converge pointwise on $(0,1)$, since $\sum_{k=0}^\infty k^n$ converges pointwise provided $|k| < 1$. I would argue that the series in question converges uniformly for all rightclosed subsets of $(0,1)$, i.e. all sets of the form $(0,a]$ where $a<1$. It is evident then that $\sum_{k=0}^\infty x^n$ passes the Weierstrass M-test. We can see though that $\sum (1-x)^n$ will also pass this test. Assume we pick a value $x = \delta>0$. Then we can bound the series $\sum (1- \delta)^n$ with some function $k^n$ such that $k = 1 - \epsilon > 1 - \delta$ for some $\delta > \epsilon > 0$. We are guaranteed such a point exists, and hence this series passes the Weierstrass M-test on all sets of the form $(0,a]$ with $a<1$.
+\end{exercise}
+
+
+
+
+\begin{exercise}{8.3.12}
+Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of functions from $D$ to $\R^q$, then $\{F_n\}$ fails to converge uniformly to 0 if and only if there is a sequence $\{x_n\}$ in $D$ such that the sequence of numbers $\{ F_n (x_n) \}$ does not converge to 0. 
+
+\begin{proof}
+    Assume that $\{F_n\}$ does not converge to 0, and that there does not exist a sequence $\{x_n\}$ such that $\{F_n(x_n)\}$ fails to converge to 0. Then for all sequences $\{x_i\} \in D$, we find that $\{F_n ( x_i)\} \to 0$. This means that for all $x$, $\left| F_n (x) \right| < \epsilon$ for some $\epsilon >0$  with $x \in D$ and $n \geq N$ for some $N$. But this is the definition of convergence for$\{F_n\}$. Hence, it cannot be that $\{F_n\}$ fails to converge provided every sequence of $\{x_n\}$ results in $\{F_n (x_n)\}$ going to 0. \\
+
+    Now, assume that $\{F_n\}$ converges to 0, but there exists a sequence $\{x_n\} \in D$ such that $F_n(x_n)$ does not converge to 0. But then, it is not true that $|F_n(x)|< \epsilon$ whenever $x \in D$ and $n \geq N$ for some $N, \epsilon>0$. As such, $\{F_n\}$ would no longer converge. \\
+
+    Therefore, $\{F_n\}$ converges to 0 if and only if for all sequences $\{x_n\} \in D$, $\{ F_n(x_n)\} \to 0$.
+\end{proof}
+\end{exercise}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1423,13 +1939,147 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Differential}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{exercise}{9.2.1}
+	If $L: \R^p \to \R^p$ is a linear function, show that $dL=L$. In other words, if $L$ has a matrix $A$, then $A$ is the differential matrix of the linear function $L(x)=A x$.
+
+	\begin{proof}
+    It suffices to show that $\lim_{h \to 0} \frac{L(a+h)-L(a)-A\,h}{|h|}=0$. We need to then show that $L(a+h)-L(a)-A\,h$. But by linearity we can write this is $L(a)+L(h)-L(a)-A\,h =0 $, from which it is evident that $L(a)=A\,h$, and hence, that $\text{d}L=L$.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{9.2.5}
+	Find the differential of the real-valued function $f(x,y,z) = x y^2 \cos(x z)$. Then find the best affine approximation to $f$ at the point $(1, 1, \pi/2)$. \\
+	
+	The differential is $\text{d} f = \left[\begin{matrix}- x y^{2} z \sin{\left (x z \right )} + y^{2} \cos{\left (x z \right )} & 2 x y \cos{\left (x z \right )} & - x^{2} y^{2} \sin{\left (x z \right )}\end{matrix}\right]$. \\
+    % % The best approximation of the function by an affine function when $x$ is near $a$ is given by the affine function $F(a+h) - F(a) - A \,h$, where $A$ is the differential, where $a= (1, 1, \pi/2)$ and $h = (x-1, y-1, z - \pi/2) = (t, u, v)$. We find the approximation
+    % \begin{align*}
+    % F(a+h) - F(a) - A h &= \begin{bmatrix} F(a_1 + h_1) - F(a_1) - A_1 h_1 \\ F(a_2 + h_2) - F(a_2) - A_2 h_2 \\ F(a_3 + h_3) - F(a_3) - A_3 h_3 \end{bmatrix} \\
+    % &= \begin{bmatrix} F(a_1 + h_1) - F(a_1) - A_1 h_1 \\ F(a_2 + h_2) - F(a_2) - A_2 h_2 \\ x y^2 \cos (x z) - (x y^2 \cos(x \pi/2)) - (- x^{2} y^{2} \sin{(x z  )}) (z-\pi/2) \end{bmatrix}
+    % \end{align*}
+    We find the linear approximation of $f$ at the given point as follows:
+    \begin{align*}
+    f(x,y,z) &\approx f(1,1,\pi/2) + f_x(1,1,\pi/2) (x-1) + f_y(1,1,\pi/2) (y-1) + f_z(1,1,\pi/2) (z-\pi/2) \\
+     &= 0 + \left( \frac{\pi}{2} \left(x - 1\right) \right) + 0 + \left( - z + \frac{\pi}{2} \right) \\
+     &= \frac{\pi}{2} - z - \frac{\pi}{2} \left(x - 1\right) = - \frac{1}{2} \left(\pi x + 2 z - 2 \pi\right).
+    \end{align*}
+    We can see that we can now approximate $f$ by the linear function $L(x,y,z) =- \frac{1}{2} \left(\pi x + 2 z - 2 \pi\right)$. Evaluating $L$ at the point of interest, we see that $L(1,1,\pi/2)=0$.
+\end{exercise}
+
+
+\begin{exercise}{9.2.7}
+	Prove that if $f$ is a real-valued function defined on an open subinterval of $\R$ containing $a$ and if $S$ is an affine function such that $f(a) = S(a)$, and 
+		\[ \lim_{h \to 0} \frac{f(a+h) - S(a+h)}{h} = 0 \]
+	then $S(a+h) = f(a) + f'(a) h$.
+	
+	\begin{proof}
+	Let $S(x)= m\,x + b $. Then 
+	    \[ f(a+h)  - S(a+h) = f(a+h) - m\,a - m\,h - b. \]
+	Since we assume $f(a)=S(a)$, we find then that $ b = f(a) - m \,a $. Then, we rewrite as $f(a+h) - S(a+h) = f(a+h) - f(a) - m\,h $. We find
+	  \begin{align*}
+	    0 = \lim_{h \to 0} \frac{f(a+h)-S(a+h)}{h} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} - \lim_{h \to 0} \frac{m\,h}{h}. 
+	  \end{align*}
+	This implies that $m = f'(a)$ and $S(x) = f'(a) x + f(a) - m\,a$. If we let $x= a+h$, we find 
+	    \[ S(a+h) = f'(a) (a+h) + f(a) - a\, f'(a) = f(a) + f'(a)h. \]
+	This completes the proof.
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{9.2.11}
+	If $f : \R^p \to \R^p$ is differentiable at $a \in \R^p$, then show that, for each $h \in \R^p$ the function $g: \R \to \R$ defined by $g(t) = f(a + t h)$ has a derivative at $t = 0$. Can you compute it in terms of $d f(a) $ and $h$?
+
+	\begin{proof}
+	\emph{MISSING A SOLUTION}
+	\end{proof}
+\end{exercise}
+
+
+\begin{exercise}{9.2.12}
+	Prove that a function $F: \R^p \to \R^q$ is affine if and only if it is differentiable everywhere and its differential matrix is constant. 
+	
+	\begin{proof}
+    We start by proving that if a function $F: \R^p \to \R^q$ is affine, then it is differentiable everywhere with a constant differential matrix. This is evident when we consider that an affine function $F(x)$ is of the form $F(x) = b + L(x)$, with $L: \R^p \to \R^q$, with an associated matrix $p \times q$-matrix $A$. Also, $b,x \in \R^p$. By exercise 9.2.1, we see that for a linear function $L(x)$ with associated matrix $A$, $\text{d}L=A$. From this we see that $F$ is differentiable everywhere with a constant differential matrix. \\
+    We now proceed to consider a function which is differentiable everywhere, and has a constant differential matrix. The function $F = (F_1(x), F_2(x), \hdots, F_p (x) )$. Since the differential is constant, we can write $F_i= a_{1,i} x_1 + a_{2,i} x_2 + \hdots + a_{p,i} x_p + b_i $ for some constants $a_{1,i}, a_{2,i}, ..., b_i$. This implies that $F(x) = b + A x$ where $A=a_{j,i}$ and $b = [b_1, b_2, \hdots, b_q ]^T$. Hence, $F(x)$ is affine.
+	\end{proof}
+\end{exercise}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Chain Rule}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{9.3.1}
+	If $F$ is a function from an open subset $U$ of $\R^p$ to $\R^q$ which is differentiable at $a$ and if $B$ is an $r \times q$ matrix, then show that $d( BF) (a) = B d F(a)$. Here, $B F(x)$ is the matrix $B$ applied to the vector $F(x)$ and $BdF(a)$ is the product of the matrix $B$ and the matrix $dF(a)$.
+
+	\begin{proof}
+    $F$ is differentiable at $a$ if and only if there exists some function $q(h)$ for $h$ near $0$ such that $F(a+h)-F(a)=Q(h) h$, and $Q(0)=\text{d}F(a)$. Let $Q$ be a function satisfying these conditions. Now let $B$ be some $p\times q$-matrix. Then the following holds:
+        \begin{align*}
+        B \left(F(a+h)-F(a)\right) &= B\, Q(h)\, h  \\
+          B \, F(a+h) - B \, F(a)  &= B\, Q(h)\, h
+        \end{align*}
+    Note that $B Q(h)$ is continuous at 0 and that $B \, F$ is differentiable at $a$. We then have $\text{d}(B\,F)a = B Q(0) = B\, \text{d} F(a)$.
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{9.3.4}
+	If $f$ is a differentiable function on $\R$ and $g(x, y) = f(x y)$, show  that $x \frac{\partial g}{\partial x} - y \frac{\partial g}{\partial y} = 0$.
+
+	\begin{proof}
+	\emph{MISSING A SOLUTION}
+	\end{proof}
+\end{exercise}
+
+
+
+
+\begin{exercise}{9.3.6}
+	If $u$ is a variable which is a differentiable function of $(x,y)$ in an open set $U \subset \R^2$, if $x$ and $y$ are differentiable function of $(s,t) \in V$ for an open set $V \subset \R^2$, and if $(x,y) \in U$ whenever $(s,t) \in V$, then use the chain rule  to  obtain an expression for $\frac{\partial u}{\partial s}$ and $\frac{\partial u}{\partial t}$ on $V$ in terms of the partial derivatives of $u$ with respect to $x$ and $y$ and the partial derivatives of $x$ and $y$ with respect to $s$ and $t$.
+
+    \begin{align*}
+    \frac{\partial d}{\partial s} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial d}{\partial y} \frac{\partial y}{\partial s} \\
+    \frac{\partial d }{\partial t} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial t} 
+    \end{align*}
+\end{exercise}
+
+
+
+\begin{exercise}{9.3.8}
+	If $F(x,y) = \left( f_1 (x,y), f_2 (x, y) \right)$ is a differentiable function from $\R^2$ to $\R^2$ and if we define $G: \R^2 \to \R^2$ by $G(s, t) = F(s t, s+t)$, find an expression for the differential matrix of $G$ in terms of the partial derivatives of $f_1, f_2$.
+
+	\begin{proof}
+	\emph{MISSING A SOLUTION}
+	\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}{9.3.9}
+	If $(x,y,z)$ are the Cartesian coordinates of a point in $\R^3$ and the spherical coordinates of the same point are $r, \theta, \phi$, then 
+		\begin{align*} &x = r \cos(\theta) \sin(\phi)  &&y = r \sin(\theta) \sin(\phi) &&&z = r \cos(\phi) \end{align*}
+	Let $u$ be a variable which is a differentiable  function of $(x,y,z)$ on $\R^3$. Find a formula for the partial derivatives of $u$ with respect to $r, \theta, \phi$ in terms of its partial derivatives with respect to $x,y,z$.
+
+	\begin{align*}
+	\frac{\partial u}{\partial r} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial r} + \frac{\partial d}{\partial z} \frac{\partial z}{\partial r} \\
+	&= \cos(\theta) \sin(\phi) \frac{\partial d}{\partial x} + \sin(\theta) \sin(\phi) \frac{\partial d}{\partial y} + \cos(\phi) \frac{\partial d}{\partial z} \\
+	\frac{\partial u}{\partial \theta} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial \theta} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial \theta} + \frac{\partial d}{\partial z} \frac{\partial z}{\partial \theta}\\
+	&= - r \sin{\left (\phi \right )} \sin{\left (\theta \right )} \frac{\partial d}{\partial x} + r \sin{\left (\phi \right )} \cos{\left (\theta \right )} \frac{\partial d}{\partial y}  \\
+	\frac{\partial u}{\partial \phi} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial \phi} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial \phi} + \frac{\partial d}{\partial z} \frac{\partial z}{\partial \phi} \\
+	&= r \cos{\left (\phi \right )} \cos{\left (\theta \right )} \frac{\partial d}{\partial x} + r \sin{\left (\theta \right )} \cos{\left (\phi \right )} \frac{\partial d}{\partial y} - r \sin{\left (\phi \right )} \frac{\partial d}{\partial z}
+	\end{align*}
+\end{exercise}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1437,18 +2087,290 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{exercise}{9.4.3}
+    Find the parametric equation for the tangent line to the curve $\gamma(t) = \left( t^3, 1/t, e^{2t-2}\right)$ at the point where $t=1$. \\
+
+    We note that $\gamma(1) = (1,1,1)$, and $d\gamma(1) = \begin{bmatrix} 3 & -1 & 2 \end{bmatrix}^\intercal$. Then the tangent line $\tau(t)$ can be written as
+        \begin{align*}
+            \tau(t) &= \begin{bmatrix} 2 \\ 1\\1 \end{bmatrix} + (t-1) \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix} = \begin{bmatrix} 1 \\ 1\\1 \end{bmatrix} + \begin{bmatrix} 3 t - 3 \\ 1 - t\\ 2 t - 2 \end{bmatrix} = \begin{bmatrix} 3t -2 \\ 2- t \\ 2 t - 1 \end{bmatrix}
+        \end{align*}
+\end{exercise}
+
+
+\begin{exercise}{9.4.6}
+    Show that the gradient  at $x \in \R^p$ of the function $g(x) = x \cdot x$ is the vector $2x$. \\
+
+    We note that we are considering the standard dot product as inner product, such that $g(x) = \langle x, x \rangle = x_2^2 + \hdots x_n^2 = \sum_{i=1}^n x_i^2$. We notice that $\text{deg}(x) = (2 x_1, 2x_2, \hdots, 2 x_n) = 2 x^\intercal$.
+\end{exercise}
+
+
+\begin{exercise}{9.4.11}
+    Find the equation of the tangent plane to the cone $z = x^2 + y^2$ at the point $(1,2,5)$. \\
+    
+    We see that $\frac{\partial z}{\partial x}= 2x$ and $\frac{\partial z}{\partial y} = 2y$. Then:
+    \begin{align*}
+    z - z_0 &= \frac{\partial z}{\partial x}(x-x_0) + \frac{\partial z}{\partial y} (y-y_0)\\
+    z &= \frac{\partial z}{\partial x}(x-x_0) + \frac{\partial z}{\partial y} (y-y_0 ) + z_0 \\
+    z &= 2 x (x - x_0) + 2 y (y-y_0) + z_0 \\
+    z &= 2 x (x -1) + 2 y(y-2) + 5.
+    \end{align*}
+\end{exercise}
+
+\begin{exercise}{9.4.12}
+    Show that for each point $(a,b,c)$ on the surface $x^2 + y^2 + z^2 =1$, there is a neighborhood of $(a,b,c)$ in which the surface may be represented as a smoothly parameterized 2-surface. Hence, there is a tangent plane to this surface at every point. \\
+
+    Let $S$ denote the surface given by $x^2 + y^2 + z^2 =1$, which is a sphere. Consider the subsets of S given the graphs of the functions:
+    \begin{align*}
+        x_+ (y,z) &= \sqrt{ 1 - y^2 - z^2 } && (y^2 + z^2 < 1) \\
+        x_- (y,z) &= \sqrt{ 1 - y^2 - z^2 } && (y^2 + z^2 < 1) \\
+        y_+ (x,z) &= \sqrt{ 1 - x^2 - z^2 } && (x^2 + z^2 < 1) \\
+        y_- (x,z) &= \sqrt{ 1 - x^2 - z^2 } && (x^2 + z^2 < 1) \\
+        z_+ (x,y) &= \sqrt{ 1 - x^2 - y^2 } && (x^2 + y^2 < 1) \\
+        z_- (x,y) &= \sqrt{ 1 - x^2 - y^2 } && (x^2 + y^2 < 1)
+    \end{align*}
+    Each of these functions is injective and differentiable. For any $a \in S$, we have that $a$ is in the image of one of these functions, so we can construct a tangent plane to thee surface at any possible point.
+\end{exercise}
+
+\begin{exercise}{9.4.13}
+    Find an equation for the tangent plane to the surface $x^2 + y^2 -z^2 = 1$ at each point on the surface.  \\
+    
+    Let $w = x^2 + y^2 + z^2 $. Then $\nabla w = \left( 2x, 2y, 2z \right)$, which means at point $A = (a,b,c)$ we have $\nabla w(A) = \left( 2a, 2b, 2c \right)$. Then we get the following equation:
+    \begin{align*}
+    2 a (x -a ) + 2b (y-b) + 2c (z -c ) &= 0\\
+    -2 a^2 + 2 ax - 2b^2 + 2 by - 2c^2 + 2 cz &= 0  \\
+    2 ax + 2 by + 2cz &= 2 a^2 + 2 b^2 + 2c^2 \\
+    ax + by + cz &= a^2 + b^2 + c^2 .
+    \end{align*} 
+\end{exercise}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Taylor's Formula}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{9.5.1}
+    Find the degree $n =2$ Taylor formula for $f(x,y)=x^2 + x y$ at the point $a=(1,2)$.  \\
+    
+    We begin by finding the necessary partial derivatives.
+    \begin{align*}
+        &\frac{\partial f}{\partial x} = 2x+y, &&\frac{\partial^2 f}{\partial x^2} = 2 \\
+        &\frac{\partial f}{\partial y} = x,    &&\frac{\partial^2 f}{\partial y^2} = 1 \\
+        &\frac{\partial^f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = 1.
+    \end{align*}
+    We now use the known equation with these derivatives at the point $a=(1,2)$.
+    \begin{align*}
+        f(a+x, b+y) &\approx f(a,b) \left( \frac{\partial f(a,b)}{\partial x} + \frac{\partial f(a,b)}{\partial y} y \right) + \frac{1}{2} \left( \frac{\partial^2 f(a,b)}{\partial x^2} x^2 + 2 \frac{\partial^2 f(a,b)}{\partial x \partial y} x y + \frac{\partial^2 f(a,b)}{\partial y^2} y^2 \right)  \\
+                    &= 3 + \left(4x+y\right) + \frac{1}{2} \left( 2 x^2 + 2 xy + y \right)  \\
+                    &= \frac{1}{2} \left( 2x^2 + 2xy+ 8x+y^2 + 2 y + 6\right).
+    \end{align*}
+\end{exercise}
+
+\begin{exercise}{9.5.4}
+    Suppose $U$ is an open convex set and $f$ is a differentiable real-valued function on $U$. If there is a number $M > 0$ such that $|df(x)| \leq M$ for all $x\in U$, then 
+        \[ |f(x) - f(y) \leq M |x-y| \]
+    for all $x,y \in U$.
+
+    \begin{proof}
+        Let $x,y \in U$. Then by Taylor's theorem we have $f(x) = f(y) + df(c) (x-y)$ for some $c \in [y,x]$. Then by algebra:
+        \begin{align*}
+            |f(x) - f(y) | &= |df(c)(x-y)| \\
+                           &\leq |df(c)| |x-y| \\
+                           &\leq m | x-y|.
+        \end{align*}
+        This completes the proof.
+    \end{proof}
+\end{exercise}
+
+
+\begin{exercise}{9.5.6}
+    Show that the following form of the Mean Value Theorem is not true: if $F:\R^2 \to \R^2$ is a differentiable function and $a,b \in \R^2$, then there is a $c$ on the line segment joining $a$ to $b$ such that $F(b) - F(a) = \text{d} F(c) (b-a)$. The problem here is that $F$ is vector-valued, not real valued.  \\
+    
+    If the function $F$ is vector-valued as above, we cannot make sense of the equation. Specifically, we find that $\text{d} F(c) (b-a)$ is defined as a scalar multiplication. In this case, the result is a scalar, whereas $F(b)-F(a)$ would be a case of vector addition. A scalar cannot equal a vector. Alternatively, we could attempt to solve this issue by redefining $\text{d} F(c) (b-a)$ as matrix multiplication. However, then we could only have equality in the case of $\text{d} F$ begin a square matrix; otherwise, the dimensions wouldn't match up. As such, it appears as though we can't make sense of the equation as is for vector valued functions.
+\end{exercise}
+
+
+
+\begin{exercise}{9.5.8}
+    Find all points of relative maximum and relative minimum and all saddle points for $f(x,y) = 1 - 2 x^2 - 2 x y- y^2$.  \\
+    
+    We begin by finding the differential $\nabla f(x,y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = \left( -4x-2y, -2x-2y \right)$. This is only zero at the point $(0,0)$. We calculate the Discriminant at this point:
+        \[ D = (-4)(-2)- (-2)^2 = 8 -4 = 4. \]
+    Since $D>0, \, \frac{\partial^2 f}{\partial x^2} < 0$ we find that we are dealing with a point of local maximum.
+\end{exercise}
+
+
+\begin{exercise}{9.5.9}
+    Find all  points of relative maximum and relative minimum and all saddle points for $f(x,y) = y^3 + y^2 +x^2 - 2 x y -3y$.  \\
+    
+    We begin by taking the various partial derivatives:
+    \begin{align*}
+        &\frac{\partial f}{\partial x} = 2x-2y, &&\frac{\partial^2 f}{\partial x^2} = 2 \\
+        &\frac{\partial f}{\partial y} = 3y^2+2y-2x-3, &&\frac{\partial^2 f}{\partial y^2}=6y+2\\
+        &\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x} = -2
+    \end{align*}
+    We then find the points where $\nabla f= \vec{0}$. As $\nabla f= \left( 2x-2y, 3y^2+2y-2x-3\right)$, we find that we have critical points at $(-1,-1)$ and $(1,1)$. \\
+    At the point $(-1,-1)$ we have $D=2 (6(-1)+2) - (-2)^2= -12$, and therefore we are dealing with a saddle point here.\\
+    At the point $(1,1)$ we have $D=2(6+2)-(-2)^2=4$, and hence we have a point of local minimum here.
+\end{exercise}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Inverse Function Theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\begin{exercise}{9.6.2}
+    Show that the function $F: \R^2 \to \R^2$ defined by $F(x,y) = (x^2+y^2, x y)$ has a smooth local inverse near points $(x,y)$ where $x \neq \pm y$. Find the inverse function $F^{-1}$ on the set $\{(x,y) : -x < y < x\}$ and identify its domain. Calculate the differential of this inverse function (1) directly and (2) by using the Inverse Function Theorem. Verify that the two methods give the same answer.  \\
+
+    Let $u=x^2+y^2$ and $v = x y$. Then we find that $u+2v = (x+y)^2$ and $u-2v=(x-y)^2$. On the set $\{(x,y) : -x < y < x\}$ we find that $x+y>0$ and $x-y>0$. This means that $J_F (x,y) = 2 (x^2-y^2)\neq 0$ and we have an inverse. We find then that
+    \begin{align*}
+        &x+y=\sqrt{u+2v}        &&x-y=\sqrt{u-2v}
+    \end{align*}
+    From this we get that
+    \begin{align*}
+        x &= \frac{1}{2} \left( \sqrt{u+2v} + \sqrt{u-2v} \right) \\
+        y &= \frac{1}{2} \left( \sqrt{u+2v} - \sqrt{u-2v} \right)
+    \end{align*}
+    We calculate the differential:
+    \begin{align*}
+    \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{bmatrix} &= \left[\begin{matrix}\frac{1}{4 \sqrt{u + 2 v}} + \frac{1}{4 \sqrt{u - 2 v}} & \frac{1}{2 \sqrt{u + 2 v}} - \frac{1}{2 \sqrt{u - 2 v}}\\\frac{1}{4 \sqrt{u + 2 v}} - \frac{1}{4 \sqrt{u - 2 v}} & \frac{1}{2 \sqrt{u + 2 v}} + \frac{1}{2 \sqrt{u - 2 v}}\end{matrix}\right]
+    \end{align*}
+    Now according to the inverse function theorem:
+    \begin{align*}
+        \text{d} F^{-1} (b) &= \left( \text{d}F(a) \right)^{-1} \\
+                            &= \left( \begin{bmatrix} \frac{\partial (x^2+y^2)}{\partial x} & \frac{\partial (x^2+y^2}{\partial y} \\ \frac{\partial(xy)}{\partial x} & \frac{\partial(xy)}{\partial y} \end{bmatrix} \right)^{-1} \\
+                            &= \left( \begin{bmatrix} 2x & 2y \\ y  & x \end{bmatrix}  \right)^{-1} \\
+                            &= \left[\begin{matrix}\frac{x}{2 x^{2} - 2 y^{2}} & - \frac{y}{x^{2} - y^{2}}\\- \frac{y}{2 x^{2} - 2 y^{2}} & \frac{x}{x^{2} - y^{2}}\end{matrix}\right] && \text{and substituting:} \\
+                            &= \left[\begin{matrix}\frac{1}{4 \sqrt{u + 2 v}} + \frac{1}{4 \sqrt{u - 2 v}} & \frac{1}{2 \sqrt{u + 2 v}} - \frac{1}{2 \sqrt{u - 2 v}}\\\frac{1}{4 \sqrt{u + 2 v}} - \frac{1}{4 \sqrt{u - 2 v}} & \frac{1}{2 \sqrt{u + 2 v}} + \frac{1}{2 \sqrt{u - 2 v}}\end{matrix}\right]
+    \end{align*}
+\end{exercise}
+
+
+
+
+\begin{exercise}{9.6.5}
+    Find a smooth local inverse function near $(1, \pi/2)$ for the function $F$ of Example 9.6.6.  \\
+    
+We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\theta) \\ \sin(\theta) & r \cos(theta) \end{pmatrix}$. The determinant is non-zero whenever $r\neq 0$. At the point $F(a)=(0,1)$. We know by the inverse function theorem that $\text{d} F^{-1} (b) = \left( \text{d} F(a) \right)^{-1}$. We now use this information and find the inverse differential:
+    \begin{align*}
+    \text{d} F^{-1}(b) = \left( \text{d} F(a)\right)^{-1} = \begin{bmatrix} \cos(\theta) & \sin(\theta) \\ -r^{-1} \sin(\theta) & r^{-1} \cos(\theta) \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
+    \end{align*}
+    We find that the inverse function is $F^{-1}(x,y) = \left( \sqrt{x^2 + y^2}, \tan^{-1}(y/x)\right)$. 
+\end{exercise}
+
+
+
+
+
+\begin{exercise}{9.6.8}
+    Show by example that the result of the previous problem is not true if $U$ is only assumed to be connected, rather than convex. Hint: Try the function $F(x,y) = (x^2 - y^2, 2 x y)$ on $\R^2 \backslash \{0\}$.  \\
+    
+    Consider the function $f(x,y) = (x^2-y^2, 2xy) $. Then $df = \begin{bmatrix} 2x && -2y\\ 2y && 2x \end{bmatrix} $. Then the determinant of $df$ is greater than 0, namely it is $4(x^2+y^2)$. Consider now $U=\R^2 \backslash \{(0,0)\}$, which is a connected but not a convex set. Here, $df$ is non-singular but $f$ is not injective since $f(1,-1)=f(-1,1)$.
+\end{exercise}
+
+
+
+
+
+\begin{exercise}{9.6.10}
+    Show that the condition that $d F(a)$ be non-singular is necessary in the Inverse Function Theorem by showing that if a function $F$ from a neighborhood of $a$ in $\R^P$ to $\R^p$ is differentiable at $a$ and has an inverse function at $a$ which is differentiable at $F(a)$, then $d F(a)$ is non-singular.  \\
+    
+    We are trying to show that if $F$ is locally invertible, its differential matrix is also invertible, i.e. non-singular. \\
+ Assume the inverse of $F$ exists, and refer to it as $F^{-1}$, such that $F \circ F^{-1} = I$. If we differentiate, we find that we are looking for a function such that
+    \[ I = \text{d} F \, \text{d} F^{-1} \left( F \right) . \]
+    By linear algebra, this implies that $( \text{d} F(a) )^{-1}$ is the inverse differential of $\text{d} F(a)$, which implies that $\text{d} F(a)$ is non-singular.
+\end{exercise}
+
+
+
+
+\begin{exercise}{9.6.12}
+    If $F: \R^p \to \R^p$  is a $C^1$ function, what can you say about $F$ at a point of $\R^p$ where $|F|$ has a local minimum? How about a point where $|F|$ has a local maximum?  \\
+    
+    The norm of a function $F$ is defined as $|F| = \sqrt{ (F_1)^2 + \hdots + (F_p)^2}$ for a function with $p$-components. Differentiating both sides with respect to some variable $x$ yields the equation
+    \[ 2 |F| \frac{d |F|}{x} = 2 F_1 \frac{d F_1}{d x} + \hdots + 2 F_p \frac{d F_p}{d x} \]
+    We note that since we are dealing with local minima/maxima, that $\frac{d |F|}{x}=0$. As such, we get the equation
+    \[ 0 = \sum_{i=1}^p F_i \frac{d F_i}{dx}. \]
+    This is an interesting equation.
+\end{exercise}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Implicit Function Theorem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{9.7.1}
+    Are there any points on the graph of the equation $x^3 +3xy+2y^3=1$ where it may not be possible to solve for $y$ as a smooth function of $x$ in some neighborhood of the point?  \\
+    
+Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function theorem, we can solve this function for $y$ as a smooth function of $x$ whenever $\frac{\partial f}{\partial y}\neq 0$. We find that $\frac{\partial f}{\partial y}= 6xy + 6 y^2$. Solving this for zero is equivalent to solving $y(x+y)=0$.  Therefore, we can solve for $y$ as a smooth function of $x$ at all points where $y \neq 0$ and $y \neq -x$.
+\end{exercise}
+
+
+\begin{exercise}{9.7.3}
+    Find $\frac{\partial(f_1,f_2)}{\partial(u,v)}$ if
+        \begin{align*}
+            f_1(x,y,u,v) &= u^2 + v^2 + x^2 + y^2, \\
+            f_2(x,y,u,v) &= xu + yv + x - y.
+        \end{align*}
+    At which points  $(x,y,u,v)$ is this matrix non-singular?  \\
+    
+    We solve for the differential:
+    \begin{align*}
+        \frac{\partial(f_1, f_2)}{\partial (u,v)} = \begin{bmatrix} \frac{\partial f_1}{\partial u} & \frac{\partial f_1}{\partial v} \\ \frac{\partial f_2}{\partial u} & \frac{\partial f_2}{\partial v} \end{bmatrix} = \begin{bmatrix} 2 u & 2 v \\ x & y \end{bmatrix}
+    \end{align*}
+    We find that this matrix is singular whenever $2 u v= 2 vx$. Hence, this matrix is non-singular for all points $(x,y,u,v) \in S = \{(x,y,u,v) : 2 u v \neq 2 vx \}$.
+\end{exercise}
+
+
+\begin{exercise}{9.7.4}
+    Show that the system of equations 
+    \begin{align*}
+        u^2 + v^2 + 2 u - x y + z &= 0 \\
+        u^3 + \sin(v) - x u + yv + z^2 &= 0
+    \end{align*}
+    has a solution for $(u,v)$ as a smooth function of $(x,y,z)$, in some neighborhood of $(0,0,0)$, with the property that $(u,v) = (0,0)$ when $(x,y,z) = (0,0,0)$.  \\
+    
+    Let $f_1 = u^2 + v^2 + 2 u - x y + z $ and $f_2 = u^3 + \sin(v) - x u + yv + z^2 $. We solve for the differential at $(0,0,0,0,0)$:
+    \begin{align*}
+        \frac{\partial f}{\partial (u,v)} &= \begin{bmatrix} 2 u + 2 & 2v \\ 3u^2-x & \cos(v)+y \end{bmatrix} \\
+        \frac{\partial f}{\partial (u,v)} (0,0,0,0,0) &= \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix} 
+    \end{align*}
+    As the last differential is if non-singular, this is possible.
+\end{exercise}
+
+
+\begin{exercise}{9.7.6}
+    For the equation $xy + yz + xz = 1$, at which points on the solution set $S$ is there a neighborhood in which $S$ is a smooth 2-surface? At each such point $(a,b,c)$, find an equation of the tangent plane.  \\
+    
+    This function describes a two sheeted hyperbola. Let $F(x,y,z):  xy + yz + xz =1$.  THen $\nabla F = (y+z, x+z, y+x)$. We find that $\nabla F = (0,0,0)$ only at the points $(0,0,0)$ and $(x,-x,0)$. Of these, the only points on the graph are $(1,-1,0)$ and $(-1,1,0)$. We find that $F(1,-1,0)=F(-1,1,0)$. This means that there exists a neighbord $V$ of $(1,-1,0)$ and $(-1,1,0)$ with $V \subset \R^3$ there exists a level set $S = \{u \in V : F(u)=0\}$ which is a smooth p-surface. The tangent space at $(1,-1,0)$ and $(-1,1,0)$ consists of the set of the solutions $u$ to $\nabla F(1,-1,0) (u - (1,-1,0))=0$ and $\nabla F(-1,1,0) (u - (-1,1,0))=0$.
+\end{exercise}
+
+
+\begin{exercise}{9.7.8}
+    For the system of equations
+    \begin{align*}
+        x^2 + y^2 + u^2 - 3 v &= 1, \\
+        2 x + x y - y + 3 u^2 - 9 v &= 0,
+    \end{align*}
+    find all points on the solution set $S$ for which there is a neighborhood in which $S$ is a smooth 2-surface.  \\
+    
+    Let $f_1 = x^2+y^2+u^2-3v-1$ and $f_2= 2x + xy - y + 3u^2 - 9v$. We find the differential
+    \begin{align*}
+    \frac{\partial (f_1,f_2)}{\partial(x,y,u,v)} &= \begin{bmatrix} \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} & \frac{\partial f_1}{\partial u} & \frac{\partial f_1}{\partial v} \\ \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y} & \frac{\partial f_2}{\partial u} & \frac{\partial f_2}{\partial v}  \end{bmatrix} \\
+                                                 &= \begin{bmatrix} 2x & 2y & 2u & -3 \\ 2+y & x-1 & 6u & -9 \end{bmatrix}
+    \end{align*}
+    From this we can see that we can express the system of equations in terms of $x,y$ as functions of $u,v$ provided that $x \neq \pm \sqrt{ (y+1)^2}$.
+
+\end{exercise}
+
+
 
 
 
