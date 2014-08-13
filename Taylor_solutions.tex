@@ -248,7 +248,7 @@ If $x^2 < 1-x$, then $x^2 + x - 1 < 0$, hence $$\left( x- \dfrac{-1 + \sqrt{5}}{
 For the forward direction, observe that for each pair $x, y \in F$ with $x > 0$, $y/x$ in $F$ and since $F$ is archimedean, we have that for some integral $n$, $n > y/x$ so $nx > y$ as desired.
 
 For the reverse direction, we have for each pair $x, y \in F, x>0$, there exists integral $n$ with $nx > y$. In particular, let $x = 1 > 0$, so $n > y$. Hence $F$ is archimedean.
-\end{exercise{1.4.6}
+\end{exercise}
 
 \begin{exercise}{1.4.7}
 By the archimedean property, there exists natural $n$ with $y-x > 1/n$. Let $k$ be an integer with $k/n < x < (k+1)/n,$ then adding the inequalities $y-x > 1/n$ and $x > k/n$ gives us $y > (k+1)/n$, so $(k+1)/n$ is a rational between $x$ and $y$. 
@@ -1387,7 +1387,6 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 
 \prb{4.4.10} Let $g(x) = \log f(x) = x \log x.$ Then $$\lim_{x \rightarrow 0} x \log x = \lim_{x \rightarrow 0} \log x /(1/x).$$ This has numerator and denominator $\pm \infty$, hence we may apply L'Hopital's to get $$\lim_{x \rightarrow 0} x \log x = \lim_{x \rightarrow 0} (1/x)/(-1/x^2) = \lim_{x \rightarrow 0} - x = 0.$$
-\end{document}
 
 
 \begin{exercise}{4.4.11}
@@ -2544,6 +2543,28 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
 \section{1-forms and Path Integrals}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{exercise}{11.1.1}
+    Find a smooth curve in $\R^2$ which traces the straight line from $(1,2)$ to $(3,0)$.\\
+
+    The solution is the function $\gamma(t) = \vec{u} + t(\vec{v}-\vec{u})$ where $\vec{u}=(1,2)$, $\vec{v}=(3,0)$, and $t \in [0,1]$. We rewrite:
+    \begin{align*}
+    \gamma(t) &= \begin{bmatrix} 1 \\ 2 \end{bmatrix} + t \left(\begin{bmatrix} 3 \\ 0 \end{bmatrix}- \begin{bmatrix} 1 \\ 2 \end{bmatrix} \right) \\
+              &= \begin{bmatrix} 1 \\ 2 \end{bmatrix} + t \begin{bmatrix} 2 \\ -2 \end{bmatrix} = \begin{bmatrix} 1 + 2 t\\ 2 - 2 t \end{bmatrix}
+    \end{align*}
+\end{exercise}
+
+
+\begin{exercise}{11.1.2}
+    We find the derivative $\gamma ' (t) = \left( \cos(t)-t \sin(t), \sin(t) + t \cos(t) \right)$. We proceed to find the norm
+    \[ \left| \gamma'(t) \right| = \sqrt{ \left( \cos(t) - t \sin(t)\right)^2 + \left( \sin(t) + t \cos(t) \right)^2 } = \sqrt{1+t^2}. \]
+    To find the length, we solve the integral $\int_0^{4 \pi} \sqrt{1+t^2} dt$. We utilize a trig substitution, lettting $t = \tan(\theta)$. 
+    \begin{align*}
+        \int_0^{4 \pi} \sqrt{1+t^2} dt &= \int_0^{\tan^{-1}(4 \pi)} \sec(\theta) d\theta \\
+                                       &= \left. \ln \left( \sec(\theta) + \tan(\theta) \right) \right|_0^{\tan^{-1}(4 \pi}) \\
+                                       &= \ln \left( \sec\left( \tan^{-1}(4 \pi)\right) + 4 \pi \right) = \ln \left( 4 \pi + \sqrt{16 \pi^2 +1 }\right)
+    \end{align*}
+    The last step is justified by letting $\sec\left( \tan^{-1}(4 \pi)\right)= \sec (\theta)$, and solving $\tan^2 (\theta) + 1 = \sec^2(\theta)$.
+\end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Change of Variables}
