@@ -31,6 +31,8 @@
 \newenvironment{question}[2][Question]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
  
+\newcommand{\prb}[1]{\textbf{Exercise #1.}}
+
 \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
@@ -239,11 +241,23 @@ Assume now that $A$ does not have a largest number. By the completeness theorem 
 
 
 \begin{exercise}{1.4.4}
-\emph{Solved in Class}
+If $x^2 < 1-x$, then $x^2 + x - 1 < 0$, hence $$\left( x- \dfrac{-1 + \sqrt{5}}{2} \right) \left( x - \dfrac{-1 - \sqrt{5}}{2} \right) < 0,$$ so $x \in \left( \dfrac{-1 - \sqrt{5}}{2}, \dfrac{-1 + \sqrt{5}}{2} \right),$ hence $A$ is bounded above by $\dfrac{-1 + \sqrt{5}}{2},$ which is its least upper bound.
 \end{exercise}
 
+\begin{exercise}{1.4.6}
+For the forward direction, observe that for each pair $x, y \in F$ with $x > 0$, $y/x$ in $F$ and since $F$ is archimedean, we have that for some integral $n$, $n > y/x$ so $nx > y$ as desired.
+
+For the reverse direction, we have for each pair $x, y \in F, x>0$, there exists integral $n$ with $nx > y$. In particular, let $x = 1 > 0$, so $n > y$. Hence $F$ is archimedean.
+\end{exercise{1.4.6}
+
 \begin{exercise}{1.4.7}
-\emph{Solved in Class}
+By the archimedean property, there exists natural $n$ with $y-x > 1/n$. Let $k$ be an integer with $k/n < x < (k+1)/n,$ then adding the inequalities $y-x > 1/n$ and $x > k/n$ gives us $y > (k+1)/n$, so $(k+1)/n$ is a rational between $x$ and $y$. 
+
+This proves the claim if both $x,y$ are positive. If both are negative, the proof works essentially the same way. If one is positive and the other negative, then take $0$ as the rational number between the two. 
+\end{exercise}
+
+\begin{exercise}{1.4.8}. 
+Suppose not, so that $x + r = s \in \mathbb{Q}$ and $xr = s' \in \mathbb{Q}$, then $x = s-r \in \mathbb{Q}$ and $x = s'/r \in \mathbb{Q}$, both of which lead us to a contradiction.
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -345,7 +359,13 @@ Prove (a) of Theorem 1.5.10. \\
 \end{exercise}
 
 \begin{exercise}{1.5.8}
-\emph{Solved in Class}
+\begin{enumerate}[(a)]
+\item $\mathrm{sup}_I f = 1, \mathrm{inf}_I f = 0$. These are the max and min respectively. 
+\item $\mathrm{sup}_I f = \infty, \mathrm{inf}_I f = 3$ at $x = 2$. Neither are the max nor min of $f$ on $I$. 
+\item $\mathrm{inf}_I f = 0, \mathrm{sup}_I f = 1$. The inf of $f$ on $I$ is actually a minimum, but the sup is not a maximum. 
+\end{enumerate}
+
+
 \end{exercise}
 
 \begin{exercise}{1.5.9}
@@ -405,6 +425,10 @@ This is equivalent to saying $-1 < x - 5 < 1$. We add $5$ to the inequality, and
 	\end{align*}
 \end{exercise}
 
+\begin{exercise}{2.1.2}
+Adding the two inequalities gives $$|x-1| + |x-2| < 1,$$ hence by the triangle inequality $|2x - 3| \leq |x-1| + |x-2| < 1,$ so $|x -\frac{3}{2}|<\frac{1}{2}$. Hence $x \in (1,2)$. Combining this with $|x-1| < 1/2$ and $|x-2|< 1/2$ we have $x \in (1,\frac{3}{2})$ and $x \in (\frac{3}{2}, 2)$, a contradiction.
+\end{exercise}
+
 \begin{exercise}{2.1.3}
 Put each of the following sequences in the form $a_1, a_2, a_3, \hdots, a_n$. This requires that you compute the first 3 terms and find an expression for the $n$th term. \\
 \textbf{(a) the sequence of positive odd integers;} This is a sequence of the form $1,3,5,\hdots$. To find the $n-th$ term, we express this sequence as $a_n = 2 n - 1$, with $n \in \N$. \\
@@ -437,8 +461,16 @@ Find $\lim (-1)^n /n$ \\
 We guess the limit to be $0$. We see $| \frac{(-1)^n}{n}| = |\frac{1}{n}|$. Hence we need to choose an $n>N$ such that $N> \frac{1}{\epsilon}$ for this inequality to be true.
 \end{exercise}
 
+\begin{exercise}{2.1.7}
+The limit is zero. Let $N = \dfrac{1}{\sqrt{\epsilon}}.$ Then if $n > N$, $$\left| \dfrac{n}{n^3 + 4} - 0 \right| = \dfrac{n}{n^3 + 4} < \dfrac{n}{n^3} = \dfrac{1}{n^2} < \dfrac{1}{N^2} = \epsilon.$$ Hence $\displaystyle \lim_{n \rightarrow \infty} \dfrac{n}{n^3+4} = 0.$ 
+\end{exercise}
+
+\begin{exercise}{2.1.8}
+The limit is zero. Let $N = \left|\dfrac{1-\epsilon^2}{2\epsilon} \right|^2.$ Then for $n > N$, $$\sqrt{n} > \left| \dfrac{1-\epsilon^2}{2\epsilon} \right| \Rightarrow 2\epsilon \sqrt{n} > |1-\epsilon^2|,$$ hence adding $\epsilon^2 + n$ to both sides yields $$\epsilon^2 + n + 2\epsilon \sqrt{n} > |1-\epsilon^2| + \epsilon^2 + n \geq 1 + n,$$ where the last step follows from the triangle inequality. Factoring the left side gives $$(\sqrt{n} + \epsilon)^2 > n+1,$$ and since both sides are positive we may take the square root which yields $$\sqrt{n} + \epsilon > \sqrt{n+1} \Rightarrow \epsilon > \sqrt{n+1} - \sqrt{n} = |\sqrt{n+1} - \sqrt{n} - 0|,$$ hence $\displaystyle \lim_{n \rightarrow \infty} \sqrt{n+1} - \sqrt{n} = 0.$ 
+\end{exercise}
+
 \begin{exercise}{2.1.9}
-\emph{Solved in Class}
+The limit is zero. We know for any $\epsilon > 0,$ there exists $N_1$ such that for all $n > N$, $$\dfrac{1}{n} < \epsilon/2,$$ since $\epsilon/2$ is another positive real and we have shown the limit of $1/n$ as $n$ goes to infinity is zero in problem 4. Similarly, we may find $N_2$ such that for all $n > N_2,$ $$\left|\dfrac{(-1)^n}{n^2}\right| < \epsilon/2,$$ since we found the limit as $n \rightarrow \infty$ of $(-1)^n/n$ earlier to be $0$, and it can be shown in much the same way that $\displaystyle \lim_{n \rightarrow \infty} (-1)^n/n^2 = 0.$ Hence, for $n > \max \{N_1, N_2\},$ both inequalities hold and we may add the two and apply the triangle inequalityto obtain $$\left|\dfrac{1}{n} + \dfrac{(-1)^n}{n^2} - 0\right| \leq \left|\dfrac{1}{n}\right| + \left|\dfrac{(-1)^n}{n^2}\right| < \epsilon,$$ hence the limit is zero.
 \end{exercise}
 
 
@@ -474,7 +506,7 @@ $\lim \frac{3n^2 -2}{n^2 +1}$. I assume the limit will be $3$. We note that $\fr
 \end{exercise}
 
 \begin{exercise}{2.2.2}
-\emph{Solved in Class}
+The limit is zero. Let $N = \dfrac{1}{\epsilon}$, then $$\left| \dfrac{n}{n^2 + 2} - 0 \right| = \dfrac{n}{n^2+2} < \dfrac{n}{n^2} = \dfrac{1}{n} < \dfrac{1}{N} = \epsilon.$$
 \end{exercise}
 
 \begin{exercise}{2.2.3}
@@ -484,14 +516,23 @@ $\lim \frac{1}{\sqrt{n}} $ I assume the limit will be $0$. We see $| \frac{1}{\s
 \end{exercise}
 
 \begin{exercise}{2.2.4}
-\emph{Solved in Class}
+The limit is 1. Let $N = \dfrac{2}{\epsilon}$, then $$\left| \left(\dfrac{n}{n+1}\right)^2 - 1 \right| = \left| \dfrac{-2n-1}{n^2 + 2n + 1} \right| = \dfrac{2n+1}{n^2 + 2n + 1}< \dfrac{2}{n}.$$ This last step is true because for any positive integer $n$, we have $3n+2 > 0,$ hence $2n^2 + 4n + 2 > 2n^2 + n$, and so dividing by $n(n^2 + 2n + 1)$ on both sides yields the desired inequality. Hence, $$\left| \left(\dfrac{n}{n+1}\right)^2 - 1 \right| < \dfrac{2}{n} < \dfrac{2}{N} = \epsilon.$$
 \end{exercise}
 
 
 \begin{exercise}{2.2.5}
 Make an educated guess as to what you think the limit is, then use the definition of limit to prove that your guess is correct.\\
 
-$\lim (\sqrt{n^2 + N} -n) $ I know as we approach infinity, the limit is $1/2$, but have not been able to prove it.
+The limit is $\dfrac{1}{2}$. Let $A = \{ n \in \mathbb{N} : |a_n - \dfrac{1}{2}| \geq \epsilon\}$ for a given $\epsilon.$ This set is finite since \begin{align*}
+\sqrt{n^2 + n} - n - \dfrac{1}{2} \geq \epsilon & \Leftrightarrow n^2 + n \geq n^2 + \left(\epsilon + \dfrac{1}{2}\right)^2 + n(2\epsilon + 1) \\
+& \Leftrightarrow 0 \geq \left( \epsilon + \dfrac{1}{2} \right)^2 + 2 \epsilon n. \end{align*}
+But this last inequality is never true, since each of the terms is strictly greater than zero. Of course, we might also have 
+\begin{align*}
+n+\dfrac{1}{2} - \sqrt{n^2 + n} \geq \epsilon & \Leftrightarrow n^2 + +n(1-2\epsilon) + \epsilon^2 \geq n^2 + n \\
+& \Leftrightarrow -2n\epsilon + \epsilon^2 \geq 0 \\
+& \Leftrightarrow \dfrac{\epsilon}{2} \geq n,
+\end{align*}
+which is certainly only true for finite $n$. Hence for a given $\epsilon$ the set $A$ is in fact finite, so the limit is $\dfrac{1}{2}.$ 
 \end{exercise}
 
 
@@ -503,6 +544,10 @@ $\lim (1 + 1/n)^3 = 1$. Proof:
 		| (1+ \frac{1}{n})^3 -1 | &= | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} + 1 - 1| = | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} |	
 		\end{align*}
 We note that each term is of the form $c/n$ or multiples thereof for some constant $c$. It has already been shown that each such term tends can be made smaller than any $\epsilon$. This also holds for the sum.
+\end{exercise}
+
+\begin{exercise}{2.2.7}
+Suppose the sequence converges to $a$, then for all $\epsilon > 0,$ there is an $N$ so that when $n > N$, $|a_n - a| < \epsilon \Rightarrow a- \epsilon < a_n < a+\epsilon.$ In particular, let $\epsilon = 1$, then certainly for all $n > N$, the sequence is bounded above by $a+1$ and below by $a-1$. For $n \leq < N,$ notice that the $a_1, ..., a_N$ is bounded above by $e = \max \{|a_1|, ..., |a_n|\}$ and below by $f = \min \{a_1, ..., a_N\}.$ Hence the entire sequence is bounded above by $\max \{e, a+1\}$ and $\min \{f, a-1\}.$ $\square$
 \end{exercise}
 
 
@@ -525,7 +570,7 @@ No. The sequence $\{cos(n \pi /3)\}$ oscillates between $-1$ and $1$; a limit ca
 \end{exercise}
 
 \begin{exercise}{2.2.10}
-\emph{Solved in Class}
+For a similar reason as in the previous problem, the sequence $a_n = \cos (\pi n)$ does not converge but the sequence $|a_n| = |\cos (\pi n)|$ does converge since $|a_n| = 1$ for all $n$. 
 \end{exercise}
 
 \begin{exercise}{2.2.11}
@@ -541,6 +586,11 @@ Prove the following partial converse to Theorem 2.2.3: Suppose $\{a_n\}$ is a co
 Note that ${a_n}$ is bounded by $c$ according to the premise. In this case, we can say that $a_n \leq \sup a_n \leq c$ for all $n$. Let $ a = \lim a_n$. We know by definition that $a \leq \sup a_n$, and therefore we can write that $\lim a_n \leq \sup a_n \leq c$. \\
 Likewise, we can say that $b$ is a lower bound for $a_n$ such that $b \leq \inf a_n$. We know that by definition $\inf a_n \leq a$, allowing us to write $b \leq \lim a_n$.
 \end{exercise}
+
+\begin{exercise}{2.2.15} 
+Suppose this sequence converges to zero. Then for all $\epsilon > 0$, there exists $N$ such that for all $n > N$, $|a_n| < \epsilon.$ But consider $n = \displaystyle \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right ) \cdot 10^6.$ This is a multiple of one million, so $a_n \geq \epsilon.$ And, it is larger than $N$ since $$\dfrac{N}{10^6} < \left \lfloor \dfrac{N}{10^6} \right \rfloor+1$$ by definition, $10^6 \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right) > N.$ Hence we have a contradiction. 
+\end{exercise}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -562,12 +612,16 @@ Use the Main Limit Theorem to find $\lim \frac{n^2 - 5}{n^3 + 2n^2 + 5}$. \\
 \end{exercise}
 
 \begin{exercise}{2.3.3}
-\emph{Solved in Class}
+By dividing numerator and denominator by $2^n$, in a similar fashion to problem 1, we can see that the limit is 1. 
+
+
+
 \end{exercise}
 
 \begin{exercise}{2.3.4}
-\emph{Solved in Class}
+Let $a_n = 1/n$, then $\lim a_n = 0,$ and let $b_n = \sin n$, then $|b_n| \leq 1$. By theorem 2.3.2, the sequence $\dfrac{\sin n}{n} = a_n b_n$ has limit zero. 
 \end{exercise}
+
 
 \begin{exercise}{2.3.5}
 Prove Theorem 2.3.2.
@@ -702,6 +756,9 @@ Prove that $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
 And hence, $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
 \end{exercise}
 
+\begin{exercise}{2.4.10} 
+If the sequence is bounded, then we are done by theorem 2.4.1. Otherwise there is no $M \in \mathbb{R}$ such that $M \geq a_n$ for all $n$. This is equivalent to saying any $M \in \mathbb{R}$, there exists $N$ such that $a_N > M$. Since the sequence is monotone, for all $n > N$, $a_n > a_N > M$. Hence it has limit equal to infinity. 
+\end{exercise}
 
 \begin{exercise}{2.4.11}
 Prove Part (c) of Theorem 2.4.7. \\
@@ -710,6 +767,14 @@ Prove Part (c) of Theorem 2.4.7. \\
  	\begin{proof}
  	If $a_n \to \infty$, there exists some value of $a_n$ such that $a_n > M$ for any possible $M\in\R$. If we consider the sequence $a_n (-1)$, we see clearly that $-a_n < M$ for any $M\in\R$. But if that is true, then $\lim -a_n= -\infty$.
  	\end{proof}
+\end{exercise}
+
+\begin{exercise}{2.4.12}
+Suppose $\lim b_n < \infty$. Then $b_n$ is bounded by theorem 2.2.3, so there exists $M$ with $b_n \leq M$ for all $n$. Since $a_n \leq b_n,$ we have $a_n \leq M$ so $\lim a_n < \infty$, a contradiction. 
+\end{exercise}
+
+\begin{exercise}{2.4.13}
+For all $M \in \mathbb{R}$, given $k \geq 0$, $M/k \in \mathbb{R}$. Hence there exists $N$, for all $n > N$, $a_n > M/k$. Since $b_n \geq k$, we have $a_n b_n > k \cdot M/k = M,$ hence $\lim a_n b_n = \infty$. 
 \end{exercise}
 
 \begin{exercise}{2.4.14}
@@ -726,6 +791,10 @@ Prove Part (c) of Theorem 2.4.7. \\
 Give an example of a nested sequence of bounded open intervals that does not have a point in its intersection.
 \end{exercise}
 
+\begin{exercise}{2.5.2}
+Let $I_n = [n, \infty)$ which are nested, closed and unbounded. Suppose there is an $x \in \mathbb{R}$ with $x \in \displaystyle \bigcap_i I_i$. But there exists an integer $m, m>x$ by the archimedean property. Hence $I_m$ does not contain $x$, a contradiction.
+\end{exercise}
+
 \begin{exercise}{2.5.4}
 Prove by induction that if $\{n_k\}$ is an increasing sequence of natural numbers, then $n_k \geq k$ for all $k$.
 	\begin{proof}
@@ -733,12 +802,19 @@ Prove by induction that if $\{n_k\}$ is an increasing sequence of natural number
 	\end{proof}
 \end{exercise}
 
-
 \begin{exercise}{2.5.5}
 Which of the following sequences $\{a_n \}$ have a convergent subsequence? Justify your answer. \\
 (a) $a_n= (-2)^n$; None of the subsequences are convergent, as they either tend to $+\infty$ or $-\infty$.\\
 (b) $a_n = \frac{5+(-1)^n n}{2+3n}$; This sequence is convergent for all $n$ such that $n\mod 2=0$, which is the sequence starting with $0.875, 0.6428, 0.55, 0.5, 0.46875, 0.4473, 0.4318, 0.42, 0.41071, \hdots$\\
 (c) $a_n=2^{(-1)^n}$ This sequence has convergent subsequences for all $n$ such that $n\mod 2=0$ and for $n \mod 2 = 1$.
+\end{exercise}
+
+\begin{exercise}{2.5.6}
+\begin{enumerate}[(a)]
+\item The sequence is $-1, 1, -1, 1, -1, 1, ...$. The subsequence $\{a_{n_i}\}, n_i = 2i-1$ converges to $-1$. 
+\item The sequence is $\sqrt{2}/2, 1, \sqrt{2}/2, - \sqrt{2}/2, -1, - \sqrt{2}/2, 0, ...$. Since the sequence is periodic, we can find infinitely many terms equal to $0$, which gives a convergent subsequence (convergent to 0). 
+\item Let $a_{n_k} = 1/2^k$ which happens when $n = 2^k + 1$. Then by a previous homework this has limit 0. Hence it is a convergent subsequence.
+\end{enumerate}
 \end{exercise}
 
 \begin{exercise}{2.5.7}
@@ -870,6 +946,10 @@ What is the natural domain of the function $\frac{x^2 +1}{x^2-1}$? With this as 
 The domain is $\R \backslash \{-1,1\}$. The function is continuous everywhere except for the points not part of the domain.
 \end{exercise}
 
+\begin{exercise}{3.1.3}
+For any real $x$, ${x^2+1}$ is defined and nonzero. And, $1+x^2$ is continuous on $\mathbb{R}$, so by theorem 3.1.9(d), it is continuous.
+\end{exercise}
+
 \begin{exercise}{3.1.4}
 Show that the function $f(x) = |x|$ is continuous on all of $\R$.
 
@@ -884,6 +964,13 @@ Assuming $\sin$ is continous, prove that $\sin(x^3-4x)$ is continuous.
 	\begin{proof}
 	We know that $|sin(x)| < 1$ for all $x$.  
 	\end{proof}
+\end{exercise}
+
+\begin{exercise}{3.1.6}
+Since $f(x), g(x)$ are continuous, and $\{f(x_n)\}$ converges to $f(a)$ and $\{g(x_n)\}$ converges to $g(a)$, when $\{x_n\}$ converges to $a$. By theorem 2.3.6(d), $\{f(x_n)/g(x_n)\}$ converges to $f(a)/g(a)$ since $g(a) \neq 0$ by assumption and $g(x_n) \neq 0$ in the domain of $f(x)/g(x)$ by definition. 
+\end{exercise}
+
+\begin{exercise}{3.1.7} Let $\{x_n\}$ by a sequence in $D_{f \circ g}$. Then $x_n \in D_g$ so if $x_n \rightarrow a,$ $g(x_n) \rightarrow g(a)$. But all the $x_n, a \in D_{f \circ g}$ implies $x_n, a \in D_g$ and $g(x_n), g(a) \in D_f.$ Hence $\{g(x_n)\}$ is a sequence in $D_f$ which converges to $g(a)$ when $\{x_n\}$ converges to $a$, hence $\{f(g(x_n))\}$ converges to $\{f(g(a))\},$ so by theorem 3.1.6 it is continuous. 
 \end{exercise}
 
 \begin{exercise}{3.1.8}
@@ -970,18 +1057,16 @@ Prove that the function (piecewise function) is continuous at 0.\\
 \section{Properties of Continuous Functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{exercise}{3.2.1}
+The minimum of $f$ on $[0, 3)$ is $-1$. The maximum does not exist, since $\sup f_{[0,3)} = 6$ which is achieved at $x=3 \not \in [0,3)$.
+\end{exercise}
+
 \begin{exercise}{3.2.2}
     Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m>0$ such that $f(x)\geq m$ for all $x \in I$ or $f(x) \leq -m$ for all $x \in I$.
     
     \begin{proof}
     Assume $f(a)>0$. We have that $f([a,b])=[m,M]$. We know that $m=\min f$, $M=\max f$. Let's prove that $m>0$. By contradiction: assume $m<0$. Value 0 is taken \emph{(non-legible)} $a_n$ intermediate value $[m, f(a)]$ which contradicts $f(x)\neq 0$. Prove for case 2 is analogous (show that $M <0$).
     \end{proof}
-\end{exercise}
-
-\begin{exercise}{3.2.3}
-Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ and if $(x_0, y_0)$ is any point in the plane, then there is a closest point to $(x_0,y_0)$ on the graph of $f$.\\
-
-\emph{solved in class}
 \end{exercise}
 
 \begin{exercise}{3.2.3}
@@ -1008,6 +1093,9 @@ The second condition cannot be fulfilled; according to theorem 3.2.1 (p. 65): ``
 fails to achieve its maximum on a bounded interval $[0,1]$. However, it does so by having a discontinuity at $x = 1/2$.
 \end{exercise}
 
+\begin{exercise}{3.2.5}
+Let $f(x) = e^x$, $I = [1, \infty)$. Then $f$ is continuous on a closed (but not bounded) interval, but is not bounded. If $f(x) = 1/(1+e^{-x})$ and $I = [0, \infty)$, then $f$ is continuous and bounded by $1$ on $I$ which is closed but does not have a maximum. 
+\end{exercise}
 
 
 \begin{exercise}{3.2.7}
@@ -1132,6 +1220,10 @@ Prove that if $I$ and $J$ are overlapping intervals in $\R (I \cap J \neq \empty
 	\end{proof}
 \end{exercise}
 
+\begin{exercise}{3.3.7}
+Suppose $f$ is not continuous on $I$, then since uniform continuity implies continuity, $f$ is not uniform continuous on $I$. Suppose $f$ is continuous on $I$. Then $f$ is uniform continuous on $I$ if $f$ is continuouss on $\bar{I}$. But a continuous function on a closed, bounded interval is bounded, but $f$ is unbounded. This is a contradiction so $f$ cannot be uniformly continuous.  
+\end{exercise}
+
 
 
 \begin{exercise}{3.3.8}
@@ -1201,21 +1293,19 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \begin{exercise}{4.3.1}
 \end{exercise}
 
+\prb{4.3.1} If we apply the MVT to the intervals $[-1, 1]$, $[0, 1]$ and $[-1, 0]$ we find that there exist points where the derivative equals $1/2, 1,$ and $0$. 
 
-\begin{exercise}{4.3.2}
-\end{exercise}
+\prb{4.3.2} Observe that $f(x) = \sin x$ satisfies the hypotheses of theorem 4.3.9 where we let $(a,b) = (-\infty, \infty)$ and so it must satisfy $|f(x) - f(y)| \leq M |x-y|$ where $M$ is a bound for the derivative. In this case $f'(x) = \cos x \leq 1$ for all $x$, hence we may set $M = 1$. Then $|\sin x - \sin y| = |f(x) - f(y)| \leq M |x-y| = |x-y|$ as desired.
 
 \begin{exercise}{4.3.3}
 \end{exercise}
 
-\begin{exercise}{4.3.4}
-\end{exercise}
+\prb{4.3.4} We know that there is some $c \in (0, \infty)$ with $f(x) - f(y) = f'(c) (x-y)$ for $x, y \in (0, \infty)$. Then $|f(x) - f(y)| \leq f'(c) |x-y| \leq M|x-y|$. If we take the limit of both sides as $y \rightarrow 0$, then since $|f(x) - f(y)|$ is continuous, $\displaystyle \lim_{y \rightarrow 0} |f(x) - f(y)| = |f(x) - f(0)| = |f(x)|$. Hence $|f(x)| \leq Mx$. 
 
 \begin{exercise}{4.3.5}
 \end{exercise}
 
-\begin{exercise}{4.3.6}
-\end{exercise}
+\prb{4.3.6} We know that $f'(x) = 6x^2 + 6x - 12 = 6(x+2)(x-1)$. Hence $f'(x) \leq 0$ on $[-2, 1]$ and is positive elsewhere. Hence $f(x)$ is decreasing on $[-2, 1]$ and increasing elsewhere. 
 
 \begin{exercise}{4.3.7}
 \end{exercise}
@@ -1258,8 +1348,7 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{exercise}{4.4.1}
-\end{exercise}
+\prb{4.4.1} By Cauchy's form of the MVT for the interval $[1, x]$ and $f(x) = \ln x$ and $g(x) = x^r$, we have $$\dfrac{\ln x}{x^r - 1} = \dfrac{1/c}{rc^{r-1}} = \dfrac{1}{rc^r},$$ hence $$\ln x = \dfrac{x^r - 1}{rc^r}.$$ We know moreover that $c > 1$ and $r > 0$, hence $r \geq \log_c 1,$ or $c^r \geq 1$ hence $1/c^r \leq 1.$ Then $$\ln x = \dfrac{x^r - 1}{rc^r} \leq \dfrac{x^r-1}{r},$$ as desired.
 
 
 \begin{exercise}{4.4.2}
@@ -1283,28 +1372,22 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 
 
-\begin{exercise}{4.4.6}
-    Find the limit $\lim_{x \to \infty} \frac{\ln x}{x^r}$ where $r > 0$. \\
-    
-    This limit is indeterminate. Use L'H\^{o}pital's rule. We find $\frac{d}{dx} \ln x = 1/x$ and $\frac{d}{dx} x^r = \frac{r\, x^r}{x}$.
-\end{exercise}
+\prb{4.4.6} The limit is of the form $\infty/\infty$, hence \begin{align*}
+\lim_{x \rightarrow \infty} \dfrac{\ln x}{x^r} & = \lim_{x \rightarrow \infty} \dfrac{1/x}{rx^{r-1}} \\
+& = \lim_{x \rightarrow \infty} \dfrac{1}{rx^{r}} = 0. \end{align*}
 
+\prb{4.4.7} If we write $x \ln x = \dfrac{\ln x}{1/x}$ then the limit is of the form $-\infty/\infty$. By L'Hopital's, the limit is equal to $$\lim_{x \rightarrow 0} \dfrac{1/x}{-1/x^2} = \lim_{x \rightarrow 0} -x = 0.$$
 
+\prb{4.4.8} The limit is of the form $0/0$ hence it is equal to $$\lim_{x \rightarrow 0} \dfrac{\cos x - 1}{3x^2}.$$ It is still of the form $0/0$ hence equal to $$\lim_{x \rightarrow 0} \dfrac{-\sin x }{6x}.$$ Applying L'Hopital's again, the limit equals $$\lim_{x \rightarrow 0} \dfrac{-\cos x }{6} = 0.$$ 
 
-\begin{exercise}{4.4.7}
-\end{exercise}
-
-
-\begin{exercise}{4.4.8}
-\end{exercise}
 
 
 \begin{exercise}{4.4.9}
 \end{exercise}
 
 
-\begin{exercise}{4.4.10}
-\end{exercise}
+\prb{4.4.10} Let $g(x) = \log f(x) = x \log x.$ Then $$\lim_{x \rightarrow 0} x \log x = \lim_{x \rightarrow 0} \log x /(1/x).$$ This has numerator and denominator $\pm \infty$, hence we may apply L'Hopital's to get $$\lim_{x \rightarrow 0} x \log x = \lim_{x \rightarrow 0} (1/x)/(-1/x^2) = \lim_{x \rightarrow 0} - x = 0.$$
+\end{document}
 
 
 \begin{exercise}{4.4.11}
@@ -1334,16 +1417,54 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \section{Definition of the Integral}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\prb{5.1.1} We have $$U(f, P) = 1 \cdot \dfrac{1}{4} + \dfrac{4}{5} \cdot \dfrac{1}{4} + \dfrac{2}{3} \cdot \dfrac{1}{4} + \dfrac{4}{7} \cdot \dfrac{1}{4} = 319/40.$$ Moreover, $$L(f,P) = \dfrac{4}{5} \cdot \dfrac{1}{4} + \dfrac{2}{3} \cdot \dfrac{1}{4} + \dfrac{4}{7} \cdot \dfrac{1}{4} + \dfrac{1}{2} \cdot \dfrac{1}{4} = 533/840.$$
+
+\prb{5.1.2} Since $x$ is an increasing function, we know that $M_k = k/n$ and $m_k = (k-1)/n$ hence $$U(f, P_n) = \displaystyle \sum_{k=1}^n \dfrac{k}{n} \dfrac{1}{n} = \dfrac{1}{n^2} \dfrac{n(n+1)}{2} = \dfrac{n+1}{2n}$$ and $$L(f, P_n) = \displaystyle \sum_{k=1}^n \dfrac{k-1}{n} \dfrac{1}{n} = \dfrac{1}{n^2} \dfrac{n(n-1)}{2} = \dfrac{n-1}{2n}.$$ Since these have the same limit as $n \rightarrow \infty$, we know that $\lim_{n \rightarrow \infty} U(f, P_n) - L(f, P_n) = 0,$ as desired.
+
+\prb{5.1.3} The base case is clearly true, so suppose that $$\displaystyle \sum_{j=1}^k j^2 = \dfrac{k(k+1)(2k+1)}{6}.$$ Then adding $(k+1)^2$ to both sides yields $$\displaystyle \sum_{j=1}^{k+1} j^2 = \dfrac{k(k+1)(2k+1)}{6} + (k+1)^2 = \dfrac{(k+1)(k+2)(2(k+1)+1)}{6},$$ as desired.
+
+\prb{5.1.4} By using exercise 3 above, one finds that $$U(f, P_n) = \sum_{k=1}^n \left(\dfrac{ka}{n}\right)^2 \dfrac{a}{n} = \dfrac{a^3}{n^2} \dfrac{n(n+1)(2n+1)}{6},$$ where $P_n = \{ 0 < \dfrac{a}{n} < \cdots < \dfrac{(n-1)a}{n} < a\}$ and $M_k = (ka/n)^2$ since $f(x) = x^2$ is increasing. Moreover, notice that the limit is $a^3/3$. We now find that $$L(f, P_n) = \sum_{k=1}^n \left(\dfrac{(k-1)a}{n}\right)^2 \dfrac{a}{n}$$ which we may find evaluates to $$\dfrac{a^3}{n^2} \dfrac{n(n-1)(2n-1)}{6}.$$ Notice that this also has limit $a^3/3$, hence the limit of the difference of the two is zero, and the integral exists. Moreover, it equals $\lim U(f, P_n) = a^3/3.$
+
+\prb{5.1.5} For any $P$, we know that $U(f,P) = 1$ since $U(f, P) = \displaystyle \sum_k M_k (x_k - x_{k-1}) = \sum_k x_k - x_{k-1} = 1-0 = 1$ as the supremum of $f$ on any interval is $1$. On the other hand we know $L(f,P) = 0$ since the infimum of $f$ on any interval is $0$. Hence for all partitions $P$, $U(f,P) - L(f,P) = 1$, hence by theorem 5.1.7 the function is not Riemann integrable.
+
+\prb{5.1.8} We know that $$\underline{\int_a^b} f(x) \ dx = \sup \{L(f, Q): Q \in \mathcal{P}\},$$ where $\mathcal{P}$ is the set of partitions of $[a,b]$. This is equal to $\sum_{k=1}^n m_k (x_k - x_{k-1})$ for some partition $\{ a = x_0 < x_1 < \cdots < x_n = b\}$ of $[a,b]$. But we know $$\sum_{k=1}^n m_k (x_k - x_{k-1}) \geq \sum_{k=1}^n m (x_k - x_{k-1}) = m(b-a).$$ This gives the first inequality in the chain of inequalities. The second inequality is obtained by the definition of supremum and infimum. The third inequality is found by noting that $M_k \leq M$. 
+
+\prb{5.1.9} For any partition, $$U(f, P) = \sum_{k=1}^n M_j (x_j - x_{j-1}) = \sum_{j=1}^n k (b-a) = \sum_{j=1}^n m_k (b-a) = L(f, P).$$ Hence $U(f, P) - L(f, P) = 0 < \epsilon$ for any partition $P$, so by theorem 5.1.7 the integral exists. Applying definition 5.1.6 and the definition of upper and lower integral, we find that the integral equals $\sum_{j=1}^n k (b-a)$.
+
+\prb{5.1.10} See definition 5.1.1. If $P$ partitions $[a,b]$ into $n$ equal subintervals, then $x_k - x_{k-1} = (a-b)/n$ hence the difference is $$\dfrac{a-b}{n} \sum_{k=1}^n (M_k - m_k).$$
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Existence and Properties of the Integral}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\prb{5.2.1} If $f = g-h$ and $g, h$ are non-decreasing, then $g', h' \geq 0$. We will then have $g' \geq h'$, $g' = h'$ or $g' \leq h'.$ In the first and third cases, we know that either $f' \geq 0$ or $f' \leq 0$. In either case, $f$ is monotone on a closed bounded interval $[a,b]$, hence by theorem 5.2.1 it is integrable. On the other hand if $g' = h'$ then $f' = 0$, hence $f$ is constant and it was proved that a constant function is integrable in the previous homework.
+
+\prb{5.2.6} We know $1+x^{2n}$ is continuous and never zero, hence $1/(1+x^{2n})$ is also continuous on $[-1, 1]$, hence by theorem 5.2.2 it is integrable. Moreover, $M = \sup_{[-1, 1]} f = 1$ and $m = \inf_{[-1, 1]} f = 1/2$. By corollary 5.2.5, we know that the integral is therefore trapped between $m(b-a) = \frac{1}{2} \cdot 2 = 1$ and $M(b-a) = 1 \cdot 2 = 2.$ Hence the desired inequality.
+
+\prb{5.2.11} Let $f(x) = 1$ if $x \in [0,1]$ is rational, and $-1$ if $x$ is irrational. Then for reasons similar to problem 5.1.5, this function is not integrable. However, $|f(x)| = 1$ for all $x \in [0,1]$, and hence it is integrable.
+
+\prb{5.2.12} We know that $f(x)$ is continuous, hence integrable on a closed bounded interval $[a,b]$. It is also therefore bounded, and so $M = \sup_{[a,b]} f$ and $m = \inf_{[a,b]} f$ are finite so $f$ actually attains these values. Moreover, we know by the IVT that $f$ attains every value between $m$ and $M$ (possibly these values). In particular, $f$ attains the value $$\dfrac{1}{b-a} \int_a^b f(x) \ dx,$$ by corollary 5.2.5. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Fundamental Theorems of Calculus}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\prb{5.3.1} We know that the antiderivative is $f(x) = x^2 \sin(1/x)$ and that it satisfies all the hypotheses of theorem 5.3.1 from example 5.3.2, and so the integral equals $f(2/\pi) - f(4/\pi) = 4/\pi^2 - 8\sqrt{2}/\pi^2.$
+
+\prb{5.3.2} It is clear that the derivative is $\cos (1/x).$
+
+\prb{5.3.4} The integral may be split up as $$\int_0^x e^{-t^2} \ dt - \int_0^{1/x} e^{-t^2} \ dt,$$ and hence the derivative of the first integral is $e^{-x^2}$ and of the second it is $-e^{-1/x^2}/x^2$ by the chain rule and second fundamental theorem of calculus. 
+
+\prb{5.3.5} $f(x) = -1/x$ is not continuous at $x = 0 \in [-1, 1]$, violating the hypotheses of theorem 5.3.1.
+
+\prb{5.3.6} Letting $g(x) = f(x),$ applying (5.3.5) gives that the integral equals $f(b)^2 - f(a)^2 - \displaystyle \int_a^b (f'(x))^2 \ dx.$ 
+
+\prb{5.3.8} Let $x \rightarrow t$ and $g'(t) = t^n$ and $f(t) = \ln t$. Then $g(t) = \dfrac{1}{n+1} t^{n+1}$ and $f'(t) = 1/t$. Both $f$ and $g$ are continuous on $[0, \infty)$ and differentiable on $(0, \infty)$. We know $fg'$ and $gf'$ are continuous, hence by (5.3.5) the integral equals $$\dfrac{1}{n+1} t^{n+1} \ln t \bigg|_0^x - \int_0^x \dfrac{1}{n+1} t^{n+1} \dfrac{1}{t} \ dt.$$ Simplifying this and making the necessary evaluations, the integral comes out as $$\dfrac{1}{n+1} x^{n+1} \ln x - \dfrac{1}{(n+1)^2} x^{n+1}.$$
+
+\prb{5.3.10} Theorem 5.3.1 requires $f(x) = x/|x|$ be continuous at every point in $[-1, 1]$, but $f(x)$ is not continuous at $x = 0.$
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Logs, Exponentials, Improper Integrals}
