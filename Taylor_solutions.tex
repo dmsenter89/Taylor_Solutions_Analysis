@@ -185,7 +185,23 @@ The above conditions are fulfilled for a function $f(x)=x$ with $A=B=[0,10]$, an
 
 
 \section{The Natural Numbers}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Integers and Rational Numbers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}{1.3.1}
+    Given that $\N$ has an operation of addition which is commutative and associative, how would you define such an addition operation in $\Z$?\\
+
+    Assume $a,b \in \Z$. We differentiate three cases: \\
+    a) Both $a,b \in \N$. In this case, proceed as in $\N$.\\
+    b) Both $a,b < 0$. In this case $a+b= - (c + d)$ where $c= -a$ and $d= -b$. As such, we may proceed as in the case of natural numbers.\\
+    c) assume $a>0$, $b<0$. We now distinguish two cases. Provided $a> -b$, we may reduce $a$ to a sum of two integers $m,n \in \N$ such that $n = -b$. We then define $a+b = m + n + b = m$, since $n+b=0$ by definition of the additive inverse. Assume now instead that $a< -b$. In this case, we can split $-b$ into an addition problem, with two integers $m,n \in \N$ such that $m+n= -b$ and $a = m$. Then
+    \[ a+b = a + (-(m+n)) = a + (-m) + (-n) = -n.  \]
+    This defines addition in $\Z$.
+\end{exercise}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Real Numbers}
