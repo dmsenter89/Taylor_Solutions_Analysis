@@ -1,0 +1,6 @@
+\begin{exercise}{7.1.5}
+Prove the second form of the triangle inequality. That is, prove that $|\norm{x} - \norm{y}| \leq \norm{x-y}$
+\begin{proof}
+Squaring both sides we get $(\norm{x} - \norm{y})^2 \leq \norm{x-y}^2$. Rewriting the right hand side we get $(\norm{x} - \norm{y})^2 \leq \sqrt{((x-y)(x-y))}^2$. Removing the square root and expanding $(x-y)(x-y)$ gives $(x-y)(x-y) = x \cdot x - 2x \cdot y + y \cdot y$. This is equivalent to writing $\norm{x}^2 - 2x \cdot y + \norm{y}^2$. Using the Cauchy-Schwartz inequality $\to$ $|u \cdot v| \leq \norm{u} \norm{v}$ $\to$ $-2|u \cdot v| \geq -2\norm{u} \norm{v}$. Applying this to the expansion $\norm{x}^2 - 2|x \cdot y| + \norm{y}^2 \geq \norm{x}^2 - 2\norm{x} \norm{y} + \norm{y}^2$ factoring both sides $\to$ $\norm{x-y}^2 \geq (\norm{x} - \norm{y})^2$ Taking square roots $\to$ $\norm{x-y} \geq |(\norm{x} - \norm{y})|$. Therefore $|\norm{x} - \norm{y}| \leq \norm{x-y}$
+\end{proof}
+\end{exercise}
