@@ -30,7 +30,7 @@
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \newenvironment{question}[2][Question]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
- 
+
 \newcommand{\prb}[1]{\textbf{Exercise #1.}}
 
 \newenvironment{corollary}[2][Corollary]{\begin{trivlist}
@@ -70,7 +70,7 @@ If $A$, $B$, and $C$ are sets, then $A  \cap (B \cup C) = (A \cap B) \cup (A \ca
 \end{theorem}
 \begin{proof}
 If  $x \in A  \cap (B \cup C)$, then $x \in A$ and $x \in (B \cup C)$. Thus, either $x \in B$ or $x \in C$. Thus, $x \in A \cap B$ or in $x \in A \cap C$. Thus, if $x \in A  \cap (B \cup C)$, then $x \in (A \cap B) \cup (A \cap C)$. \\
-If an $x \in (A \cap B) \cup (A \cap C)$, then either $x \in (A \cap B)$ or $x \in (A \cap C)$. This means that surely $x \in A$, and also that $x \in B \cup C$. Hence, if $x \in (A \cap B) \cup (A \cap C)$, then $x \in A  \cap (B \cup C)$.\\ 
+If an $x \in (A \cap B) \cup (A \cap C)$, then either $x \in (A \cap B)$ or $x \in (A \cap C)$. This means that surely $x \in A$, and also that $x \in B \cup C$. Hence, if $x \in (A \cap B) \cup (A \cap C)$, then $x \in A  \cap (B \cup C)$.\\
 Therefore, $A  \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
 \end{proof}
 
@@ -87,7 +87,7 @@ Let $\mathcal{A}$ denote the set of all sets such that $(0,1) \in \mathcal{A_i}$
 \begin{align*}
 	\bigcap \mathcal{A} = \{x: x \in A \text{ } \forall A \in \mathcal{A}\}.
 \end{align*}
-In other words, we are looking for some set $A$ such that $A$ is a subset of every other set in $\mathcal{A}$. This set is $A = \{x: 0 < x < 1\}$. Consider any other subset $C$ of $\mathcal{A}$. If $C \neq A$, then necessarily there must exist an element $x$ such that $x \in C$ and $x \notin A$, showing that $A \subset C$ but $C \nsubseteq A$. Since $x$ is not in every subset of $\mathcal{A}$, $x \notin \bigcap \mathcal{A}$. 
+In other words, we are looking for some set $A$ such that $A$ is a subset of every other set in $\mathcal{A}$. This set is $A = \{x: 0 < x < 1\}$. Consider any other subset $C$ of $\mathcal{A}$. If $C \neq A$, then necessarily there must exist an element $x$ such that $x \in C$ and $x \notin A$, showing that $A \subset C$ but $C \nsubseteq A$. Since $x$ is not in every subset of $\mathcal{A}$, $x \notin \bigcap \mathcal{A}$.
 \end{question}
 
 \begin{question}{1.1.6}
@@ -99,7 +99,7 @@ Let $\mathcal{A}$ be the set containing all sets containing $(0,1)$ as a subset.
 
 \begin{problem}{1.1.7}
 If A is a collection of subsets of a set X, formulate and prove a theorem
-like Theorem 1.1.5 (\emph{from book numbering}) for the intersection and union of A. 
+like Theorem 1.1.5 (\emph{from book numbering}) for the intersection and union of A.
 
 \begin{theorem}{1.1.7}
 	Let $\mathcal{A}$ be a collection of subsets $A_1, A_2,...,A_n$ of some set $X$. Then $( \bigcup \mathcal{A})^c = A_1^c \cap A_2^c \cap ... \cap A_n^c$ and $( \bigcap \mathcal{A})^c = A_1^c  \cup A_2^c \cup ... \cup A_n^c$.
@@ -116,7 +116,7 @@ Then we will refer to $A_2 \cup ... \cup A_n$ as $B$. We can then rewrite the ab
 \end{align*}
 Then DeMorgan's laws apply again as above, and we can write $[ A_2 \cup (A_3 \cup .... \cup A_n)]^c = A_2^c \cap (A_3 \cup ... \cup A_n)^c$. Since intersections and unions are associative, we can then write
 \begin{align*}
-	(\bigcup \mathcal{A})^c = (A_1^c \cap (A_2^c \cap (A_3 \cup ... \cup A_n)^c)) = A_1^c \cap A_2^c \cap (A_3 \cup ... \cup A_n)^c	
+	(\bigcup \mathcal{A})^c = (A_1^c \cap (A_2^c \cap (A_3 \cup ... \cup A_n)^c)) = A_1^c \cap A_2^c \cap (A_3 \cup ... \cup A_n)^c
 \end{align*}
 We continue an inductive application of DeMorgan's laws as outlined above, until we see that $( \bigcup \mathcal{A})^c = A_1^c \cap A_2^c \cap ... \cap A_n^c$ \\~\\
 The other proof is analogous, requiring a sub-partition of the collection of intersections and rewriting them into series of intersections of two sets to which DeMorgan's laws apply.
@@ -137,7 +137,7 @@ If $f : A \to B$ is a function and $E$ and $F$ are subsets of $B$, then $f^{-1} 
 
 \begin{proof}
 If $x \in f^{-1} (E \cap F )$, then $f(x) \in E \cap F$. This means that $f(x)$ is both in $E$ as well as in $F$. If $f(x) \in E$, then $x \in f^{-1}(E)$. If $f(x) \in F$, then $x \in f^{-1}(F)$. Since $f(x)$ is in both $E$ and $F$, $x$ is in $f^{-1} (E \cap F)$. \\
-Assume $x$ is in $f^{-1} (E) \cap f^{-1} (F )$. Then, $x \in f^{-1} (E)$ as well as $x \in f^{-1} (F)$. If $x \in f^{-1} (E)$, then $f(x) \in E$. If $x \in f^{-1}(F)$, then $f(x) \in F$. Since $x$ is both in $f^{-1} (E)$ as well as $f^{-1} (F)$, we know that $f(x) \in E \cap F$. This implies that $x \in f^{-1} (E \cap F)$. \\ 
+Assume $x$ is in $f^{-1} (E) \cap f^{-1} (F )$. Then, $x \in f^{-1} (E)$ as well as $x \in f^{-1} (F)$. If $x \in f^{-1} (E)$, then $f(x) \in E$. If $x \in f^{-1}(F)$, then $f(x) \in F$. Since $x$ is both in $f^{-1} (E)$ as well as $f^{-1} (F)$, we know that $f(x) \in E \cap F$. This implies that $x \in f^{-1} (E \cap F)$. \\
 Since every $x \in f^{-1} (E \cap F )$ implies that $x \in f^{-1} (E) \cap f^{-1} (F )$ and vice versa, it is true that  $f^{-1} (E \cap F ) = f^{-1} (E) \cap f^{-1} (F )$.
 \end{proof}
 
@@ -251,12 +251,12 @@ For the reverse direction, we have for each pair $x, y \in F, x>0$, there exists
 \end{exercise}
 
 \begin{exercise}{1.4.7}
-By the archimedean property, there exists natural $n$ with $y-x > 1/n$. Let $k$ be an integer with $k/n < x < (k+1)/n,$ then adding the inequalities $y-x > 1/n$ and $x > k/n$ gives us $y > (k+1)/n$, so $(k+1)/n$ is a rational between $x$ and $y$. 
+By the archimedean property, there exists natural $n$ with $y-x > 1/n$. Let $k$ be an integer with $k/n < x < (k+1)/n,$ then adding the inequalities $y-x > 1/n$ and $x > k/n$ gives us $y > (k+1)/n$, so $(k+1)/n$ is a rational between $x$ and $y$.
 
-This proves the claim if both $x,y$ are positive. If both are negative, the proof works essentially the same way. If one is positive and the other negative, then take $0$ as the rational number between the two. 
+This proves the claim if both $x,y$ are positive. If both are negative, the proof works essentially the same way. If one is positive and the other negative, then take $0$ as the rational number between the two.
 \end{exercise}
 
-\begin{exercise}{1.4.8}. 
+\begin{exercise}{1.4.8}.
 Suppose not, so that $x + r = s \in \mathbb{Q}$ and $xr = s' \in \mathbb{Q}$, then $x = s-r \in \mathbb{Q}$ and $x = s'/r \in \mathbb{Q}$, both of which lead us to a contradiction.
 \end{exercise}
 
@@ -285,11 +285,11 @@ Find the sup and inf of the following sets. Tell whether each set has a maximum 
 
 \begin{exercise}{1.5.3}
 Prove that if $\sup A < \infty$, then for each $n \in \mathbb{N}$ there is an element $a_n \in A$
-such that $\sup A - 1/n < a_n \leq \sup A$. 
+such that $\sup A - 1/n < a_n \leq \sup A$.
 
 	\begin{proof}
 	This is true since we can easily construct an element $a_n$ such that this equality holds. We assume that $A$ is defined for all $m/n$ with $m,n \in \mathbb{Z}$ within $A$. In this case, we constructs our term to be $a_n = \sup A - 1/(n+1)$. It is obvious that since $1/(n+1) < 1/n$, that $\sup A - 1/n < \sup A - 1/(n+1) \leq \sup A$. \\
-	Alternatively, we may also note that $\sup A - 1/n < \sup A$ for all $n \in \mathbb{N}$ by definition, so the inequality holds in the trivial case of $a_n = \sup A$. 
+	Alternatively, we may also note that $\sup A - 1/n < \sup A$ for all $n \in \mathbb{N}$ by definition, so the inequality holds in the trivial case of $a_n = \sup A$.
 	\end{proof}
 \end{exercise}
 
@@ -298,7 +298,7 @@ such that $\sup A - 1/n < a_n \leq \sup A$.
 
 \begin{exercise}{1.5.4}
 Prove that if $\sup A = \infty$, then for each $n \in \mathbb{N}$ there is an element $a_n \in A$
-such that $a_n > n$. 
+such that $a_n > n$.
 
 \begin{proof}
 Assume some set $A$ whose supremum is $+\infty$. In that case, $\forall x \in A$, $x < \infty$. Both from the Archimedean property and from the Peano Axioms we know that for every $n \in \mathbb{N}$, there is a successor element $n'$ which is also in $\mathbb{N}$, such that $n < n'$. Since there $\nexists a$ such that $a = \infty$, and $n<\infty$, this implies that $\exists a_n$ such that $a_n = n'$ and $a_n \in A$, showing that $n < a_n < \infty$.
@@ -311,7 +311,7 @@ Assume some set $A$ whose supremum is $+\infty$. In that case, $\forall x \in A$
 \begin{exercise}{1.5.5}
 Formulate and prove the analog of Theorem 1.5.4 for $\inf$. \\
 
-\textbf{Theorem.} Let $A$ be a non-empty subset of $\mathbb{R}$ and let $x$ be an element of $\mathbb{R}$. Then \\ 
+\textbf{Theorem.} Let $A$ be a non-empty subset of $\mathbb{R}$ and let $x$ be an element of $\mathbb{R}$. Then \\
 (a) $\inf A \geq x$ if and only if $a \geq x$ for every $a \in A$;\\
 (b) $x > \inf A$ if and only if $x > a$ for some some $a \in A$.
 
@@ -330,7 +330,7 @@ Prove part (d) of Theorem 1.5.7.\\
 \textbf{Theorem}. Let $A,B$ be non-empty subsets of $\mathbb{R}$. Then $\sup (A-B) = \sup A - \inf B$.
 
 	\begin{proof}
-	According to the book, $\sup(A+B) = \sup A + \sup B$ (proof on p. 30). We can then write $\sup (A + (-B) ) = \sup A + \sup(-B)$. We then apply Theorem 1.5.7b, to rewrite $\sup(-B)$ as $-\inf A$. From this it follows that 
+	According to the book, $\sup(A+B) = \sup A + \sup B$ (proof on p. 30). We can then write $\sup (A + (-B) ) = \sup A + \sup(-B)$. We then apply Theorem 1.5.7b, to rewrite $\sup(-B)$ as $-\inf A$. From this it follows that
 	\begin{align*}
 	\sup(A + (-B)) = \sup(A-B) = \sup A + (- \inf B) = \sup A - \inf B
 	\end{align*}.
@@ -360,9 +360,9 @@ Prove (a) of Theorem 1.5.10. \\
 
 \begin{exercise}{1.5.8}
 \begin{enumerate}[(a)]
-\item $\mathrm{sup}_I f = 1, \mathrm{inf}_I f = 0$. These are the max and min respectively. 
-\item $\mathrm{sup}_I f = \infty, \mathrm{inf}_I f = 3$ at $x = 2$. Neither are the max nor min of $f$ on $I$. 
-\item $\mathrm{inf}_I f = 0, \mathrm{sup}_I f = 1$. The inf of $f$ on $I$ is actually a minimum, but the sup is not a maximum. 
+\item $\mathrm{sup}_I f = 1, \mathrm{inf}_I f = 0$. These are the max and min respectively.
+\item $\mathrm{sup}_I f = \infty, \mathrm{inf}_I f = 3$ at $x = 2$. Neither are the max nor min of $f$ on $I$.
+\item $\mathrm{inf}_I f = 0, \mathrm{sup}_I f = 1$. The inf of $f$ on $I$ is actually a minimum, but the sup is not a maximum.
 \end{enumerate}
 
 
@@ -378,7 +378,7 @@ Prove (b) of Theorem 1.5.10. \\
 \textbf{Theorem}. Let $f$ and $g$ be functions defined on a set containing $A$ as a subset, and let $c \in \mathbb{R}$ be a positive constant. Then $\sup_A (-f) = - \inf_A f$.
 
 	\begin{proof}
-	We have a function $f: A \to B$. A number $x$ is a lower bound for $f(a)$ for all $a \in A$ if and only if $-x$ is an upper bound for the set $-f(a)$. Let  $L$ be the set of all lower bounds for $f(a)$. Then $-L$ is the set of all upper bounds for $-f(a)$. Furthermore, the largest member of $L$ and the smallest member of $-L$ are negatives of each other. That is, $- \inf f(a) = \sup (f(a))$, or equivalently $- \inf f = \sup (-f)$.  
+	We have a function $f: A \to B$. A number $x$ is a lower bound for $f(a)$ for all $a \in A$ if and only if $-x$ is an upper bound for the set $-f(a)$. Let  $L$ be the set of all lower bounds for $f(a)$. Then $-L$ is the set of all upper bounds for $-f(a)$. Furthermore, the largest member of $L$ and the smallest member of $-L$ are negatives of each other. That is, $- \inf f(a) = \sup (f(a))$, or equivalently $- \inf f = \sup (-f)$.
 	\end{proof}
 \end{exercise}
 
@@ -410,7 +410,7 @@ Prove (d) of Theorem 1.5.10. \\
 
 \begin{exercise}{2.1.1}
 Show that \\
-\textbf{(a) if $|x - 5| < 1$, then $x$ is a number greater than $4$ and less than $6$.;} 
+\textbf{(a) if $|x - 5| < 1$, then $x$ is a number greater than $4$ and less than $6$.;}
 This is equivalent to saying $-1 < x - 5 < 1$. We add $5$ to the inequality, and we get $4 < x < 6$.\\
 \textbf{(b) if $|x - 3| < 1/2$ and $|y - 3| < 1/2$, then $|x - y| < 1$;} We add the inequalities, such that we see $ |x-3| + |y - 3| < 1/2 + 1/2 = 1$. We notice that $|y-3| = |3-y|$. We rewrite using the triangle inequality:
 	\begin{align*}
@@ -446,7 +446,7 @@ The larger $n$ become, the smaller $1/n^2$ will become. We guess the limit to be
 \begin{exercise}{2.1.5}
 Find $\lim  \frac{2n-1}{3n+1}$. \\
 
-We guess the limit to be $2/3$. 
+We guess the limit to be $2/3$.
 	\begin{align*}
 	|\frac{2n-1}{3n+1} - \frac{2}{3}| = | \frac{3(2n-1) - 2(3n+1)}{3(3n+1)}| = | \frac{6n-3-6n-2}{9n+3} |\\
 	= |\frac{5}{9n+3} < | \frac{5}{9n} | < | \frac{5}{n} |
@@ -462,11 +462,11 @@ We guess the limit to be $0$. We see $| \frac{(-1)^n}{n}| = |\frac{1}{n}|$. Henc
 \end{exercise}
 
 \begin{exercise}{2.1.7}
-The limit is zero. Let $N = \dfrac{1}{\sqrt{\epsilon}}.$ Then if $n > N$, $$\left| \dfrac{n}{n^3 + 4} - 0 \right| = \dfrac{n}{n^3 + 4} < \dfrac{n}{n^3} = \dfrac{1}{n^2} < \dfrac{1}{N^2} = \epsilon.$$ Hence $\displaystyle \lim_{n \rightarrow \infty} \dfrac{n}{n^3+4} = 0.$ 
+The limit is zero. Let $N = \dfrac{1}{\sqrt{\epsilon}}.$ Then if $n > N$, $$\left| \dfrac{n}{n^3 + 4} - 0 \right| = \dfrac{n}{n^3 + 4} < \dfrac{n}{n^3} = \dfrac{1}{n^2} < \dfrac{1}{N^2} = \epsilon.$$ Hence $\displaystyle \lim_{n \rightarrow \infty} \dfrac{n}{n^3+4} = 0.$
 \end{exercise}
 
 \begin{exercise}{2.1.8}
-The limit is zero. Let $N = \left|\dfrac{1-\epsilon^2}{2\epsilon} \right|^2.$ Then for $n > N$, $$\sqrt{n} > \left| \dfrac{1-\epsilon^2}{2\epsilon} \right| \Rightarrow 2\epsilon \sqrt{n} > |1-\epsilon^2|,$$ hence adding $\epsilon^2 + n$ to both sides yields $$\epsilon^2 + n + 2\epsilon \sqrt{n} > |1-\epsilon^2| + \epsilon^2 + n \geq 1 + n,$$ where the last step follows from the triangle inequality. Factoring the left side gives $$(\sqrt{n} + \epsilon)^2 > n+1,$$ and since both sides are positive we may take the square root which yields $$\sqrt{n} + \epsilon > \sqrt{n+1} \Rightarrow \epsilon > \sqrt{n+1} - \sqrt{n} = |\sqrt{n+1} - \sqrt{n} - 0|,$$ hence $\displaystyle \lim_{n \rightarrow \infty} \sqrt{n+1} - \sqrt{n} = 0.$ 
+The limit is zero. Let $N = \left|\dfrac{1-\epsilon^2}{2\epsilon} \right|^2.$ Then for $n > N$, $$\sqrt{n} > \left| \dfrac{1-\epsilon^2}{2\epsilon} \right| \Rightarrow 2\epsilon \sqrt{n} > |1-\epsilon^2|,$$ hence adding $\epsilon^2 + n$ to both sides yields $$\epsilon^2 + n + 2\epsilon \sqrt{n} > |1-\epsilon^2| + \epsilon^2 + n \geq 1 + n,$$ where the last step follows from the triangle inequality. Factoring the left side gives $$(\sqrt{n} + \epsilon)^2 > n+1,$$ and since both sides are positive we may take the square root which yields $$\sqrt{n} + \epsilon > \sqrt{n+1} \Rightarrow \epsilon > \sqrt{n+1} - \sqrt{n} = |\sqrt{n+1} - \sqrt{n} - 0|,$$ hence $\displaystyle \lim_{n \rightarrow \infty} \sqrt{n+1} - \sqrt{n} = 0.$
 \end{exercise}
 
 \begin{exercise}{2.1.9}
@@ -477,7 +477,7 @@ The limit is zero. We know for any $\epsilon > 0,$ there exists $N_1$ such that 
 \begin{exercise}{2.1.10}
 Prove that $\lim 2^{-n} = 0$. Hint: prove first that $2^n \geq n$ for all natural numbers $n$.\\
 
-	\begin{proof} 
+	\begin{proof}
 	We wish to show that $2^n > n$ for all $n$. Proof by induction. The base case, $2^1 > 1$ is obviously true, since $2^1 = 2$. We assume now that $2^n > n$ for some $n$. Then we wish to check $2^{n+1}$. But, we can rewrite this simply as $2^n 2^1$. Let $k= 2^n$. Since we know that $k > n$, it is obvious that $2 k > n+1$. Thus, $2^n > n$ for all $n \in \N$. \\
 	We note that $2^{-n} = \frac{1}{2^n}$. Thus, $\lim 2^{-n}  = \lim \frac{1}{2^n}$. Since $2^n$ increases until infinity, we see that $1/2^{n}$ will grow smaller and smaller, since $1/2^{n} > 1/2^{n+1}$ for all $n$.\\
 	We see that for any $\epsilon > 0$, we need to simply pick $n$ such that $1/\epsilon < 2^n$.  As such, the limit is 0.
@@ -526,13 +526,13 @@ Make an educated guess as to what you think the limit is, then use the definitio
 The limit is $\dfrac{1}{2}$. Let $A = \{ n \in \mathbb{N} : |a_n - \dfrac{1}{2}| \geq \epsilon\}$ for a given $\epsilon.$ This set is finite since \begin{align*}
 \sqrt{n^2 + n} - n - \dfrac{1}{2} \geq \epsilon & \Leftrightarrow n^2 + n \geq n^2 + \left(\epsilon + \dfrac{1}{2}\right)^2 + n(2\epsilon + 1) \\
 & \Leftrightarrow 0 \geq \left( \epsilon + \dfrac{1}{2} \right)^2 + 2 \epsilon n. \end{align*}
-But this last inequality is never true, since each of the terms is strictly greater than zero. Of course, we might also have 
+But this last inequality is never true, since each of the terms is strictly greater than zero. Of course, we might also have
 \begin{align*}
 n+\dfrac{1}{2} - \sqrt{n^2 + n} \geq \epsilon & \Leftrightarrow n^2 + +n(1-2\epsilon) + \epsilon^2 \geq n^2 + n \\
 & \Leftrightarrow -2n\epsilon + \epsilon^2 \geq 0 \\
 & \Leftrightarrow \dfrac{\epsilon}{2} \geq n,
 \end{align*}
-which is certainly only true for finite $n$. Hence for a given $\epsilon$ the set $A$ is in fact finite, so the limit is $\dfrac{1}{2}.$ 
+which is certainly only true for finite $n$. Hence for a given $\epsilon$ the set $A$ is in fact finite, so the limit is $\dfrac{1}{2}.$
 \end{exercise}
 
 
@@ -541,7 +541,7 @@ Make an educated guess as to what you think the limit is, then use the definitio
 
 $\lim (1 + 1/n)^3 = 1$. Proof:
 	\begin{align*}
-		| (1+ \frac{1}{n})^3 -1 | &= | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} + 1 - 1| = | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} |	
+		| (1+ \frac{1}{n})^3 -1 | &= | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} + 1 - 1| = | \frac{1}{n^3} + \frac{3}{n^2}+ \frac{3}{n} |
 		\end{align*}
 We note that each term is of the form $c/n$ or multiples thereof for some constant $c$. It has already been shown that each such term tends can be made smaller than any $\epsilon$. This also holds for the sum.
 \end{exercise}
@@ -552,11 +552,11 @@ Suppose the sequence converges to $a$, then for all $\epsilon > 0,$ there is an 
 
 
 \begin{exercise}{2.2.8}
-Prove that if $\lim a_n = a$, then $\lim a_n^3 = a^3$. 
+Prove that if $\lim a_n = a$, then $\lim a_n^3 = a^3$.
 	\begin{align*}
 	|a_n^3 - a^3 | = |(a_n - a) (a_n^2 + a_n a + a^2)|
 	\end{align*}
-We then note that we are given that $|a_n - a| < \epsilon$. From this we see that 
+We then note that we are given that $|a_n - a| < \epsilon$. From this we see that
 	\begin{align*}
 	|(a_n - a) (a_n^2 + a_n a + a^2)| < \epsilon (a_n^2 + a_n a + a^2).
 	\end{align*}
@@ -570,7 +570,7 @@ No. The sequence $\{cos(n \pi /3)\}$ oscillates between $-1$ and $1$; a limit ca
 \end{exercise}
 
 \begin{exercise}{2.2.10}
-For a similar reason as in the previous problem, the sequence $a_n = \cos (\pi n)$ does not converge but the sequence $|a_n| = |\cos (\pi n)|$ does converge since $|a_n| = 1$ for all $n$. 
+For a similar reason as in the previous problem, the sequence $a_n = \cos (\pi n)$ does not converge but the sequence $|a_n| = |\cos (\pi n)|$ does converge since $|a_n| = 1$ for all $n$.
 \end{exercise}
 
 \begin{exercise}{2.2.11}
@@ -587,8 +587,8 @@ Note that ${a_n}$ is bounded by $c$ according to the premise. In this case, we c
 Likewise, we can say that $b$ is a lower bound for $a_n$ such that $b \leq \inf a_n$. We know that by definition $\inf a_n \leq a$, allowing us to write $b \leq \lim a_n$.
 \end{exercise}
 
-\begin{exercise}{2.2.15} 
-Suppose this sequence converges to zero. Then for all $\epsilon > 0$, there exists $N$ such that for all $n > N$, $|a_n| < \epsilon.$ But consider $n = \displaystyle \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right ) \cdot 10^6.$ This is a multiple of one million, so $a_n \geq \epsilon.$ And, it is larger than $N$ since $$\dfrac{N}{10^6} < \left \lfloor \dfrac{N}{10^6} \right \rfloor+1$$ by definition, $10^6 \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right) > N.$ Hence we have a contradiction. 
+\begin{exercise}{2.2.15}
+Suppose this sequence converges to zero. Then for all $\epsilon > 0$, there exists $N$ such that for all $n > N$, $|a_n| < \epsilon.$ But consider $n = \displaystyle \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right ) \cdot 10^6.$ This is a multiple of one million, so $a_n \geq \epsilon.$ And, it is larger than $N$ since $$\dfrac{N}{10^6} < \left \lfloor \dfrac{N}{10^6} \right \rfloor+1$$ by definition, $10^6 \left(\left \lfloor \dfrac{N}{10^6} \right \rfloor + 1\right) > N.$ Hence we have a contradiction.
 \end{exercise}
 
 
@@ -612,14 +612,14 @@ Use the Main Limit Theorem to find $\lim \frac{n^2 - 5}{n^3 + 2n^2 + 5}$. \\
 \end{exercise}
 
 \begin{exercise}{2.3.3}
-By dividing numerator and denominator by $2^n$, in a similar fashion to problem 1, we can see that the limit is 1. 
+By dividing numerator and denominator by $2^n$, in a similar fashion to problem 1, we can see that the limit is 1.
 
 
 
 \end{exercise}
 
 \begin{exercise}{2.3.4}
-Let $a_n = 1/n$, then $\lim a_n = 0,$ and let $b_n = \sin n$, then $|b_n| \leq 1$. By theorem 2.3.2, the sequence $\dfrac{\sin n}{n} = a_n b_n$ has limit zero. 
+Let $a_n = 1/n$, then $\lim a_n = 0,$ and let $b_n = \sin n$, then $|b_n| \leq 1$. By theorem 2.3.2, the sequence $\dfrac{\sin n}{n} = a_n b_n$ has limit zero.
 \end{exercise}
 
 
@@ -639,7 +639,7 @@ Prove Theorem 2.3.2.
 
 
 \begin{exercise}{2.3.6}
-Prove that a sequence $\{a_n\}$ is both bounded above and bounded below if and only if its sequence of absolute values $\{|a_n|\}$ is bounded above. 
+Prove that a sequence $\{a_n\}$ is both bounded above and bounded below if and only if its sequence of absolute values $\{|a_n|\}$ is bounded above.
 
 \begin{proof}
 By definition, if $\{|a_n|\}$ is bounded above, then there exists some $M$ such that $|a_n| \leq M$ for all $n$. This is equivalent to saying $-M \leq a_n \leq M$, which proves that $\{a_n\}$ is bounded above and below.
@@ -648,7 +648,7 @@ By definition, if $\{|a_n|\}$ is bounded above, then there exists some $M$ such 
 
 
 \begin{exercise}{2.3.7}
-Prove part(b) of Theorem 2.3.6. 
+Prove part(b) of Theorem 2.3.6.
 
 \begin{proof}
 	Since both $a_n$ and $b_n$ have a limit, we can write $|a_n -a| < \frac{\epsilon}{2}$ and $|b_n - b| < \frac{\epsilon}{2}$. For all $\epsilon$, we have an $N$ such that if we choose $n>N$, these inequalities are true. We know add them together and find
@@ -656,7 +656,7 @@ Prove part(b) of Theorem 2.3.6.
 	|a_n - a| + |b_n - b| &< \epsilon \\
 	|(a_n) + (b_n -b) | \leq |a_n - a| + |b_n - b| &< \epsilon \\
 	|(a_n + b_n) - (a+b) | \leq |a_n - a| + |b_n - b| &< \epsilon.
-	\end{align*} 
+	\end{align*}
 \end{proof}
 \end{exercise}
 
@@ -669,7 +669,7 @@ This is true by virtue of the definition of $\mathbb{R}$. The statement above is
 
 
 \begin{exercise}{2.3.9}
-Prove part (d) of Theorem 2.3.6. Hint: Use the previous exercise. I.e, that if $a_n \to a$ and $b_n \to b$, $a_n/b_n \to a/b$, if $b \neq 0$ and $b_n \neq 0$ for all $n$. 
+Prove part (d) of Theorem 2.3.6. Hint: Use the previous exercise. I.e, that if $a_n \to a$ and $b_n \to b$, $a_n/b_n \to a/b$, if $b \neq 0$ and $b_n \neq 0$ for all $n$.
 
 	\begin{proof}
 		\begin{align*}
@@ -685,10 +685,10 @@ Prove part (f) of theorem 2.3.6. Hint: use the identity:
 	\begin{align*}
 	x^k - y^k = (x-y)(x^{k-1} + x^{k-2} y+ \hdots  + y^{k-1})
 	\end{align*}
-with $x= a_n^{1/k}$ and $y= a^{1/k}$, to show that $a_n^{1/k} \to a^{1/k}$ if $a_n \geq 0$ for all $n$. 
+with $x= a_n^{1/k}$ and $y= a^{1/k}$, to show that $a_n^{1/k} \to a^{1/k}$ if $a_n \geq 0$ for all $n$.
 
 	\begin{proof}
-		We notice that 
+		We notice that
 		\begin{align*}
 			a_n^{1/k} - a^{1/K} = (a_n - a) (a_n^{1/K-1} + a_n^{1/K -2}a^{1/k} + \hdots + a^{1/K-1}) = (a_n - a) b_n
 		\end{align*}
@@ -731,7 +731,7 @@ Tell which of the following sequences are non-increasing, non-decreasing, bounde
 			\[ x_{n+1} = \underbrace{\sqrt{1+\sqrt{1+ \hdots \sqrt{1+\sqrt{2}}}}}_\text{$n$ terms} > \underbrace{\sqrt{1+\sqrt{1+ \hdots \sqrt{1+\sqrt{2}}}}}_\text{$n-1$ terms} = x_n \]
 			Then $x_n$ is increasing for all $n \in \N$. We prove that $x_n < 2$ by induction. We have $x_1=1<2$. Then, if $x_k<2$, $x_{k+1} = \sqrt{1+x_k}< \sqrt{1+2}= \sqrt{3}<2$. Thus by the monotone convergence theorem, $x_n$ converges and is bounded by 2. \\
 		Finding the limit: We solve $a=\sqrt{1+a}$, which implies $a^2 - a -1 =0$. The solutions to this are $a_1 = \frac{1+\sqrt{5}}{2}$, $a_2= \frac{1-\sqrt{5}}{2}$. The correct limit is $a_1$, since $a_2 < 0$.
-	\end{proof}		
+	\end{proof}
 \end{exercise}
 
 \begin{exercise}{2.4.3}
@@ -743,12 +743,12 @@ We notice that $2^{-n}$ is monotone and converges to $0$. Therefore we see that 
 
 
 \begin{exercise}{2.4.4}
-	
+
 \end{exercise}
 
 
 \begin{exercise}{2.4.8}
-Prove that $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$. 
+Prove that $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
 	\begin{align*}
 	\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1} &= \lim \frac{n^5(1+3n^3/n^5+2/n^5)}{n^4(1-n/n^4+1/n^4)}\\
 	&= \lim \underbrace{n}_\text{$\to \infty$} (\underbrace{\frac{1+3/n^2+2/n^5}{1-1/n^3+1/n^4}}_\text{$\to 1$})
@@ -756,25 +756,25 @@ Prove that $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
 And hence, $\lim \frac{n^5 + 3n^3 + 2}{n^4 -n+1}= \infty$.
 \end{exercise}
 
-\begin{exercise}{2.4.10} 
-If the sequence is bounded, then we are done by theorem 2.4.1. Otherwise there is no $M \in \mathbb{R}$ such that $M \geq a_n$ for all $n$. This is equivalent to saying any $M \in \mathbb{R}$, there exists $N$ such that $a_N > M$. Since the sequence is monotone, for all $n > N$, $a_n > a_N > M$. Hence it has limit equal to infinity. 
+\begin{exercise}{2.4.10}
+If the sequence is bounded, then we are done by theorem 2.4.1. Otherwise there is no $M \in \mathbb{R}$ such that $M \geq a_n$ for all $n$. This is equivalent to saying any $M \in \mathbb{R}$, there exists $N$ such that $a_N > M$. Since the sequence is monotone, for all $n > N$, $a_n > a_N > M$. Hence it has limit equal to infinity.
 \end{exercise}
 
 \begin{exercise}{2.4.11}
 Prove Part (c) of Theorem 2.4.7. \\
  	\textbf{Theorem} $\lim a_n = \infty$ iff $\lim(-a_n)= -\infty $
- 	
+
  	\begin{proof}
  	If $a_n \to \infty$, there exists some value of $a_n$ such that $a_n > M$ for any possible $M\in\R$. If we consider the sequence $a_n (-1)$, we see clearly that $-a_n < M$ for any $M\in\R$. But if that is true, then $\lim -a_n= -\infty$.
  	\end{proof}
 \end{exercise}
 
 \begin{exercise}{2.4.12}
-Suppose $\lim b_n < \infty$. Then $b_n$ is bounded by theorem 2.2.3, so there exists $M$ with $b_n \leq M$ for all $n$. Since $a_n \leq b_n,$ we have $a_n \leq M$ so $\lim a_n < \infty$, a contradiction. 
+Suppose $\lim b_n < \infty$. Then $b_n$ is bounded by theorem 2.2.3, so there exists $M$ with $b_n \leq M$ for all $n$. Since $a_n \leq b_n,$ we have $a_n \leq M$ so $\lim a_n < \infty$, a contradiction.
 \end{exercise}
 
 \begin{exercise}{2.4.13}
-For all $M \in \mathbb{R}$, given $k \geq 0$, $M/k \in \mathbb{R}$. Hence there exists $N$, for all $n > N$, $a_n > M/k$. Since $b_n \geq k$, we have $a_n b_n > k \cdot M/k = M,$ hence $\lim a_n b_n = \infty$. 
+For all $M \in \mathbb{R}$, given $k \geq 0$, $M/k \in \mathbb{R}$. Hence there exists $N$, for all $n > N$, $a_n > M/k$. Since $b_n \geq k$, we have $a_n b_n > k \cdot M/k = M,$ hence $\lim a_n b_n = \infty$.
 \end{exercise}
 
 \begin{exercise}{2.4.14}
@@ -811,8 +811,8 @@ Which of the following sequences $\{a_n \}$ have a convergent subsequence? Justi
 
 \begin{exercise}{2.5.6}
 \begin{enumerate}[(a)]
-\item The sequence is $-1, 1, -1, 1, -1, 1, ...$. The subsequence $\{a_{n_i}\}, n_i = 2i-1$ converges to $-1$. 
-\item The sequence is $\sqrt{2}/2, 1, \sqrt{2}/2, - \sqrt{2}/2, -1, - \sqrt{2}/2, 0, ...$. Since the sequence is periodic, we can find infinitely many terms equal to $0$, which gives a convergent subsequence (convergent to 0). 
+\item The sequence is $-1, 1, -1, 1, -1, 1, ...$. The subsequence $\{a_{n_i}\}, n_i = 2i-1$ converges to $-1$.
+\item The sequence is $\sqrt{2}/2, 1, \sqrt{2}/2, - \sqrt{2}/2, -1, - \sqrt{2}/2, 0, ...$. Since the sequence is periodic, we can find infinitely many terms equal to $0$, which gives a convergent subsequence (convergent to 0).
 \item Let $a_{n_k} = 1/2^k$ which happens when $n = 2^k + 1$. Then by a previous homework this has limit 0. Hence it is a convergent subsequence.
 \end{enumerate}
 \end{exercise}
@@ -827,7 +827,7 @@ For each of the following sequences, determine how many different limits of subs
 \begin{exercise}{2.5.8}
 Does the sequence $\sin n$ have a convergent subsequence? Why? \\
 
-Yes, it has three convergent subsequences, provided $n\in \R$. If $n\in \N$, then it is not convergent. 
+Yes, it has three convergent subsequences, provided $n\in \R$. If $n\in \N$, then it is not convergent.
 \end{exercise}
 
 \begin{exercise}{2.5.9}
@@ -847,7 +847,7 @@ Prove that a sequence which satisfies $|a_{n+1} - a_n| < 2^{-n}$ for all $n$ is 
 		\end{align*}
 	We rewrite and solve the geometric series:
 		\begin{align*}
-		2^{-n}( \sum_{k=-m+n+1}^0 2^k)= 2^{-n}(2-2^{-m+n+1}) = 2^{1-n} - 2^{1-m} 
+		2^{-n}( \sum_{k=-m+n+1}^0 2^k)= 2^{-n}(2-2^{-m+n+1}) = 2^{1-n} - 2^{1-m}
 		\end{align*}
 	We want to to prove $|2^{1-n} - 2^{1-m}| \leq 2^{1-n} + 2^{1-m} < \epsilon$. We solve the equations $2^{1-n} < \frac{\epsilon}{2}$ and $2^{1-m} < \frac{\epsilon}{2}$. The solution to this is $2- \frac{\log(\epsilon)}{\log(2)}< n,m$
 	\end{proof}
@@ -869,7 +869,7 @@ Prove that a sequence which satisfies $|a_{n+1} - a_n| < 2^{-n}$ for all $n$ is 
 \begin{exercise}{2.6.2}
 Find lim inf and lim sup for the sequence $a_n = \frac{n}{2^{k_n}}-1$ with $k_n$ being the largest integer $k$ so that $2^k \leq n$. \\
 
-This is the sequence $0, 0, \frac{1}{2},0, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}, 0, \frac{1}{8}, \frac{2}{8}, \frac{3}{8}, \frac{4}{8}, \frac{5}{8}, \frac{6}{8}, \frac{7}{8}, 0, \hdots $. It is clear that $\lim \inf =0$ and $\lim \sup = 1$. 
+This is the sequence $0, 0, \frac{1}{2},0, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}, 0, \frac{1}{8}, \frac{2}{8}, \frac{3}{8}, \frac{4}{8}, \frac{5}{8}, \frac{6}{8}, \frac{7}{8}, 0, \hdots $. It is clear that $\lim \inf =0$ and $\lim \sup = 1$.
 \end{exercise}
 
 
@@ -886,7 +886,7 @@ We find that $\lim \inf = 0$ and $\lim \sup =1$.
 
 \begin{exercise}{2.6.5}
 If $\lim \sup a_n$ is finite, prove that $\lim \inf(-a_n) = - \lim \sup a_n$.
-	
+
 	\begin{proof}
 	By assumption, $\lim \sup a_n$ is equal to some $a$, such that $a \geq a_n$ for all $a_n \in \{a_n\}$. We multiply this by $-1$ to find the inverse sequence $\{-a_n\}$. Then we have $-a \leq -a_n$ for all $a_n \in \{a_n\}$. By definition, this means $-a = \lim \inf (-a_n)$. Therefore, $\lim \inf (-a_n) = - \lim \sup a_n$.
 	\end{proof}
@@ -929,7 +929,7 @@ All $x \in R$ with $|x| \leq 1$ are limits for $\sin$.
 If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2-1)$?\\
 =======
     If $f$ is a function with domain $[0,1]$, what is the domain of $f(x^2 -1)$? \\
-    
+
     $g$ is defined at point $x$ iff $x^2-1 \in [0,1]$, $0 \leq x^2-1 \leq 1$.
     \begin{align*}
         \begin{cases}
@@ -962,20 +962,20 @@ Show that the function $f(x) = |x|$ is continuous on all of $\R$.
 Assuming $\sin$ is continous, prove that $\sin(x^3-4x)$ is continuous.
 
 	\begin{proof}
-	We know that $|sin(x)| < 1$ for all $x$.  
+	We know that $|sin(x)| < 1$ for all $x$.
 	\end{proof}
 \end{exercise}
 
 \begin{exercise}{3.1.6}
-Since $f(x), g(x)$ are continuous, and $\{f(x_n)\}$ converges to $f(a)$ and $\{g(x_n)\}$ converges to $g(a)$, when $\{x_n\}$ converges to $a$. By theorem 2.3.6(d), $\{f(x_n)/g(x_n)\}$ converges to $f(a)/g(a)$ since $g(a) \neq 0$ by assumption and $g(x_n) \neq 0$ in the domain of $f(x)/g(x)$ by definition. 
+Since $f(x), g(x)$ are continuous, and $\{f(x_n)\}$ converges to $f(a)$ and $\{g(x_n)\}$ converges to $g(a)$, when $\{x_n\}$ converges to $a$. By theorem 2.3.6(d), $\{f(x_n)/g(x_n)\}$ converges to $f(a)/g(a)$ since $g(a) \neq 0$ by assumption and $g(x_n) \neq 0$ in the domain of $f(x)/g(x)$ by definition.
 \end{exercise}
 
-\begin{exercise}{3.1.7} Let $\{x_n\}$ by a sequence in $D_{f \circ g}$. Then $x_n \in D_g$ so if $x_n \rightarrow a,$ $g(x_n) \rightarrow g(a)$. But all the $x_n, a \in D_{f \circ g}$ implies $x_n, a \in D_g$ and $g(x_n), g(a) \in D_f.$ Hence $\{g(x_n)\}$ is a sequence in $D_f$ which converges to $g(a)$ when $\{x_n\}$ converges to $a$, hence $\{f(g(x_n))\}$ converges to $\{f(g(a))\},$ so by theorem 3.1.6 it is continuous. 
+\begin{exercise}{3.1.7} Let $\{x_n\}$ by a sequence in $D_{f \circ g}$. Then $x_n \in D_g$ so if $x_n \rightarrow a,$ $g(x_n) \rightarrow g(a)$. But all the $x_n, a \in D_{f \circ g}$ implies $x_n, a \in D_g$ and $g(x_n), g(a) \in D_f.$ Hence $\{g(x_n)\}$ is a sequence in $D_f$ which converges to $g(a)$ when $\{x_n\}$ converges to $a$, hence $\{f(g(x_n))\}$ converges to $\{f(g(a))\},$ so by theorem 3.1.6 it is continuous.
 \end{exercise}
 
 \begin{exercise}{3.1.8}
-    We know $\sqrt{x}$ is continuous at all $a \geq 0$ by theorem 3.1.7. Give another proof of this fact by using only the definition of continuity. 
-    
+    We know $\sqrt{x}$ is continuous at all $a \geq 0$ by theorem 3.1.7. Give another proof of this fact by using only the definition of continuity.
+
     \begin{proof}
     We need to distinguish between two cases: \\
     Case 1 - $a= 0$: $|\sqrt{x} - \sqrt{0}| = \sqrt{x} < \epsilon$ iff $0 \leq x < \epsilon^2$, $\delta=\epsilon^2$. Whenever $x<\epsilon^2$ we find that $\sqrt{x}< \epsilon$ and therefore $\sqrt{x}$ is continuous at $a=0$. \\
@@ -1007,7 +1007,7 @@ Let $f$ be a function with domain $D$ and suppose $f$ is continuous at some poin
     Prove that the function
         \[ f(x)= \begin{cases} \sin (1/x) & x\neq 0 \\ 0 & x =0 \end{cases} \]
     is not continuous at 0.
-    
+
     \begin{proof}
     Whenever $x_n \to 0$ we have $f(x_n) \to f(0) = 0$. We are looking for a sequence $x_n \to 0$ but where $f(x_n) \not\to f(0)=0$. We choose $x_n = \frac{1}{\pi/2 + 2 \pi n}$. This goes to 0 but $\sin(\frac{\pi}{1} +2n)=1$.
     \end{proof}
@@ -1019,7 +1019,7 @@ Let $f$ be a function with domain $D$ and suppose $f$ is continuous at some poin
     Prove that the function
         \[ f(x)= \begin{cases} x \sin(1/x) & x \neq 0 \\ 0 & x=0 \end{cases} \]
     is continuous at 0.
-    
+
     \begin{proof}
     We need to estimate $|f(x)-f(0)|$.
     \[ |f(x)-f(0)| = |x \sin \left(\frac{1}{x} \right)| = |x| |\sin \left( \frac{1}{x} \right)| \leq |x| < \epsilon \]
@@ -1063,15 +1063,15 @@ The minimum of $f$ on $[0, 3)$ is $-1$. The maximum does not exist, since $\sup 
 
 \begin{exercise}{3.2.2}
     Prove that if $f$ is a continuous function on a closed bounded interval $I$ and if $f(x)$ is never 0 for $x \in I$, then there is a number $m>0$ such that $f(x)\geq m$ for all $x \in I$ or $f(x) \leq -m$ for all $x \in I$.
-    
+
     \begin{proof}
     Assume $f(a)>0$. We have that $f([a,b])=[m,M]$. We know that $m=\min f$, $M=\max f$. Let's prove that $m>0$. By contradiction: assume $m<0$. Value 0 is taken \emph{(non-legible)} $a_n$ intermediate value $[m, f(a)]$ which contradicts $f(x)\neq 0$. Prove for case 2 is analogous (show that $M <0$).
     \end{proof}
 \end{exercise}
 
 \begin{exercise}{3.2.3}
-    Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ and if $(x_0, y_0)$ is any point in the plane, then there is a closest point to $(x_0,y_0)$ on the graph of $f$. 
-    
+    Prove that if $f$ is a continuous function on a closed bounded interval $[a,b]$ and if $(x_0, y_0)$ is any point in the plane, then there is a closest point to $(x_0,y_0)$ on the graph of $f$.
+
     \begin{proof}
     Pick any point $x \in [a,b]$. Then the distance to $x_0,y_0$ is $\text{dist}\left( (x_0,y_o), (x,f(x)) \right) = \left( (x-x_0)^2 + (y_0-f(x))^2)\right)^{\frac{1}{2}}$. We must prove that this function attains its minimum value in $[a,b]$ and that if $f$ is continuous, then $\left( (x-x_0)^2 + (y_0-f(x))^2)\right)^{\frac{1}{2}}$ is also continuous on $[a,b]$. Then distance takes its minimum value there.
     \end{proof}
@@ -1082,7 +1082,7 @@ The minimum of $f$ on $[0, 3)$ is $-1$. The maximum does not exist, since $\sup 
 Find an example of a function which is continuous on a bounded (but not closed) interval $I$, but is not bounded. Then find an example of a function which is continuous and bounded on a bounded interval $I$, but does not have a maximum value. \\
 
 The function $f: (0,1) \to \R$ with $f(x)=\frac{1}{x}$ fulfills the first condition. \\
-The second condition cannot be fulfilled; according to theorem 3.2.1 (p. 65): ``If $f$ is a continuous function on a closed bounded interval $I$, then $f$ is bounded on $I$ and in fact, it assumes both a minimum and a maximum value on $I$.'' The only way to create a function which would \emph{not} assume a maximum on such an interval would be by violating the continuity. For example, the function	
+The second condition cannot be fulfilled; according to theorem 3.2.1 (p. 65): ``If $f$ is a continuous function on a closed bounded interval $I$, then $f$ is bounded on $I$ and in fact, it assumes both a minimum and a maximum value on $I$.'' The only way to create a function which would \emph{not} assume a maximum on such an interval would be by violating the continuity. For example, the function
 	\begin{align*}
 	f(x) =
 		\begin{cases}
@@ -1094,7 +1094,7 @@ fails to achieve its maximum on a bounded interval $[0,1]$. However, it does so 
 \end{exercise}
 
 \begin{exercise}{3.2.5}
-Let $f(x) = e^x$, $I = [1, \infty)$. Then $f$ is continuous on a closed (but not bounded) interval, but is not bounded. If $f(x) = 1/(1+e^{-x})$ and $I = [0, \infty)$, then $f$ is continuous and bounded by $1$ on $I$ which is closed but does not have a maximum. 
+Let $f(x) = e^x$, $I = [1, \infty)$. Then $f$ is continuous on a closed (but not bounded) interval, but is not bounded. If $f(x) = 1/(1+e^{-x})$ and $I = [0, \infty)$, then $f$ is continuous and bounded by $1$ on $I$ which is closed but does not have a maximum.
 \end{exercise}
 
 
@@ -1109,14 +1109,14 @@ In other words, we are looking for a function with a discontinuity between $[0,1
        2x & : \frac{1}{2} \leq x \leq 1
      \end{array}
    \right.
-\end{displaymath} 
+\end{displaymath}
 
 \end{exercise}
 
 
 \begin{exercise}{3.2.8}
-    Show that if $f$ and $g$ are continuous functions on the interval $[a,b]$ such that $f(a)< g(a)$ and $g(b)<f(b)$, then there is a number $c \in (a,b)$ such that $f(c)=g(c)$. 
-    
+    Show that if $f$ and $g$ are continuous functions on the interval $[a,b]$ such that $f(a)< g(a)$ and $g(b)<f(b)$, then there is a number $c \in (a,b)$ such that $f(c)=g(c)$.
+
     \begin{proof}
     We create a function $h(x)=f(x)-g(x)$. This is continuous since it is a linear combination of continuous functions, and it is defined on $[a,b]$. We know that $h(a)=f(a)-g(a)<0$ and $h(b)=f(b)-g(b)>0$.  Bt the intermediate value theorem there exists a $c$ such that $h(c)=f(c)-g(c)=0$, which implies $f(c)=g(c)$.
     \end{proof}
@@ -1125,7 +1125,7 @@ In other words, we are looking for a function with a discontinuity between $[0,1
 
 
 \begin{exercise}{3.2.9}
-Let $f$ be a continuous function from $[0,1]$ to $[0,1]$.Prove that there is a point $c \in [0,1]$ such that $f(c) = c$ - that is, show that $f$ has a \emph{fixed point}. Hint: Apply the Intermediate Value Theorem to the function $g(x) = f(x)-x$. 
+Let $f$ be a continuous function from $[0,1]$ to $[0,1]$.Prove that there is a point $c \in [0,1]$ such that $f(c) = c$ - that is, show that $f$ has a \emph{fixed point}. Hint: Apply the Intermediate Value Theorem to the function $g(x) = f(x)-x$.
 	\begin{proof}
 	Let $g(x) = f(x) -x$. Since $f(x)$ is continuous, we know that $g(x)$ is also continuous. Then $g(a) \geq 0$ and $g(b) \leq 0$. By the intermediate value theorem we know that there exists some $x \in [0,1]$ such that $g(x) = 0$, which implies that $f(x)=x$.
 	\end{proof}
@@ -1134,7 +1134,7 @@ Let $f$ be a continuous function from $[0,1]$ to $[0,1]$.Prove that there is a p
 
 \begin{exercise}{3.2.10}
     Use the intermediate value theorem to prove that if $n$ is a natural number, then every positive number $a$ has a positive $n$-th root.
-    
+
     \begin{proof}
     We write the function $f(x)=x^n$ which is continuous on $[0,\infty)$ since it is a polynomial. We notice $f(0)=0<a$. We know that there is a number $m\in \N$ such that $m>a$ which implies $f(m)=m^n \geq m > a$. Thus we have $f(0) < a$ and $f(m)>a$ and since $f$ is continuous on $[0,m]$, the intermediate value theorem states that there exists a $c$ such that $f(c)=c^n=a$.
     \end{proof}
@@ -1142,11 +1142,11 @@ Let $f$ be a continuous function from $[0,1]$ to $[0,1]$.Prove that there is a p
 
 
 \begin{exercise}{3.2.11}
-Prove that a polynomial of odd degree has at least one real root. 
+Prove that a polynomial of odd degree has at least one real root.
 
 	\begin{proof}
 	Assume $g(x): \R \to \R$ is an odd degree polynomial. Then $g$ is of the form $\sum_{k=0}^{n} a_k x^k$, where $a_k$ is the $k$-th coefficient of the polynomial an $n \in \N$ such that $n \mod 2 = 1$. We can then factor $g$ to be of the form $g(x)= x^n (a_n + \sum_{k=0}^{n-1} a_k \frac{x^k}{x^n} )$. We note that $\lim_{x \to \pm \infty} \sum_{k=0}^{n-1} a_k \frac{x^k}{x^n}  = 0$. We then consider $\lim_{x \to \pm \infty} x^n a_n$. We note that since $n$ is odd, $x^n \leq 0$ if $x \leq 0$ and $x^n \geq 0$ if $x \geq 0$. Therefore, $\lim_{x \to +\infty} x^n a_n = + \infty$ and $\lim_{x \to -\infty} x^n a_n = -\infty$, provided that $a_n > 0$. Hence, we find that $\lim_{x \to - \infty} g(x) = - \infty$ and $\lim_{x \to \infty} g(x) = \infty$. In the case of $a_n < 0$, we find that $\lim_{x \to -\infty} g(x) = \infty$ and $\lim_{x \to \infty} g(x)= -\infty$. \\
-	We know that any polynomial is continous, and the above shows that there are some $a,b \in \R$ such that $g(a) < 0$ and $g(b) > 0$. We now consider the interval $[a,b]$. By the Intermediate value theorem, we find that for every $c \in [g(a),g(b)]$ there exists some $x \in [a,b]$ such that $g(x)=c$, implying that there exists at least one $x$ such that $g(x)=0$. 
+	We know that any polynomial is continous, and the above shows that there are some $a,b \in \R$ such that $g(a) < 0$ and $g(b) > 0$. We now consider the interval $[a,b]$. By the Intermediate value theorem, we find that for every $c \in [g(a),g(b)]$ there exists some $x \in [a,b]$ such that $g(x)=c$, implying that there exists at least one $x$ such that $g(x)=0$.
 	\end{proof}
 \end{exercise}
 
@@ -1174,21 +1174,21 @@ Yes, it is. According to Theorem 3.3.4, if a function is continuous on a closed 
 
 \begin{exercise}{3.3.2}
     Is the function $f(x)=1/x^2$ uniformly continuous on $(0,+\infty)$ (\emph{actual text printed asks only about interval up to 1})? Justify your answer. \\
-    
-    Assume $f$ were uniformly continuous. Then it it is uniformly continuous on a subinterval, such as $(0,1)$. But $f(x)$ is \emph{not} bounded on the interval $(0,1)$. Therefore, it is not uniformly continuous. 
+
+    Assume $f$ were uniformly continuous. Then it it is uniformly continuous on a subinterval, such as $(0,1)$. But $f(x)$ is \emph{not} bounded on the interval $(0,1)$. Therefore, it is not uniformly continuous.
 \end{exercise}
 
 
 \begin{exercise}{3.3.3}
 Is the function $f(x) = x^2$ uniformly continuous on $(0, + \infty)$? Justify your answer.  \\
 
-No, it its not. As $x \to \infty$ we find that the distance between $y,y'$ gets bigger and bigger, such that $x,x'$ need to be closer and closer for $y,y'$ to still be within $\epsilon$ of each other. This means that $\delta$ does depend on $a$, so it is not uniformly continuous. 
+No, it its not. As $x \to \infty$ we find that the distance between $y,y'$ gets bigger and bigger, such that $x,x'$ need to be closer and closer for $y,y'$ to still be within $\epsilon$ of each other. This means that $\delta$ does depend on $a$, so it is not uniformly continuous.
 \end{exercise}
 
 
 \begin{exercise}{3.3.4}
     Using only the $\epsilon-\delta$ definition of uniform continuity, prove that the function $f(x)=\frac{x}{x+1}$ is uniformly continuous on $[0,\infty)$.
-    
+
     \begin{proof}
         \begin{align*}
         |f(x)-f(y)| &= | \frac{x}{x+1} - \frac{y}{y+1} | = |\frac{x(y+1) + y(x+1)}{(x+1)(y+1)}| \\
@@ -1202,13 +1202,13 @@ No, it its not. As $x \to \infty$ we find that the distance between $y,y'$ gets 
 
 \begin{exercise}{3.3.5}
     In example 3.3.8 we showed that $\sqrt{x}$ is uniformly continuous on $[1,\infty)$. Show that it is also uniformly continuous on $[0,1]$. \\
-    
+
     By theorem 3.3.4: if $\sqrt{x}$ is continuous on $[0,1]$, it is uniformly continuous there.
 \end{exercise}
 
 
 \begin{exercise}{3.3.6}
-Prove that if $I$ and $J$ are overlapping intervals in $\R (I \cap J \neq \emptyset$ and $f$ is a function, defined on $I \cup J$, which is uniformly continuous on $I$ and uniformly continuous on $J$, then it is also uniformly continuous on $I \cup J$. Use this and the previous exercise to prove that $\sqrt{x}$ is uniformly continuous on $[0, + \infty)$. 
+Prove that if $I$ and $J$ are overlapping intervals in $\R (I \cap J \neq \emptyset$ and $f$ is a function, defined on $I \cup J$, which is uniformly continuous on $I$ and uniformly continuous on $J$, then it is also uniformly continuous on $I \cup J$. Use this and the previous exercise to prove that $\sqrt{x}$ is uniformly continuous on $[0, + \infty)$.
 
 	\begin{proof}
 	By assumption $I \cap J \neq \emptyset$. We shall assume that the interval $I$ is the ``lower'' one of the two. Then there exists an $x$ such that $x \in I \cap J$. Since $I$ is uniformly continuous by assumption, we know that $[x-a,x]$ is uniformly continous for all $(x-a)\in I$. Likewise we know that $[x,x+b]$ is uniformly continous for all $(x+b)\in J$ since $J$ is uniformly continous by assumption. This implies that the whole interval $[x-a, x+b]$ is uniformly continous. \\
@@ -1221,13 +1221,13 @@ Prove that if $I$ and $J$ are overlapping intervals in $\R (I \cap J \neq \empty
 \end{exercise}
 
 \begin{exercise}{3.3.7}
-Suppose $f$ is not continuous on $I$, then since uniform continuity implies continuity, $f$ is not uniform continuous on $I$. Suppose $f$ is continuous on $I$. Then $f$ is uniform continuous on $I$ if $f$ is continuouss on $\bar{I}$. But a continuous function on a closed, bounded interval is bounded, but $f$ is unbounded. This is a contradiction so $f$ cannot be uniformly continuous.  
+Suppose $f$ is not continuous on $I$, then since uniform continuity implies continuity, $f$ is not uniform continuous on $I$. Suppose $f$ is continuous on $I$. Then $f$ is uniform continuous on $I$ if $f$ is continuouss on $\bar{I}$. But a continuous function on a closed, bounded interval is bounded, but $f$ is unbounded. This is a contradiction so $f$ cannot be uniformly continuous.
 \end{exercise}
 
 
 
 \begin{exercise}{3.3.8}
-Let $f$ be a function defined on an interval $I$ and suppose that there are positive constants $K$ and $r$ such that 
+Let $f$ be a function defined on an interval $I$ and suppose that there are positive constants $K$ and $r$ such that
 	\[ |f(x)-f(y)| \leq K |x-y|^r \text{ for all } x,y \in I. \]
 Prove that $f$ is uniformly continuous.
 
@@ -1239,8 +1239,8 @@ Prove that $f$ is uniformly continuous.
 
 
 \begin{exercise}{3.3.9}
-Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly continuous on $(0,1)$? Justify your answers. 
-	
+Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly continuous on $(0,1)$? Justify your answers.
+
 	\begin{proof}
 	Since $\sin$ is a trigonometric function, it is continuous on its whole domain. Likewise, $\sin(1/x)$ is continous since it is merely a composition of two elementary functions. \\
 	However, $\sin(1/x)$ is \emph{not} uniformly continous. The reason for this is that the as $x \to 0$ the function oscillates between $-1$ and $1$. Thus, a $\delta$ that would work at one point in the function will can produce potentially a difference $|f(x)-f(y)|=2$ for $x,y$ sufficiently close to 0. Hence, the functions is not uniformly continous.
@@ -1250,17 +1250,17 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 \begin{exercise}{3.3.10}
     Is the function $f(x)=x \sin(1/x)$ uniformly continuous on $(0,1)$? Justify your answer. \\
-    
+
     \begin{proof}
     Method 1: $f(1)=\sin(1)$. It is still uniformly continuous. $\lim_{x \to 0} f(x)= \lim_{x \to 0} x \sin(1/x) = 0$. By squeeze theorem:
 		\begin{align*}
 		\underbrace{0}_\text{$\to$ 0} \leq \overbrace{|x \sin \left( \frac{1}{x} \right) |}^\text{$\to$ 0 by squeeze thrm.} \leq \underbrace{|x|}_\text{$\to$ 0}
-		\end{align*}		       
-         
+		\end{align*}
+
     If we define $f(0)=0$, $f(1)=\sin(1)$, then $f(x)$ becomes continuous on $[0,1]$. then by theorem 3.3.4, $f$ is uniformly continuous on $[0,1] \implies f$ is uniformly continuous on $(0,1)$.\\
-    Method 2: 
+    Method 2:
         \[ |f(x)-f(y)| = |x \sin(1/x) - y \sin(1/y)| \leq |x \sin(1/x)| + |y \sin(1/y)| \leq |x|+|y| \]
-    Then for all $\epsilon>0$ we have $|f(x)-f(y)|<\epsilon$ if $x,y \in (0,\frac{\epsilon}{2}]$. If now $x,y > \epsilon/3$, then there exists a $\delta>0$ such that $|f(x)-f(y)| <\epsilon$ whenever $|x-y| < \delta$: 
+    Then for all $\epsilon>0$ we have $|f(x)-f(y)|<\epsilon$ if $x,y \in (0,\frac{\epsilon}{2}]$. If now $x,y > \epsilon/3$, then there exists a $\delta>0$ such that $|f(x)-f(y)| <\epsilon$ whenever $|x-y| < \delta$:
         \[ |f(x)-f(y)| \leq |x|+|y| < \frac{\epsilon}{3} + |x| + |y-x| < \frac{\epsilon}{3} + \frac{\epsilon}{3}+ \delta < \epsilon \]
     if $\delta< \frac{\epsilon}{3}$. Then we choose $\delta= \min(\frac{\epsilon}{3}, \delta_0)$.
     \end{proof}
@@ -1293,19 +1293,19 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 \begin{exercise}{4.3.1}
 \end{exercise}
 
-\prb{4.3.1} If we apply the MVT to the intervals $[-1, 1]$, $[0, 1]$ and $[-1, 0]$ we find that there exist points where the derivative equals $1/2, 1,$ and $0$. 
+\prb{4.3.1} If we apply the MVT to the intervals $[-1, 1]$, $[0, 1]$ and $[-1, 0]$ we find that there exist points where the derivative equals $1/2, 1,$ and $0$.
 
 \prb{4.3.2} Observe that $f(x) = \sin x$ satisfies the hypotheses of theorem 4.3.9 where we let $(a,b) = (-\infty, \infty)$ and so it must satisfy $|f(x) - f(y)| \leq M |x-y|$ where $M$ is a bound for the derivative. In this case $f'(x) = \cos x \leq 1$ for all $x$, hence we may set $M = 1$. Then $|\sin x - \sin y| = |f(x) - f(y)| \leq M |x-y| = |x-y|$ as desired.
 
 \begin{exercise}{4.3.3}
 \end{exercise}
 
-\prb{4.3.4} We know that there is some $c \in (0, \infty)$ with $f(x) - f(y) = f'(c) (x-y)$ for $x, y \in (0, \infty)$. Then $|f(x) - f(y)| \leq f'(c) |x-y| \leq M|x-y|$. If we take the limit of both sides as $y \rightarrow 0$, then since $|f(x) - f(y)|$ is continuous, $\displaystyle \lim_{y \rightarrow 0} |f(x) - f(y)| = |f(x) - f(0)| = |f(x)|$. Hence $|f(x)| \leq Mx$. 
+\prb{4.3.4} We know that there is some $c \in (0, \infty)$ with $f(x) - f(y) = f'(c) (x-y)$ for $x, y \in (0, \infty)$. Then $|f(x) - f(y)| \leq f'(c) |x-y| \leq M|x-y|$. If we take the limit of both sides as $y \rightarrow 0$, then since $|f(x) - f(y)|$ is continuous, $\displaystyle \lim_{y \rightarrow 0} |f(x) - f(y)| = |f(x) - f(0)| = |f(x)|$. Hence $|f(x)| \leq Mx$.
 
 \begin{exercise}{4.3.5}
 \end{exercise}
 
-\prb{4.3.6} We know that $f'(x) = 6x^2 + 6x - 12 = 6(x+2)(x-1)$. Hence $f'(x) \leq 0$ on $[-2, 1]$ and is positive elsewhere. Hence $f(x)$ is decreasing on $[-2, 1]$ and increasing elsewhere. 
+\prb{4.3.6} We know that $f'(x) = 6x^2 + 6x - 12 = 6(x+2)(x-1)$. Hence $f'(x) \leq 0$ on $[-2, 1]$ and is positive elsewhere. Hence $f(x)$ is decreasing on $[-2, 1]$ and increasing elsewhere.
 
 \begin{exercise}{4.3.7}
 \end{exercise}
@@ -1378,7 +1378,7 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 \prb{4.4.7} If we write $x \ln x = \dfrac{\ln x}{1/x}$ then the limit is of the form $-\infty/\infty$. By L'Hopital's, the limit is equal to $$\lim_{x \rightarrow 0} \dfrac{1/x}{-1/x^2} = \lim_{x \rightarrow 0} -x = 0.$$
 
-\prb{4.4.8} The limit is of the form $0/0$ hence it is equal to $$\lim_{x \rightarrow 0} \dfrac{\cos x - 1}{3x^2}.$$ It is still of the form $0/0$ hence equal to $$\lim_{x \rightarrow 0} \dfrac{-\sin x }{6x}.$$ Applying L'Hopital's again, the limit equals $$\lim_{x \rightarrow 0} \dfrac{-\cos x }{6} = 0.$$ 
+\prb{4.4.8} The limit is of the form $0/0$ hence it is equal to $$\lim_{x \rightarrow 0} \dfrac{\cos x - 1}{3x^2}.$$ It is still of the form $0/0$ hence equal to $$\lim_{x \rightarrow 0} \dfrac{-\sin x }{6x}.$$ Applying L'Hopital's again, the limit equals $$\lim_{x \rightarrow 0} \dfrac{-\cos x }{6} = 0.$$
 
 
 
@@ -1426,7 +1426,7 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 \prb{5.1.5} For any $P$, we know that $U(f,P) = 1$ since $U(f, P) = \displaystyle \sum_k M_k (x_k - x_{k-1}) = \sum_k x_k - x_{k-1} = 1-0 = 1$ as the supremum of $f$ on any interval is $1$. On the other hand we know $L(f,P) = 0$ since the infimum of $f$ on any interval is $0$. Hence for all partitions $P$, $U(f,P) - L(f,P) = 1$, hence by theorem 5.1.7 the function is not Riemann integrable.
 
-\prb{5.1.8} We know that $$\underline{\int_a^b} f(x) \ dx = \sup \{L(f, Q): Q \in \mathcal{P}\},$$ where $\mathcal{P}$ is the set of partitions of $[a,b]$. This is equal to $\sum_{k=1}^n m_k (x_k - x_{k-1})$ for some partition $\{ a = x_0 < x_1 < \cdots < x_n = b\}$ of $[a,b]$. But we know $$\sum_{k=1}^n m_k (x_k - x_{k-1}) \geq \sum_{k=1}^n m (x_k - x_{k-1}) = m(b-a).$$ This gives the first inequality in the chain of inequalities. The second inequality is obtained by the definition of supremum and infimum. The third inequality is found by noting that $M_k \leq M$. 
+\prb{5.1.8} We know that $$\underline{\int_a^b} f(x) \ dx = \sup \{L(f, Q): Q \in \mathcal{P}\},$$ where $\mathcal{P}$ is the set of partitions of $[a,b]$. This is equal to $\sum_{k=1}^n m_k (x_k - x_{k-1})$ for some partition $\{ a = x_0 < x_1 < \cdots < x_n = b\}$ of $[a,b]$. But we know $$\sum_{k=1}^n m_k (x_k - x_{k-1}) \geq \sum_{k=1}^n m (x_k - x_{k-1}) = m(b-a).$$ This gives the first inequality in the chain of inequalities. The second inequality is obtained by the definition of supremum and infimum. The third inequality is found by noting that $M_k \leq M$.
 
 \prb{5.1.9} For any partition, $$U(f, P) = \sum_{k=1}^n M_j (x_j - x_{j-1}) = \sum_{j=1}^n k (b-a) = \sum_{j=1}^n m_k (b-a) = L(f, P).$$ Hence $U(f, P) - L(f, P) = 0 < \epsilon$ for any partition $P$, so by theorem 5.1.7 the integral exists. Applying definition 5.1.6 and the definition of upper and lower integral, we find that the integral equals $\sum_{j=1}^n k (b-a)$.
 
@@ -1444,7 +1444,7 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 \prb{5.2.11} Let $f(x) = 1$ if $x \in [0,1]$ is rational, and $-1$ if $x$ is irrational. Then for reasons similar to problem 5.1.5, this function is not integrable. However, $|f(x)| = 1$ for all $x \in [0,1]$, and hence it is integrable.
 
-\prb{5.2.12} We know that $f(x)$ is continuous, hence integrable on a closed bounded interval $[a,b]$. It is also therefore bounded, and so $M = \sup_{[a,b]} f$ and $m = \inf_{[a,b]} f$ are finite so $f$ actually attains these values. Moreover, we know by the IVT that $f$ attains every value between $m$ and $M$ (possibly these values). In particular, $f$ attains the value $$\dfrac{1}{b-a} \int_a^b f(x) \ dx,$$ by corollary 5.2.5. 
+\prb{5.2.12} We know that $f(x)$ is continuous, hence integrable on a closed bounded interval $[a,b]$. It is also therefore bounded, and so $M = \sup_{[a,b]} f$ and $m = \inf_{[a,b]} f$ are finite so $f$ actually attains these values. Moreover, we know by the IVT that $f$ attains every value between $m$ and $M$ (possibly these values). In particular, $f$ attains the value $$\dfrac{1}{b-a} \int_a^b f(x) \ dx,$$ by corollary 5.2.5.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Fundamental Theorems of Calculus}
@@ -1454,11 +1454,11 @@ Is the function $f(x)=\sin(\frac{1}{x})$ continuous on $(0,1)$? Is it uniformly 
 
 \prb{5.3.2} It is clear that the derivative is $\cos (1/x).$
 
-\prb{5.3.4} The integral may be split up as $$\int_0^x e^{-t^2} \ dt - \int_0^{1/x} e^{-t^2} \ dt,$$ and hence the derivative of the first integral is $e^{-x^2}$ and of the second it is $-e^{-1/x^2}/x^2$ by the chain rule and second fundamental theorem of calculus. 
+\prb{5.3.4} The integral may be split up as $$\int_0^x e^{-t^2} \ dt - \int_0^{1/x} e^{-t^2} \ dt,$$ and hence the derivative of the first integral is $e^{-x^2}$ and of the second it is $-e^{-1/x^2}/x^2$ by the chain rule and second fundamental theorem of calculus.
 
 \prb{5.3.5} $f(x) = -1/x$ is not continuous at $x = 0 \in [-1, 1]$, violating the hypotheses of theorem 5.3.1.
 
-\prb{5.3.6} Letting $g(x) = f(x),$ applying (5.3.5) gives that the integral equals $f(b)^2 - f(a)^2 - \displaystyle \int_a^b (f'(x))^2 \ dx.$ 
+\prb{5.3.6} Letting $g(x) = f(x),$ applying (5.3.5) gives that the integral equals $f(b)^2 - f(a)^2 - \displaystyle \int_a^b (f'(x))^2 \ dx.$
 
 \prb{5.3.8} Let $x \rightarrow t$ and $g'(t) = t^n$ and $f(t) = \ln t$. Then $g(t) = \dfrac{1}{n+1} t^{n+1}$ and $f'(t) = 1/t$. Both $f$ and $g$ are continuous on $[0, \infty)$ and differentiable on $(0, \infty)$. We know $fg'$ and $gf'$ are continuous, hence by (5.3.5) the integral equals $$\dfrac{1}{n+1} t^{n+1} \ln t \bigg|_0^x - \int_0^x \dfrac{1}{n+1} t^{n+1} \dfrac{1}{t} \ dt.$$ Simplifying this and making the necessary evaluations, the integral comes out as $$\dfrac{1}{n+1} x^{n+1} \ln x - \dfrac{1}{(n+1)^2} x^{n+1}.$$
 
@@ -1509,7 +1509,7 @@ Prove that $f(x) = \sum_{k=1}^\infty \frac{sin (kx)}{2^k} $ is continuous on the
 \begin{exercise}{6.4.4}
 Radius of convergence of $\sum_{k=1}^\infty \frac{1}{k 3^k}x^k$. \\
 
-We have $c_k = (k 3^k)^{-1}$. We proceed to take the $k$-th root: 
+We have $c_k = (k 3^k)^{-1}$. We proceed to take the $k$-th root:
     \[ (k 3^k)^{-1/k} = \frac{1}{3} \frac{1}{\sqrt[k]{k}} = 3^{-1}. \]
 We then solve using the formula for the radius of convergence:
     \begin{align*}
@@ -1528,7 +1528,7 @@ We have $c_k= \frac{(-1)^{k-1}}{k+1}$. We take the $k$-th root:
     (c_k)^{1/k} &=  \left( \frac{(-1)^{k-1}}{k+1} \right)^{\frac{1}{k}} = \left(- \frac{(-1)^k}{k+1} \right)^{\frac{1}{k}} \\
                 &= - \frac{(-1)^{k/k}}{\left(k+1\right)^{1/k}} = - \frac{-1}{\left(k+1\right)^{1/k}} = \frac{1}{\left(k+1\right)^{1/k}}.
     \end{align*}
-    
+
     We then use the formula for the radius of convergence:
     \begin{align*}
     R = \frac{1}{\lim \sup \sqrt[k]{c_k}} = \frac{1}{\lim \sup \left(k+1\right)^{-1/k}} = \frac{1}{1} = 1.
@@ -1541,7 +1541,7 @@ We have $c_k= \frac{(-1)^{k-1}}{k+1}$. We take the $k$-th root:
 \begin{exercise}{6.4.8}
 Radius of convergence of $\sum_{k=0}^\infty 2^k x^{2k}$.  \\
 
-We have $c_k= 2^k$. We then take the $k$-th root: $\left( 2^k \right)^{\frac{1}{k}} =2^{k/k} = 2$. We use the formula for the the radius of convergence: 
+We have $c_k= 2^k$. We then take the $k$-th root: $\left( 2^k \right)^{\frac{1}{k}} =2^{k/k} = 2$. We use the formula for the the radius of convergence:
     \begin{align*}
       R = \frac{1}{\lim \sup \sqrt[k]{c_k}} = \frac{1}{\lim \sup 2} = \frac{1}{2}.
     \end{align*}
@@ -1577,7 +1577,7 @@ Prove that if $f(x)$ is the sum of a power series centered at $a$ and with radiu
 Prove that $\lim \frac{x^n}{n!} = 0$ for all $x$.
 
 \begin{proof}
-    Since we take the limit as $n \to \infty$, $n$ will take on every value of $\N$. We assume that $x \in \R$. Therefore, at some point we find have that $x \leq n$; at the first point this occurs, we then consider the rational expression $\frac{x}{n} C$ where $C$ is some constant of the form $\frac{x^{n-1}}{\left(n-1\right)!}$. If we consier the next term in the sequence, $\frac{x\, x}{n\, (n+1)}C$, we find that $n \left(n+1\right)\geq x\,x$, since $x\leq n$. Therefore, it is obvious that $\lim_{n \to \infty} \frac{x^n}{n!}=0$ for all $x$.  
+    Since we take the limit as $n \to \infty$, $n$ will take on every value of $\N$. We assume that $x \in \R$. Therefore, at some point we find have that $x \leq n$; at the first point this occurs, we then consider the rational expression $\frac{x}{n} C$ where $C$ is some constant of the form $\frac{x^{n-1}}{\left(n-1\right)!}$. If we consier the next term in the sequence, $\frac{x\, x}{n\, (n+1)}C$, we find that $n \left(n+1\right)\geq x\,x$, since $x\leq n$. Therefore, it is obvious that $\lim_{n \to \infty} \frac{x^n}{n!}=0$ for all $x$.
 \end{proof}
 \end{exercise}
 
@@ -1605,7 +1605,7 @@ We begin by taking the first few derivatives of $f(x) = \sqrt{t+x}$.
     f^{(3)} (x) &= \frac{3}{8 \left(t + x\right)^{\frac{5}{2}}} \\
     f^{(4)} (x) &= - \frac{15}{16 \left(t + x\right)^{\frac{7}{2}}}
     \end{align*}
-    
+
     Then the Taylor formula for the above function for the first 5 terms, with remainder, at $a=0$ will be as follows:
     \begin{align*}
     f(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x-a)^n \\
@@ -1627,10 +1627,10 @@ We again begin by taking the first four derivatives of $f$.
     f''(x) &= - \frac{1}{\left(x + 1\right)^{2}} \\
     f^{(3)} (x) &= \frac{2}{\left(x + 1\right)^{3}} \\
     f^{(4)} (x) &= - \frac{6}{\left(x + 1\right)^{4}}
-    \end{align*} 
-    Then the Taylor formula for the above function for the first 5 terms, with remainder, at $a=0$ will be as follows: 
+    \end{align*}
+    Then the Taylor formula for the above function for the first 5 terms, with remainder, at $a=0$ will be as follows:
     \begin{align*}
-    f(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x-a)^n \\ 
+    f(x) &= \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} (x-a)^n \\
     &\approx x - \frac{1}{2} x^2 + \frac{2}{6} x^3 - \frac{6}{24} x^4 + \frac{24}{120\left(c+1\right)^5} x^5 \\
     &= x - \frac{1}{2} x^2 + \frac{1}{3} x^3 - \frac{1}{4} x^4 + \frac{1}{5 \left(c+1\right)^5} x^5 \,.
     \end{align*}
@@ -1643,7 +1643,7 @@ If $f$ is an infinitely differentiable function on $(a-r,a+r)$ and there is some
 
 This appears to be a backwards reasoning argument. We that if $f$ is a convergent taylor series on $\left(a-R, a+R\right)$, then it is infitinely differentiable on that same interval.
 
-We can see that if there is some constant $K$ such that $\left| f^{(n)} (x)\right| \leq K \frac{n!}{r^n}$ for all $n \in \N$ and all $x \in (a-r,a+r)$, then $f^{(n)}(x)$ is always bounded. 
+We can see that if there is some constant $K$ such that $\left| f^{(n)} (x)\right| \leq K \frac{n!}{r^n}$ for all $n \in \N$ and all $x \in (a-r,a+r)$, then $f^{(n)}(x)$ is always bounded.
 \end{exercise}
 
 
@@ -1690,9 +1690,9 @@ Prove that $\left| |x| - |y| \right| \leq \left| x- y \right|$.
 
 \begin{exercise}{7.1.6}
 Prove that equality holds in the Cauchy-Schwartz inequality if and only if one of the vectors $\vec{u}, \vec{v}$ is a scalar multiple of the other.
-    
+
     \begin{proof}
-    Let $\vec{v}$ be a scalar multiple of $\vec{u}$, such that $\vec{v} = \alpha \vec{u}$. Then 
+    Let $\vec{v}$ be a scalar multiple of $\vec{u}$, such that $\vec{v} = \alpha \vec{u}$. Then
         \begin{align*}
         \vec{u} \cdot \vec{v} = \vec{u} \cdot \alpha \vec{u} &= \alpha u_1^2 + \alpha u_2^2 + \hdots + \alpha u_n^2 \\
          &= \alpha \left( u_1^2 + \hdots + u_n^2 \right) \\
@@ -1700,14 +1700,51 @@ Prove that equality holds in the Cauchy-Schwartz inequality if and only if one o
         \end{align*}
     Therefore, we find that $\left| \vec{u} \right|^2 \left|\vec{v}\right|^2 = \left|\vec{u}\right| \alpha \left|\vec{u}\right|^2= \alpha \left| \vec{u} \right|^2$, and hence, equality holds. The proof for the case where $\vec{u}$ is a scalar multiple of $\vec{v}$ is analogous.
     \end{proof}
-\end{exercise} 
+\end{exercise}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Convergent Sequences of Vectors}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exercise}{7.2.7}
+Let {Xn} be a bounded sequence in  $R^d $ and let  $An $ be a bounded sequence of scalars. Prove that if either sequence has limit 0, then so does the sequence ${AnXn} $
 
+        If $\{\vec{x}_n: n \in \mathbb{N}\}$ converges to the vector $\vec{x}$ and $\{a_n: n \in \mathbb{N}\}$ to a real number $a$ then the sequences of vectors, $\{a_n\vec{x}_n: n \in \mathbb{N}\}$, converges to $a\vec{x}$.
+
+      \begin{proof}
+
+        Let $\varepsilon > 0$. It remains to prove that there is $N \in \mathbb{N}$ such that, for every natural number $n > N$, we have
+        $$
+        \|a_n\vec{x}_n-a\vec{x}\|< \varepsilon.
+        $$
+        By the definition of the limit, there is a integer $N_1>0$ such that, when $n > N_1$, we have
+        $$
+        \|\vec{x}_n-\vec{x}\|< \sqrt{\varepsilon}.
+        $$
+        Similarly, by the definition of the limit, there is a integer $N_2>0$ such that, when $n > N_2$, we have
+        $$
+        |a_n-a|< \sqrt{\varepsilon}.
+        $$
+        We choose $N = \max(N_1, N_2)$. Let $n \in \mathbb{N}$ such that $n > N$. As the inequalities hold we can multiply them to obtain
+        \begin{align*}
+        \varepsilon=\sqrt{\varepsilon} \sqrt{\varepsilon}&> |a_n-a|\|\vec{x}_n-\vec{x}\| \\
+        &=\||a_n-a|\vec{x}_n-|a_n-a|\vec{x}\|
+        \end{align*}
+
+        Then
+
+        \begin{align}
+          \| a_n x_n - ax\| &\le \|a_n x_n - a x_n\| + \|a x_n - a x\| \\
+          &\le |a_n-a| \|x_n\| + |a| \|x_n-x\|\\
+          &\le |a_n-a| (\|x_n-x\|+\|x\|) + |a|\|x_n-x\|
+        \end{align}
+        and note $\|a_n-a\| \to 0$ and $\|x_n-x\| \to 0$.
+
+
+      \end{proof}
+
+\end
 
 
 
@@ -1718,7 +1755,7 @@ Prove that equality holds in the Cauchy-Schwartz inequality if and only if one o
 
 
 \begin{exercise}{7.3.1}
-Prove that the set $\{(x, y) \in \R^2 : y > 0\}$ is an open subset of $\R^2$. 
+Prove that the set $\{(x, y) \in \R^2 : y > 0\}$ is an open subset of $\R^2$.
 
     \begin{proof}
     According to theorem 7.3.10, a set $A\in \R^d$ is closed if and only if every convergent sequence in $A$ converges to a point $x \in A$. Consider the sequence $\{\frac{1}{n}, \frac{1}{n} \}$. This sequence is clearly contained in the set $A = \{(x, y) \in \R^2 : y > 0\}$. However, $\{\frac{1}{n}, \frac{1}{n} \} \to (0,0)$, and $(0,0) \notin A$. Therefore, the set $A$ is not closed. Since $A$ is not closed, $A$ is an open set.
@@ -1727,7 +1764,7 @@ Prove that the set $\{(x, y) \in \R^2 : y > 0\}$ is an open subset of $\R^2$.
 
 
 \begin{exercise}{7.3.4}
-Find the interior, closure, and boundary for the set 
+Find the interior, closure, and boundary for the set
 \[ A= \{(x, y) \in \R^2 : |(x, y)| < 1\} \cup \{(x, y) \in \R^2 : y = 0, −2 < x < 2\}. \]
 The solution is as follows:
     \begin{align*}
@@ -1784,7 +1821,7 @@ nested upward sequence of open sets with $K \subset \bigcup_k U_k$ , then prove 
 
 
 \begin{proof}
-    This seems obvious. Since $U_K$ is a nested upward sequence, we have that $U_i \subset U_{i+1}$ for all $i\in N$. If $K \subset \bigcup_k U_k$, then $\forall x_i \in K$ we find that $x_i \in \bigcup_k U_k$. Since $K$ is a compact set, it has a finite subcoverage. This means, there is a finite $n \in N$ such that $\bigcup_n U_n \subset K$. Therefore, there exists a finite $m \in N$ such that $K \subset \bigcup_{n+m} U_{m+n}$.  
+    This seems obvious. Since $U_K$ is a nested upward sequence, we have that $U_i \subset U_{i+1}$ for all $i\in N$. If $K \subset \bigcup_k U_k$, then $\forall x_i \in K$ we find that $x_i \in \bigcup_k U_k$. Since $K$ is a compact set, it has a finite subcoverage. This means, there is a finite $n \in N$ such that $\bigcup_n U_n \subset K$. Therefore, there exists a finite $m \in N$ such that $K \subset \bigcup_{n+m} U_{m+n}$.
 \end{proof}
 \end{exercise}
 
@@ -1792,10 +1829,10 @@ nested upward sequence of open sets with $K \subset \bigcup_k U_k$ , then prove 
 
 
 \begin{exercise}{7.4.4}
-Prove that if $K$ is a compact subset of $\R^d$, then $K$ contains a point of maximal norm. That is, there is a point $x_1 \in K$ such that 
+Prove that if $K$ is a compact subset of $\R^d$, then $K$ contains a point of maximal norm. That is, there is a point $x_1 \in K$ such that
     \[ |x| \leq |x_1| \text{ for all } x \in K. \]
 \emph{Hint:} set $m =\sup\{ |x| : x \in K \}$  and consider the open balls $B_{m-1/n}(0)$.
-    
+
     \begin{proof}
     A continuous image of a compact space is compact. Consider the space $K \in \R^d$, and let $f:K \to \R$ such that $f(x)=|x|$. This is a continuous function since the space is compact. As a continuous, real valued function, it attains both a maximum and a minimum per 3.2.1. Therefore, there exists an $x_i \in K$ such that $f(x_i) \geq f(x_k)$ for all $k \in \N$. This proves that $\exists \,x : |x| \geq |x_i|$ for all $i \in \N$.
     \end{proof}
@@ -1822,7 +1859,7 @@ collection of compact subsets is necessarily compact. Show the latter
 statement by finding an example of an infinite union of compact sets which
 is not compact. \\
 
-Any compact set has a finite subcoverage. Having a finite subcoverage - given an open cover - is sufficient for a set to be considered compact. The union of 2 compact sets then has two sets of compact subcoverages. The union of subcoverages is likewise finite. Assume we have $n$ compact sets with finite subcoverage. The union of these $n$ sets with an additional compact set results in the union of a set of finite subcoverages of the union of the $n$ sets together with a finite subcoverage of the $n+1$-th set. This is then evidently also finite. Hence, any finite union of compact sets is also compact. However, an infinite collection is not necessarily compact as this infinite union may lead to the existence of an infinite number of subcoverages, which would make this union no longer compact. 
+Any compact set has a finite subcoverage. Having a finite subcoverage - given an open cover - is sufficient for a set to be considered compact. The union of 2 compact sets then has two sets of compact subcoverages. The union of subcoverages is likewise finite. Assume we have $n$ compact sets with finite subcoverage. The union of these $n$ sets with an additional compact set results in the union of a set of finite subcoverages of the union of the $n$ sets together with a finite subcoverage of the $n+1$-th set. This is then evidently also finite. Hence, any finite union of compact sets is also compact. However, an infinite collection is not necessarily compact as this infinite union may lead to the existence of an infinite number of subcoverages, which would make this union no longer compact.
 \end{exercise}
 
 
@@ -1895,7 +1932,7 @@ The function $\gamma$ consists solely of continuous functions in $\R$, and as su
 
 
 \begin{exercise}{8.1.4}
-Consider the function $f:\R^2  \to \R $ defined by  
+Consider the function $f:\R^2  \to \R $ defined by
     \[ f(x,y) = \left\{
      \begin{array}{lr}
        x \, y & : x \, y > 0.\\
@@ -1903,11 +1940,11 @@ Consider the function $f:\R^2  \to \R $ defined by
      \end{array}
    \right. \]
    at which points of $\R^2$ is this function continuous? \\
-   
-   
+
+
     This function is continuous whenever
     \begin{itemize}
-        \item $x,y >0$ 
+        \item $x,y >0$
         \item $x,y < 0$
         \item $x < 0$, $y > 0$
         \item or $x > 0$, $y < 0.$
@@ -1918,11 +1955,11 @@ Consider the function $f:\R^2  \to \R $ defined by
 
 
 \begin{exercise}{8.1.5}
-For the function  $f : \R^2 \to \R$ defined by 
+For the function  $f : \R^2 \to \R$ defined by
     \[ f(x,y) = \frac{x^2 y}{x^4 + y^2} \]
 show that $f$ has a limit $0$ as $(x,y) \to (0,0)$ along any straight line through the origin but that it does not have a limit as $(x,y)\to (0,0)$ in $\R^2$. \\
 
-Assume thatwe approach along the $x = 0$ axis. In that case, the function has the limit $0$. Assume now we approach along some line, which has the form $ y = m x$. Then we consider 
+Assume thatwe approach along the $x = 0$ axis. In that case, the function has the limit $0$. Assume now we approach along some line, which has the form $ y = m x$. Then we consider
     \[ \lim_{x,y \to (0,0)} \frac{x^2  (mx)}{x^4 + (m x^2)^2} = \lim_{x,y \to (0,0)} \frac{x^3 m}{x^4 + m^2 x^4} = \lim_{x,y \to (0,0)} \frac{m x}{x^2 + m^2} = 0.\]
     The function does not however have a limit itself. For a function to have a limit, its limit must be path-independent. This is not the case for the function in question. Assume you approach via the path $y = m x^2$. The resulting limit
         \[ \lim_{x,y \to (0,0)} \frac{x^2 (mx^2)}{x^4 + (mx^2)^2} = \lim_{x,y \to (0,0)} \frac{x^4 m}{x^4 + x^4 m} = \lim_{x,y \to (0,0)} \frac{m}{1 + m}  \]
@@ -1963,7 +2000,7 @@ We know that a continuous function maps a compact set to a compact set, and that
 \begin{exercise}{8.2.5}
 The image of a compact set under a continuous function is compact, hence closed by theorem 8.2.3. Is the image of a closed set under a continuous function necessarily closed? Prove that it is or give a counter example.  \\
 
-A simple counter example would be the function $f:\R \to \R^+$ where $f(x) = e^x$. Then the preimage of $f$ is closed, yet the image of $f$ is not, as the limit point $\lim_{x \to -\infty} e^x = 0$ is not part of the image set. 
+A simple counter example would be the function $f:\R \to \R^+$ where $f(x) = e^x$. Then the preimage of $f$ is closed, yet the image of $f$ is not, as the limit point $\lim_{x \to -\infty} e^x = 0$ is not part of the image set.
 \end{exercise}
 
 
@@ -2003,11 +2040,11 @@ If $D \subset \R^p$, prove that if a function $F:D \to \R^q$ is uniformly contin
 
 
 \begin{exercise}{8.3.1}
-Show that the sequence $\{\gamma_n(t)\}$, where 
+Show that the sequence $\{\gamma_n(t)\}$, where
     \[ \gamma_n(t) = \left( \frac{1}{1+n t}, \frac{t}{n} \right), \]
 does not converge uniformly on $[0,1]$. \\
 
-For the function to converge uniformly, both parts of the function need to individually converge uniformly. While it is true that $t/n$ converges uniformly on $[0,1]$ since it can be bound by $1/n$, it is not true that $1/(1+n t)$ converges uniformly. Specifically, we find that 
+For the function to converge uniformly, both parts of the function need to individually converge uniformly. While it is true that $t/n$ converges uniformly on $[0,1]$ since it can be bound by $1/n$, it is not true that $1/(1+n t)$ converges uniformly. Specifically, we find that
     \[ \left| \frac{1}{1+n} \right| \leq \left| \frac{1}{1+ n t} \right| \leq 1. \]
 As can be seen, this bound is dependent on $t$, since we need $n$ large whenever $t$ approaches 0 to be within $\epsilon>0$. Hence, this part of the function fails to converge uniformly, which results in our sequence $\gamma_n (t)$ failing to converge uniformly.
 \end{exercise}
@@ -2024,7 +2061,7 @@ We can rewrite this sequence as $\left\{ \left( \frac{1}{k \csc(k x)}, \frac{1}{
 
 
 \begin{exercise}{8.3.8}
-Does the series $\sum_{k=0}^\infty x^k y^k $ converge uniformly on the square 
+Does the series $\sum_{k=0}^\infty x^k y^k $ converge uniformly on the square
     \[ \left\{ (x,y) \in \R^2 : -1 < x <1,\,  -1 < y < 1   \right\}?\]
 Justify your answer. \\
 
@@ -2044,7 +2081,7 @@ The series does not converge pointwise on $[0,1]$, since $\sum_{k=0}^\infty 1^n$
 
 
 \begin{exercise}{8.3.12}
-Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of functions from $D$ to $\R^q$, then $\{F_n\}$ fails to converge uniformly to 0 if and only if there is a sequence $\{x_n\}$ in $D$ such that the sequence of numbers $\{ F_n (x_n) \}$ does not converge to 0. 
+Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of functions from $D$ to $\R^q$, then $\{F_n\}$ fails to converge uniformly to 0 if and only if there is a sequence $\{x_n\}$ in $D$ such that the sequence of numbers $\{ F_n (x_n) \}$ does not converge to 0.
 
 \begin{proof}
     Assume that $\{F_n\}$ does not converge to 0, and that there does not exist a sequence $\{x_n\}$ such that $\{F_n(x_n)\}$ fails to converge to 0. Then for all sequences $\{x_i\} \in D$, we find that $\{F_n ( x_i)\} \to 0$. This means that for all $x$, $\left| F_n (x) \right| < \epsilon$ for some $\epsilon >0$  with $x \in D$ and $n \geq N$ for some $N$. But this is the definition of convergence for$\{F_n\}$. Hence, it cannot be that $\{F_n\}$ fails to converge provided every sequence of $\{x_n\}$ results in $\{F_n (x_n)\}$ going to 0. \\
@@ -2093,7 +2130,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.2.5}
 	Find the differential of the real-valued function $f(x,y,z) = x y^2 \cos(x z)$. Then find the best affine approximation to $f$ at the point $(1, 1, \pi/2)$. \\
-	
+
 	The differential is $\text{d} f = \left[\begin{matrix}- x y^{2} z \sin{\left (x z \right )} + y^{2} \cos{\left (x z \right )} & 2 x y \cos{\left (x z \right )} & - x^{2} y^{2} \sin{\left (x z \right )}\end{matrix}\right]$. \\
     % % The best approximation of the function by an affine function when $x$ is near $a$ is given by the affine function $F(a+h) - F(a) - A \,h$, where $A$ is the differential, where $a= (1, 1, \pi/2)$ and $h = (x-1, y-1, z - \pi/2) = (t, u, v)$. We find the approximation
     % \begin{align*}
@@ -2111,18 +2148,18 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 
 \begin{exercise}{9.2.7}
-	Prove that if $f$ is a real-valued function defined on an open subinterval of $\R$ containing $a$ and if $S$ is an affine function such that $f(a) = S(a)$, and 
+	Prove that if $f$ is a real-valued function defined on an open subinterval of $\R$ containing $a$ and if $S$ is an affine function such that $f(a) = S(a)$, and
 		\[ \lim_{h \to 0} \frac{f(a+h) - S(a+h)}{h} = 0 \]
 	then $S(a+h) = f(a) + f'(a) h$.
-	
+
 	\begin{proof}
-	Let $S(x)= m\,x + b $. Then 
+	Let $S(x)= m\,x + b $. Then
 	    \[ f(a+h)  - S(a+h) = f(a+h) - m\,a - m\,h - b. \]
 	Since we assume $f(a)=S(a)$, we find then that $ b = f(a) - m \,a $. Then, we rewrite as $f(a+h) - S(a+h) = f(a+h) - f(a) - m\,h $. We find
 	  \begin{align*}
-	    0 = \lim_{h \to 0} \frac{f(a+h)-S(a+h)}{h} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} - \lim_{h \to 0} \frac{m\,h}{h}. 
+	    0 = \lim_{h \to 0} \frac{f(a+h)-S(a+h)}{h} = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} - \lim_{h \to 0} \frac{m\,h}{h}.
 	  \end{align*}
-	This implies that $m = f'(a)$ and $S(x) = f'(a) x + f(a) - m\,a$. If we let $x= a+h$, we find 
+	This implies that $m = f'(a)$ and $S(x) = f'(a) x + f(a) - m\,a$. If we let $x= a+h$, we find
 	    \[ S(a+h) = f'(a) (a+h) + f(a) - a\, f'(a) = f(a) + f'(a)h. \]
 	This completes the proof.
 	\end{proof}
@@ -2139,8 +2176,8 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 
 \begin{exercise}{9.2.12}
-	Prove that a function $F: \R^p \to \R^q$ is affine if and only if it is differentiable everywhere and its differential matrix is constant. 
-	
+	Prove that a function $F: \R^p \to \R^q$ is affine if and only if it is differentiable everywhere and its differential matrix is constant.
+
 	\begin{proof}
     We start by proving that if a function $F: \R^p \to \R^q$ is affine, then it is differentiable everywhere with a constant differential matrix. This is evident when we consider that an affine function $F(x)$ is of the form $F(x) = b + L(x)$, with $L: \R^p \to \R^q$, with an associated matrix $p \times q$-matrix $A$. Also, $b,x \in \R^p$. By exercise 9.2.1, we see that for a linear function $L(x)$ with associated matrix $A$, $\text{d}L=A$. From this we see that $F$ is differentiable everywhere with a constant differential matrix. \\
     We now proceed to consider a function which is differentiable everywhere, and has a constant differential matrix. The function $F = (F_1(x), F_2(x), \hdots, F_p (x) )$. Since the differential is constant, we can write $F_i= a_{1,i} x_1 + a_{2,i} x_2 + \hdots + a_{p,i} x_p + b_i $ for some constants $a_{1,i}, a_{2,i}, ..., b_i$. This implies that $F(x) = b + A x$ where $A=a_{j,i}$ and $b = [b_1, b_2, \hdots, b_q ]^T$. Hence, $F(x)$ is affine.
@@ -2185,7 +2222,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
     \begin{align*}
     \frac{\partial d}{\partial s} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial d}{\partial y} \frac{\partial y}{\partial s} \\
-    \frac{\partial d }{\partial t} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial t} 
+    \frac{\partial d }{\partial t} &= \frac{\partial d}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial d }{\partial y} \frac{\partial y}{\partial t}
     \end{align*}
 \end{exercise}
 
@@ -2202,7 +2239,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 
 \begin{exercise}{9.3.9}
-	If $(x,y,z)$ are the Cartesian coordinates of a point in $\R^3$ and the spherical coordinates of the same point are $r, \theta, \phi$, then 
+	If $(x,y,z)$ are the Cartesian coordinates of a point in $\R^3$ and the spherical coordinates of the same point are $r, \theta, \phi$, then
 		\begin{align*} &x = r \cos(\theta) \sin(\phi)  &&y = r \sin(\theta) \sin(\phi) &&&z = r \cos(\phi) \end{align*}
 	Let $u$ be a variable which is a differentiable  function of $(x,y,z)$ on $\R^3$. Find a formula for the partial derivatives of $u$ with respect to $r, \theta, \phi$ in terms of its partial derivatives with respect to $x,y,z$.
 
@@ -2243,7 +2280,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.4.11}
     Find the equation of the tangent plane to the cone $z = x^2 + y^2$ at the point $(1,2,5)$. \\
-    
+
     We see that $\frac{\partial z}{\partial x}= 2x$ and $\frac{\partial z}{\partial y} = 2y$. Then:
     \begin{align*}
     z - z_0 &= \frac{\partial z}{\partial x}(x-x_0) + \frac{\partial z}{\partial y} (y-y_0)\\
@@ -2270,14 +2307,14 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.4.13}
     Find an equation for the tangent plane to the surface $x^2 + y^2 -z^2 = 1$ at each point on the surface.  \\
-    
+
     Let $w = x^2 + y^2 + z^2 $. Then $\nabla w = \left( 2x, 2y, 2z \right)$, which means at point $A = (a,b,c)$ we have $\nabla w(A) = \left( 2a, 2b, 2c \right)$. Then we get the following equation:
     \begin{align*}
     2 a (x -a ) + 2b (y-b) + 2c (z -c ) &= 0\\
     -2 a^2 + 2 ax - 2b^2 + 2 by - 2c^2 + 2 cz &= 0  \\
     2 ax + 2 by + 2cz &= 2 a^2 + 2 b^2 + 2c^2 \\
     ax + by + cz &= a^2 + b^2 + c^2 .
-    \end{align*} 
+    \end{align*}
 \end{exercise}
 
 
@@ -2290,7 +2327,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.5.1}
     Find the degree $n =2$ Taylor formula for $f(x,y)=x^2 + x y$ at the point $a=(1,2)$.  \\
-    
+
     We begin by finding the necessary partial derivatives.
     \begin{align*}
         &\frac{\partial f}{\partial x} = 2x+y, &&\frac{\partial^2 f}{\partial x^2} = 2 \\
@@ -2306,7 +2343,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 \end{exercise}
 
 \begin{exercise}{9.5.4}
-    Suppose $U$ is an open convex set and $f$ is a differentiable real-valued function on $U$. If there is a number $M > 0$ such that $|df(x)| \leq M$ for all $x\in U$, then 
+    Suppose $U$ is an open convex set and $f$ is a differentiable real-valued function on $U$. If there is a number $M > 0$ such that $|df(x)| \leq M$ for all $x\in U$, then
         \[ |f(x) - f(y) \leq M |x-y| \]
     for all $x,y \in U$.
 
@@ -2324,7 +2361,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.5.6}
     Show that the following form of the Mean Value Theorem is not true: if $F:\R^2 \to \R^2$ is a differentiable function and $a,b \in \R^2$, then there is a $c$ on the line segment joining $a$ to $b$ such that $F(b) - F(a) = \text{d} F(c) (b-a)$. The problem here is that $F$ is vector-valued, not real valued.  \\
-    
+
     If the function $F$ is vector-valued as above, we cannot make sense of the equation. Specifically, we find that $\text{d} F(c) (b-a)$ is defined as a scalar multiplication. In this case, the result is a scalar, whereas $F(b)-F(a)$ would be a case of vector addition. A scalar cannot equal a vector. Alternatively, we could attempt to solve this issue by redefining $\text{d} F(c) (b-a)$ as matrix multiplication. However, then we could only have equality in the case of $\text{d} F$ begin a square matrix; otherwise, the dimensions wouldn't match up. As such, it appears as though we can't make sense of the equation as is for vector valued functions.
 \end{exercise}
 
@@ -2332,7 +2369,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.5.8}
     Find all points of relative maximum and relative minimum and all saddle points for $f(x,y) = 1 - 2 x^2 - 2 x y- y^2$.  \\
-    
+
     We begin by finding the differential $\nabla f(x,y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = \left( -4x-2y, -2x-2y \right)$. This is only zero at the point $(0,0)$. We calculate the Discriminant at this point:
         \[ D = (-4)(-2)- (-2)^2 = 8 -4 = 4. \]
     Since $D>0, \, \frac{\partial^2 f}{\partial x^2} < 0$ we find that we are dealing with a point of local maximum.
@@ -2341,7 +2378,7 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.5.9}
     Find all  points of relative maximum and relative minimum and all saddle points for $f(x,y) = y^3 + y^2 +x^2 - 2 x y -3y$.  \\
-    
+
     We begin by taking the various partial derivatives:
     \begin{align*}
         &\frac{\partial f}{\partial x} = 2x-2y, &&\frac{\partial^2 f}{\partial x^2} = 2 \\
@@ -2392,12 +2429,12 @@ Prove that if $D$ is a subset of $\R^p$ and $\{ F_n\}$ is a sequence of function
 
 \begin{exercise}{9.6.5}
     Find a smooth local inverse function near $(1, \pi/2)$ for the function $F$ of Example 9.6.6.  \\
-    
+
 We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\theta) \\ \sin(\theta) & r \cos(theta) \end{pmatrix}$. The determinant is non-zero whenever $r\neq 0$. At the point $F(a)=(0,1)$. We know by the inverse function theorem that $\text{d} F^{-1} (b) = \left( \text{d} F(a) \right)^{-1}$. We now use this information and find the inverse differential:
     \begin{align*}
     \text{d} F^{-1}(b) = \left( \text{d} F(a)\right)^{-1} = \begin{bmatrix} \cos(\theta) & \sin(\theta) \\ -r^{-1} \sin(\theta) & r^{-1} \cos(\theta) \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
     \end{align*}
-    We find that the inverse function is $F^{-1}(x,y) = \left( \sqrt{x^2 + y^2}, \tan^{-1}(y/x)\right)$. 
+    We find that the inverse function is $F^{-1}(x,y) = \left( \sqrt{x^2 + y^2}, \tan^{-1}(y/x)\right)$.
 \end{exercise}
 
 
@@ -2406,7 +2443,7 @@ We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\the
 
 \begin{exercise}{9.6.8}
     Show by example that the result of the previous problem is not true if $U$ is only assumed to be connected, rather than convex. Hint: Try the function $F(x,y) = (x^2 - y^2, 2 x y)$ on $\R^2 \backslash \{0\}$.  \\
-    
+
     Consider the function $f(x,y) = (x^2-y^2, 2xy) $. Then $df = \begin{bmatrix} 2x && -2y\\ 2y && 2x \end{bmatrix} $. Then the determinant of $df$ is greater than 0, namely it is $4(x^2+y^2)$. Consider now $U=\R^2 \backslash \{(0,0)\}$, which is a connected but not a convex set. Here, $df$ is non-singular but $f$ is not injective since $f(1,-1)=f(-1,1)$.
 \end{exercise}
 
@@ -2416,7 +2453,7 @@ We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\the
 
 \begin{exercise}{9.6.10}
     Show that the condition that $d F(a)$ be non-singular is necessary in the Inverse Function Theorem by showing that if a function $F$ from a neighborhood of $a$ in $\R^P$ to $\R^p$ is differentiable at $a$ and has an inverse function at $a$ which is differentiable at $F(a)$, then $d F(a)$ is non-singular.  \\
-    
+
     We are trying to show that if $F$ is locally invertible, its differential matrix is also invertible, i.e. non-singular. \\
  Assume the inverse of $F$ exists, and refer to it as $F^{-1}$, such that $F \circ F^{-1} = I$. If we differentiate, we find that we are looking for a function such that
     \[ I = \text{d} F \, \text{d} F^{-1} \left( F \right) . \]
@@ -2428,7 +2465,7 @@ We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\the
 
 \begin{exercise}{9.6.12}
     If $F: \R^p \to \R^p$  is a $C^1$ function, what can you say about $F$ at a point of $\R^p$ where $|F|$ has a local minimum? How about a point where $|F|$ has a local maximum?  \\
-    
+
     The norm of a function $F$ is defined as $|F| = \sqrt{ (F_1)^2 + \hdots + (F_p)^2}$ for a function with $p$-components. Differentiating both sides with respect to some variable $x$ yields the equation
     \[ 2 |F| \frac{d |F|}{x} = 2 F_1 \frac{d F_1}{d x} + \hdots + 2 F_p \frac{d F_p}{d x} \]
     We note that since we are dealing with local minima/maxima, that $\frac{d |F|}{x}=0$. As such, we get the equation
@@ -2445,7 +2482,7 @@ We find that $\text{d} F(r, \theta)= \begin{pmatrix} \cos(\theta) & -r \sin(\the
 
 \begin{exercise}{9.7.1}
     Are there any points on the graph of the equation $x^3 +3xy+2y^3=1$ where it may not be possible to solve for $y$ as a smooth function of $x$ in some neighborhood of the point?  \\
-    
+
 Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function theorem, we can solve this function for $y$ as a smooth function of $x$ whenever $\frac{\partial f}{\partial y}\neq 0$. We find that $\frac{\partial f}{\partial y}= 6xy + 6 y^2$. Solving this for zero is equivalent to solving $y(x+y)=0$.  Therefore, we can solve for $y$ as a smooth function of $x$ at all points where $y \neq 0$ and $y \neq -x$.
 \end{exercise}
 
@@ -2457,7 +2494,7 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
             f_2(x,y,u,v) &= xu + yv + x - y.
         \end{align*}
     At which points  $(x,y,u,v)$ is this matrix non-singular?  \\
-    
+
     We solve for the differential:
     \begin{align*}
         \frac{\partial(f_1, f_2)}{\partial (u,v)} = \begin{bmatrix} \frac{\partial f_1}{\partial u} & \frac{\partial f_1}{\partial v} \\ \frac{\partial f_2}{\partial u} & \frac{\partial f_2}{\partial v} \end{bmatrix} = \begin{bmatrix} 2 u & 2 v \\ x & y \end{bmatrix}
@@ -2467,17 +2504,17 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
 
 
 \begin{exercise}{9.7.4}
-    Show that the system of equations 
+    Show that the system of equations
     \begin{align*}
         u^2 + v^2 + 2 u - x y + z &= 0 \\
         u^3 + \sin(v) - x u + yv + z^2 &= 0
     \end{align*}
     has a solution for $(u,v)$ as a smooth function of $(x,y,z)$, in some neighborhood of $(0,0,0)$, with the property that $(u,v) = (0,0)$ when $(x,y,z) = (0,0,0)$.  \\
-    
+
     Let $f_1 = u^2 + v^2 + 2 u - x y + z $ and $f_2 = u^3 + \sin(v) - x u + yv + z^2 $. We solve for the differential at $(0,0,0,0,0)$:
     \begin{align*}
         \frac{\partial f}{\partial (u,v)} &= \begin{bmatrix} 2 u + 2 & 2v \\ 3u^2-x & \cos(v)+y \end{bmatrix} \\
-        \frac{\partial f}{\partial (u,v)} (0,0,0,0,0) &= \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix} 
+        \frac{\partial f}{\partial (u,v)} (0,0,0,0,0) &= \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}
     \end{align*}
     As the last differential is if non-singular, this is possible.
 \end{exercise}
@@ -2485,7 +2522,7 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
 
 \begin{exercise}{9.7.6}
     For the equation $xy + yz + xz = 1$, at which points on the solution set $S$ is there a neighborhood in which $S$ is a smooth 2-surface? At each such point $(a,b,c)$, find an equation of the tangent plane.  \\
-    
+
     This function describes a two sheeted hyperbola. Let $F(x,y,z):  xy + yz + xz =1$.  THen $\nabla F = (y+z, x+z, y+x)$. We find that $\nabla F = (0,0,0)$ only at the points $(0,0,0)$ and $(x,-x,0)$. Of these, the only points on the graph are $(1,-1,0)$ and $(-1,1,0)$. We find that $F(1,-1,0)=F(-1,1,0)$. This means that there exists a neighbord $V$ of $(1,-1,0)$ and $(-1,1,0)$ with $V \subset \R^3$ there exists a level set $S = \{u \in V : F(u)=0\}$ which is a smooth p-surface. The tangent space at $(1,-1,0)$ and $(-1,1,0)$ consists of the set of the solutions $u$ to $\nabla F(1,-1,0) (u - (1,-1,0))=0$ and $\nabla F(-1,1,0) (u - (-1,1,0))=0$.
 \end{exercise}
 
@@ -2497,7 +2534,7 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
         2 x + x y - y + 3 u^2 - 9 v &= 0,
     \end{align*}
     find all points on the solution set $S$ for which there is a neighborhood in which $S$ is a smooth 2-surface.  \\
-    
+
     Let $f_1 = x^2+y^2+u^2-3v-1$ and $f_2= 2x + xy - y + 3u^2 - 9v$. We find the differential
     \begin{align*}
     \frac{\partial (f_1,f_2)}{\partial(x,y,u,v)} &= \begin{bmatrix} \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} & \frac{\partial f_1}{\partial u} & \frac{\partial f_1}{\partial v} \\ \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y} & \frac{\partial f_2}{\partial u} & \frac{\partial f_2}{\partial v}  \end{bmatrix} \\
@@ -2557,7 +2594,7 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
 \begin{exercise}{11.1.2}
     We find the derivative $\gamma ' (t) = \left( \cos(t)-t \sin(t), \sin(t) + t \cos(t) \right)$. We proceed to find the norm
     \[ \left| \gamma'(t) \right| = \sqrt{ \left( \cos(t) - t \sin(t)\right)^2 + \left( \sin(t) + t \cos(t) \right)^2 } = \sqrt{1+t^2}. \]
-    To find the length, we solve the integral $\int_0^{4 \pi} \sqrt{1+t^2} dt$. We utilize a trig substitution, lettting $t = \tan(\theta)$. 
+    To find the length, we solve the integral $\int_0^{4 \pi} \sqrt{1+t^2} dt$. We utilize a trig substitution, lettting $t = \tan(\theta)$.
     \begin{align*}
         \int_0^{4 \pi} \sqrt{1+t^2} dt &= \int_0^{\tan^{-1}(4 \pi)} \sec(\theta) d\theta \\
                                        &= \left. \ln \left( \sec(\theta) + \tan(\theta) \right) \right|_0^{\tan^{-1}(4 \pi}) \\
@@ -2604,4 +2641,3 @@ Consider the function $f(x,y)=x^3 + 3xy^2+2y^3 -1$. By the implicit function the
 % --------------------------------------------------------------
 
 \end{document}
-
